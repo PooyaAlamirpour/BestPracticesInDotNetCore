@@ -22,6 +22,7 @@ Customer {
 - [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)
 - [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)
 - [Clean architecture](https://github.com/jasontaylordev/CleanArchitecture)
+- [Clean Code](https://en.wikipedia.org/wiki/SonarQube)
 - [CQRS](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_query_responsibility_separation) pattern ([Event sourcing](https://en.wikipedia.org/wiki/Domain-driven_design#Event_sourcing)).
 - Clean git commits that shows your work progress.
 
