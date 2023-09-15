@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1ac7f96d-acc1-434d-9924-a5a8c013b641",
+    "firstname": "Pooya",
+    "lastname": "Alamirpour",
+    "dateOfBirth": "1/2/2000",
+    "phoneNumber": "+989910831364",
+    "email": "Pooya.Alamirpour@gmail.com",
+    "bankAccountNumber": "6104000000001111"
+  },
+  {
+    "id": "85635290-629e-45d3-b1c1-492850922df3",
+    "firstname": "Nastaran",
+    "lastname": "Niknejad",
+    "dateOfBirth": "1/2/2001",
+    "phoneNumber": "+989910831333",
+    "email": "Nastaran.Niknejad@gmail.com",
+    "bankAccountNumber": "6104000000002222"
+  }
+]
