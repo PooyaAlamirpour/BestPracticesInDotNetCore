@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.10">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.5" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Domain\src\Mc2.CrudTest.Domain.Core\Mc2.CrudTest.Domain.Core.csproj" />
+      <ProjectReference Include="..\..\..\Framework\Mc2.CrudTest.framework.domain\Mc2.CrudTest.framework.domain.csproj" />
+      <ProjectReference Include="..\..\..\Framework\Mc2.CrudTest.framework.Mediator\Mc2.CrudTest.framework.Mediator.csproj" />
+      <ProjectReference Include="..\..\..\Mc2.CrudTest.framework.Mediator\Mc2.CrudTest.framework.Mediator.csproj" />
+    </ItemGroup>
+
+</Project>
