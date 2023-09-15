@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mc2.CrudTest.Infrastructure.Persistence.Repositories;
 
-public class CustomerRepository : GenericRepository<CustomerAggregateRoot, CustomerId>, ICustomerRepository
+public class CustomerReadRepository : GenericRepository<CustomerAggregateRoot, CustomerId>, ICustomerReadRepository
 {
-    public CustomerRepository(IServiceProvider serviceProvider) : base(serviceProvider)
+    public CustomerReadRepository(IServiceProvider serviceProvider) : base(serviceProvider)
     {
     }
-
+    
     public async Task<List<CustomerAggregateRoot>> GetListByFilter(string firstname, string lastname, string email, string phoneNumber,
         string bankAccountNumber)
     {

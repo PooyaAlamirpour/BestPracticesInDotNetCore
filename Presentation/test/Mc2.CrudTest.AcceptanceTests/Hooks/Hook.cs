@@ -32,7 +32,7 @@ namespace Mc2.CrudTest.AcceptanceTests.Hooks
             _objectContainer.RegisterInstanceAs(new JsonFilesRepository());
             
             var scope = factory.Services.CreateScope();
-            var repository = scope.ServiceProvider.GetRequiredService<ICustomerRepository>();
+            var repository = scope.ServiceProvider.GetRequiredService<ICustomerWriteRepository>();
             _objectContainer.RegisterInstanceAs(repository);
         }
 
@@ -50,7 +50,7 @@ namespace Mc2.CrudTest.AcceptanceTests.Hooks
         private async Task ClearData(WebApplicationFactory<Program> factory)
         {
             using var scope = factory.Services.CreateScope();
-            var repository = scope.ServiceProvider.GetRequiredService<ICustomerRepository>();
+            var repository = scope.ServiceProvider.GetRequiredService<ICustomerWriteRepository>();
             var entities = await repository.GetListAsync();
             foreach (var entity in entities)
             {

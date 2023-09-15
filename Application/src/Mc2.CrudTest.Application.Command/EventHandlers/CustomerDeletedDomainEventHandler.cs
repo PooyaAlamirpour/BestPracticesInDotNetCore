@@ -7,18 +7,18 @@ namespace Mc2.CrudTest.Application.Command.EventHandlers;
 
 public class CustomerDeletedDomainEventHandler : ICommandEventHandler<CustomerDeletedDomainEvent>
 {
-    private readonly ICustomerRepository _customerRepository;
-
-    public CustomerDeletedDomainEventHandler(ICustomerRepository customerRepository)
+    private readonly ICustomerWriteRepository _customerWriteRepository;
+    
+    public CustomerDeletedDomainEventHandler(ICustomerWriteRepository customerWriteRepository)
     {
-        _customerRepository = customerRepository;
+        _customerWriteRepository = customerWriteRepository;
     }
 
     public async Task Handle(CustomerDeletedDomainEvent @event, CancellationToken cancellationToken)
     {
         CustomerAggregateRoot customer = new();
         customer.Apply(@event);
-        _customerRepository.Delete(customer);
-        await _customerRepository.CommitAsync(cancellationToken);
+        _customerWriteRepository.Delete(customer);
+        await _customerWriteRepository.CommitAsync(cancellationToken);
     }
 }

@@ -27,7 +27,7 @@ public sealed class CrudCustomerStepDefinitions
     private const string BaseAddress = "http://localhost:8080/api/v1/";
 
     private readonly ScenarioContext _scenarioContext;
-    private ICustomerRepository CustomerRepository { get; }
+    private ICustomerWriteRepository CustomerWriteRepository { get; }
     private WebApplicationFactory<Program> Factory { get; }
     private JsonFilesRepository JsonFilesRepository { get; }
     private HttpResponseMessage Response { get; set; } = null!;
@@ -42,12 +42,12 @@ public sealed class CrudCustomerStepDefinitions
     public HttpClient Client { get; set; } = null!;
 
     public CrudCustomerStepDefinitions(ScenarioContext scenarioContext, WebApplicationFactory<Program> factory, 
-        JsonFilesRepository jsonFilesRepository, ICustomerRepository customerRepository)
+        JsonFilesRepository jsonFilesRepository, ICustomerWriteRepository customerWriteRepository)
     {
         _scenarioContext = scenarioContext;
         Factory = factory;
         JsonFilesRepository = jsonFilesRepository;
-        CustomerRepository = customerRepository;
+        CustomerWriteRepository = customerWriteRepository;
     }
 
 
@@ -66,11 +66,11 @@ public sealed class CrudCustomerStepDefinitions
         {
             foreach (var customer in customers)
             {
-                CustomerRepository.Add(CustomerAggregateRoot.Create(customer.Firstname, customer.Lastname, 
+                CustomerWriteRepository.Add(CustomerAggregateRoot.Create(customer.Firstname, customer.Lastname, 
                     customer.DateOfBirth.ToString(), customer.PhoneNumber, customer.Email, customer.BankAccountNumber));
             }
 
-            await CustomerRepository.CommitAsync();
+            await CustomerWriteRepository.CommitAsync();
         }
     }
 

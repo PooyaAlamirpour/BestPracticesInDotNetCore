@@ -4,6 +4,7 @@ using Mc2.CrudTest.Application.Command;
 using Mc2.CrudTest.Application.Queries;
 using Mc2.CrudTest.Domain.Core;
 using Mc2.CrudTest.Infrastructure.Persistence;
+using Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
 using NetArchTest.Rules;
 
 namespace Mc2.CrudTest.Architecture.Tests;
@@ -11,8 +12,8 @@ namespace Mc2.CrudTest.Architecture.Tests;
 public class ProjectLayerTests
 {
     // application solution
-    private const string ApplicationCommandNamespace = "Mc2.CrudTest.Application.Command";
-    private const string ApplicationQueryNamespace = "Mc2.CrudTest.Application.Queries";
+    private const string CommandApplicationNamespace = "Mc2.CrudTest.Application.Command";
+    private const string QueryApplicationNamespace = "Mc2.CrudTest.Application.Queries";
 
     // domain solution
     private const string DomainNamespace = "Mc2.CrudTest.Domain.Core";
@@ -43,8 +44,8 @@ public class ProjectLayerTests
             new[]
             {
                 PersistenceNamespace,
-                ApplicationCommandNamespace,
-                ApplicationQueryNamespace,
+                CommandApplicationNamespace,
+                QueryApplicationNamespace,
                 PresentationNamespace
             }
         );
@@ -53,8 +54,8 @@ public class ProjectLayerTests
             typeof(PersistenceAssembly).Assembly,
             new[]
             {
-                ApplicationCommandNamespace,
-                ApplicationQueryNamespace,
+                CommandApplicationNamespace,
+                QueryApplicationNamespace,
                 PresentationNamespace
             }
         );
@@ -74,5 +75,27 @@ public class ProjectLayerTests
                 PresentationNamespace,
             }
         );
+    }
+
+    [Fact]
+    public void CommandApplicationAssembly_Should_Not_HaveDependencyOn_ICustomerReadRepository()
+    {
+        Types.InAssembly(CommandApplicationAssembly.Assembly)
+            .That().HaveNameEndingWith("Handler")
+            .ShouldNot()
+            .HaveDependencyOn($"{typeof(ICustomerReadRepository).Namespace}.{nameof(ICustomerReadRepository)}")
+            .GetResult()
+            .IsSuccessful.Should().BeTrue();
+    }
+    
+    [Fact]
+    public void QueryApplicationAssembly_Should_Not_HaveDependencyOn_ICustomerWriteRepository()
+    {
+        Types.InAssembly(QueryApplicationAssembly.Assembly)
+            .That().HaveNameEndingWith("Handler")
+            .ShouldNot()
+            .HaveDependencyOn($"{typeof(ICustomerWriteRepository).Namespace}.{nameof(ICustomerWriteRepository)}")
+            .GetResult()
+            .IsSuccessful.Should().BeTrue();
     }
 }

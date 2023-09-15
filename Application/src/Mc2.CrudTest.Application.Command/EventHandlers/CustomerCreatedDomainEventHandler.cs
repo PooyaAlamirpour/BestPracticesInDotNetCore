@@ -7,11 +7,11 @@ namespace Mc2.CrudTest.Application.Command.EventHandlers;
 
 public class CustomerCreatedDomainEventHandler : ICommandEventHandler<CustomerCreatedDomainEvent>
 {
-    private readonly ICustomerRepository _customerRepository;
+    private readonly ICustomerWriteRepository _customerWriteRepository;
 
-    public CustomerCreatedDomainEventHandler(ICustomerRepository customerRepository)
+    public CustomerCreatedDomainEventHandler(ICustomerWriteRepository customerWriteRepository)
     {
-        _customerRepository = customerRepository;
+        _customerWriteRepository = customerWriteRepository;
     }
 
     public async Task Handle(CustomerCreatedDomainEvent @event, CancellationToken cancellationToken)
@@ -19,7 +19,7 @@ public class CustomerCreatedDomainEventHandler : ICommandEventHandler<CustomerCr
         CustomerAggregateRoot customer = new();
         customer.Apply(@event);
         
-        _customerRepository.Add(customer);
-        await _customerRepository.CommitAsync(cancellationToken);
+        _customerWriteRepository.Add(customer);
+        await _customerWriteRepository.CommitAsync(cancellationToken);
     }
 }

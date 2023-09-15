@@ -26,7 +26,8 @@ public static class DependencyInjection
 
     private static void AddRepositories(this IServiceCollection services)
     {
-        services.AddTransient<ICustomerRepository, CustomerRepository>();
+        services.AddTransient<ICustomerWriteRepository, CustomerWriteRepository>();
+        services.AddTransient<ICustomerReadRepository, CustomerReadRepository>();
         services.AddTransient(typeof(IEventStoreRepository<,>), typeof(EventStoreRepository<,>));
         services.AddTransient(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
     }

@@ -6,16 +6,16 @@ namespace Mc2.CrudTest.Application.Queries.Customer.Get;
 
 public class GetCustomerQueryHandler : IRequestHandler<GetCustomerQuery, List<CustomerAggregateRoot>>
 {
-    private readonly ICustomerRepository _customerRepository;
+    private readonly ICustomerReadRepository _customerReadRepository;
 
-    public GetCustomerQueryHandler(ICustomerRepository customerRepository)
+    public GetCustomerQueryHandler(ICustomerReadRepository customerReadRepository)
     {
-        _customerRepository = customerRepository;
+        _customerReadRepository = customerReadRepository;
     }
 
     public async Task<List<CustomerAggregateRoot>> Handle(GetCustomerQuery message, CancellationToken cancellationToken)
     {
-        List<CustomerAggregateRoot> customerList = await _customerRepository.GetListByFilter(message.Firstname, 
+        List<CustomerAggregateRoot> customerList = await _customerReadRepository.GetListByFilter(message.Firstname, 
             message.Lastname, message.Email, message.PhoneNumber, message.BankAccountNumber);
         return customerList;
     }
