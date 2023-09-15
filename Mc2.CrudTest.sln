@@ -51,13 +51,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Application.Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Application.Command.UnitTests", "Application\test\Mc2.CrudTest.Application.Command.UnitTests\Mc2.CrudTest.Application.Command.UnitTests.csproj", "{F8C70835-9380-4BB0-BB92-E3DCE437455C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Infrastructure.Persistence", "Infrastructure\src\Mc2.CrudTest.Infrastructure.Persistence\Mc2.CrudTest.Infrastructure.Persistence.csproj", "{6069DA6D-FE83-44FC-83EE-99BDD731E6E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Infrastructure.Read.Persistence", "Infrastructure\src\Mc2.CrudTest.Infrastructure.Read.Persistence\Mc2.CrudTest.Infrastructure.Read.Persistence.csproj", "{6069DA6D-FE83-44FC-83EE-99BDD731E6E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.framework.domain", "Framework\Mc2.CrudTest.framework.domain\Mc2.CrudTest.framework.domain.csproj", "{5E60ECC7-8DE3-4AB3-A93D-3722F79E4759}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.framework.Mediator", "Framework\Mc2.CrudTest.framework.Mediator\Mc2.CrudTest.framework.Mediator.csproj", "{B461ED82-C364-44E8-937A-7FFFAC49F8A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Architecture.Tests", "ArchitectureTest\Mc2.CrudTest.Architecture.Tests.csproj", "{2077B734-1D02-4705-8F6A-B7DCF08917F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Infrastructure.Write.Persistence", "Mc2.CrudTest.Infrastructure.Write.Persistence\Mc2.CrudTest.Infrastructure.Write.Persistence.csproj", "{52EEEA1D-799A-4763-817B-D1ADE8DB6539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +123,10 @@ Global
 		{2077B734-1D02-4705-8F6A-B7DCF08917F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2077B734-1D02-4705-8F6A-B7DCF08917F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2077B734-1D02-4705-8F6A-B7DCF08917F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EEEA1D-799A-4763-817B-D1ADE8DB6539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EEEA1D-799A-4763-817B-D1ADE8DB6539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EEEA1D-799A-4763-817B-D1ADE8DB6539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EEEA1D-799A-4763-817B-D1ADE8DB6539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,5 +157,6 @@ Global
 		{6069DA6D-FE83-44FC-83EE-99BDD731E6E7} = {4FB38E46-080F-4E9A-A640-FCBBDBAC512F}
 		{5E60ECC7-8DE3-4AB3-A93D-3722F79E4759} = {200805AF-7718-4B31-BB15-1D61EBED870C}
 		{B461ED82-C364-44E8-937A-7FFFAC49F8A4} = {200805AF-7718-4B31-BB15-1D61EBED870C}
+		{52EEEA1D-799A-4763-817B-D1ADE8DB6539} = {4FB38E46-080F-4E9A-A640-FCBBDBAC512F}
 	EndGlobalSection
 EndGlobal

@@ -3,7 +3,6 @@ using System;
 using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,11 +10,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230913134021_PhoneNumberLength")]
-    partial class PhoneNumberLength
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,7 +41,7 @@ namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("varchar(255)")
                         .HasColumnName("email");
 
                     b.Property<string>("Firstname")
@@ -72,15 +69,28 @@ namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
                     b.HasKey("Id")
                         .HasName("PRIMARY");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("Firstname", "Lastname", "DateOfBirth")
+                        .IsUnique();
+
                     b.ToTable("customers", (string)null);
                 });
 
-            modelBuilder.Entity("Mc2.CrudTest.Infrastructure.Persistence.Entities.EventEntity", b =>
+            modelBuilder.Entity("Mc2.CrudTest.Infrastructure.Read.Persistence.Entities.EventEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)")
                         .HasColumnName("id");
+
+                    b.Property<Guid>("AggregateId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("AggregateType")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)")

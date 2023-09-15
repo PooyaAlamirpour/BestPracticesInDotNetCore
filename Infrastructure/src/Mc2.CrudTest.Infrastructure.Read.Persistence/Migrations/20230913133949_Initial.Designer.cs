@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230915010354_MakeUnique")]
-    partial class MakeUnique
+    [Migration("20230913133949_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("varchar(255)")
+                        .HasColumnType("longtext")
                         .HasColumnName("email");
 
                     b.Property<string>("Firstname")
@@ -65,35 +65,21 @@ namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("varchar(15)")
+                        .HasColumnType("longtext")
                         .HasColumnName("phone_number");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.HasIndex("Firstname", "Lastname", "DateOfBirth")
-                        .IsUnique();
-
                     b.ToTable("customers", (string)null);
                 });
 
-            modelBuilder.Entity("Mc2.CrudTest.Infrastructure.Persistence.Entities.EventEntity", b =>
+            modelBuilder.Entity("Mc2.CrudTest.Infrastructure.Read.Persistence.Entities.EventEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)")
                         .HasColumnName("id");
-
-                    b.Property<Guid>("AggregateId")
-                        .HasColumnType("char(36)");
-
-                    b.Property<string>("AggregateType")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)")

@@ -19,7 +19,7 @@ public class ProjectLayerTests
     private const string DomainNamespace = "Mc2.CrudTest.Domain.Core";
 
     // infrastructure solution
-    private const string PersistenceNamespace = "Mc2.CrudTest.Infrastructure.Persistence";
+    private const string PersistenceNamespace = "Mc2.CrudTest.Infrastructure.Read.Persistence";
 
     // presentation solution
     private const string PresentationNamespace = "Mc2.CrudTest.Presentation.Api";

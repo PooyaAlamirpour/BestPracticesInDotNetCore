@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\Infrastructure\src\Mc2.CrudTest.Infrastructure.Persistence\Mc2.CrudTest.Infrastructure.Persistence.csproj" />
+      <ProjectReference Include="..\..\..\Infrastructure\src\Mc2.CrudTest.Infrastructure.Read.Persistence\Mc2.CrudTest.Infrastructure.Read.Persistence.csproj" />
     </ItemGroup>
 
 </Project>

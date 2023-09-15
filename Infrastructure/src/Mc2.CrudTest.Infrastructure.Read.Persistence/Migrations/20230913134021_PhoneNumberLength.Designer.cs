@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230914162830_AggregateTypeIsAdded")]
-    partial class AggregateTypeIsAdded
+    [Migration("20230913134021_PhoneNumberLength")]
+    partial class PhoneNumberLength
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,19 +75,12 @@ namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
                     b.ToTable("customers", (string)null);
                 });
 
-            modelBuilder.Entity("Mc2.CrudTest.Infrastructure.Persistence.Entities.EventEntity", b =>
+            modelBuilder.Entity("Mc2.CrudTest.Infrastructure.Read.Persistence.Entities.EventEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)")
                         .HasColumnName("id");
-
-                    b.Property<Guid>("AggregateId")
-                        .HasColumnType("char(36)");
-
-                    b.Property<string>("AggregateType")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)")

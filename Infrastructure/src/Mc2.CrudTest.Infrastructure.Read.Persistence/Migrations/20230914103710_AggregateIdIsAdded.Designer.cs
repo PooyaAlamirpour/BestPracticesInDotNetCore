@@ -3,6 +3,7 @@ using System;
 using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230914103710_AggregateIdIsAdded")]
+    partial class AggregateIdIsAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,7 @@ namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("varchar(255)")
+                        .HasColumnType("longtext")
                         .HasColumnName("email");
 
                     b.Property<string>("Firstname")
@@ -69,16 +72,10 @@ namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
                     b.HasKey("Id")
                         .HasName("PRIMARY");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.HasIndex("Firstname", "Lastname", "DateOfBirth")
-                        .IsUnique();
-
                     b.ToTable("customers", (string)null);
                 });
 
-            modelBuilder.Entity("Mc2.CrudTest.Infrastructure.Persistence.Entities.EventEntity", b =>
+            modelBuilder.Entity("Mc2.CrudTest.Infrastructure.Read.Persistence.Entities.EventEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -87,10 +84,6 @@ namespace Mc2.CrudTest.Infrastructure.Persistence.Migrations
 
                     b.Property<Guid>("AggregateId")
                         .HasColumnType("char(36)");
-
-                    b.Property<string>("AggregateType")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)")
