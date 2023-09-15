@@ -12,8 +12,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Framework\Mc2.CrudTest.framework.domain\Mc2.CrudTest.framework.domain.csproj" />
-      <ProjectReference Include="..\..\..\Framework\Mc2.CrudTest.framework.Mediator\Mc2.CrudTest.framework.Mediator.csproj" />
-      <ProjectReference Include="..\..\..\Mc2.CrudTest.framework.domain\Mc2.CrudTest.framework.domain.csproj" />
     </ItemGroup>
 
 </Project>

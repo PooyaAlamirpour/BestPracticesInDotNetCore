@@ -27,6 +27,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Application\src\Mc2.CrudTest.Application.Command\Mc2.CrudTest.Application.Command.csproj" />
       <ProjectReference Include="..\Application\src\Mc2.CrudTest.Application.Queries\Mc2.CrudTest.Application.Queries.csproj" />
+      <ProjectReference Include="..\Domain\src\Mc2.CrudTest.Domain.Core\Mc2.CrudTest.Domain.Core.csproj" />
     </ItemGroup>
 
 </Project>
