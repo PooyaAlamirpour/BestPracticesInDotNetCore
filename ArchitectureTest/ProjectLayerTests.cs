@@ -23,7 +23,7 @@ public class ProjectLayerTests
     // presentation solution
     private const string PresentationNamespace = "Mc2.CrudTest.Presentation.Api";
 
-    private void CheckProjectDependencies(Assembly projectAssembly, string[] forbiddenProjects)
+    private void ShouldNotHaveDependenciesOn(Assembly projectAssembly, string[] forbiddenProjects)
     {
         // Act
         var result = Types.InAssembly(projectAssembly)
@@ -38,7 +38,7 @@ public class ProjectLayerTests
     [Fact]
     public void CheckLayersDependencies()
     {
-        CheckProjectDependencies(
+        ShouldNotHaveDependenciesOn(
             typeof(DomainAssembly).Assembly,
             new[]
             {
@@ -49,7 +49,7 @@ public class ProjectLayerTests
             }
         );
         
-        CheckProjectDependencies(
+        ShouldNotHaveDependenciesOn(
             typeof(PersistenceAssembly).Assembly,
             new[]
             {
@@ -59,7 +59,7 @@ public class ProjectLayerTests
             }
         );
         
-        CheckProjectDependencies(
+        ShouldNotHaveDependenciesOn(
             typeof(CommandApplicationAssembly).Assembly,
             new[]
             {
@@ -67,7 +67,7 @@ public class ProjectLayerTests
             }
         );
         
-        CheckProjectDependencies(
+        ShouldNotHaveDependenciesOn(
             typeof(QueryApplicationAssembly).Assembly,
             new[]
             {
