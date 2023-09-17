@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mc2.CrudTest.Infrastructure.Persistence.Repositories;
 
-public class CustomerReadRepository : GenericRepository<CustomerAggregateRoot, CustomerId>, ICustomerReadRepository
+public class CustomerReadReadRepository : GenericReadRepository<CustomerAggregateRoot, CustomerId>, ICustomerReadRepository
 {
-    public CustomerReadRepository(IServiceProvider serviceProvider) : base(serviceProvider)
+    public CustomerReadReadRepository(IServiceProvider serviceProvider) : base(serviceProvider)
     {
     }
     

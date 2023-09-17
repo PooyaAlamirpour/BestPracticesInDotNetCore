@@ -7,14 +7,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Mc2.CrudTest.Infrastructure.Persistence.Repositories;
 
-public class GenericRepository<TAggregate, TId> : IGenericRepository<TAggregate, TId> where TAggregate : Entity<TId> 
+public class GenericReadRepository<TAggregate, TId> : IGenericReadRepository<TAggregate, TId> where TAggregate : Entity<TId> 
     where TId : notnull
 {
-    private readonly ApplicationDbContext? _dbContext;
+    private readonly ApplicationReadDbContext? _dbContext;
 
-    public GenericRepository(IServiceProvider serviceProvider)
+    public GenericReadRepository(IServiceProvider serviceProvider)
     {
-        _dbContext = serviceProvider.GetRequiredService<ApplicationDbContext>();
+        _dbContext = serviceProvider.GetRequiredService<ApplicationReadDbContext>();
     }
 
     private DbSet<TAggregate>? EntitySet

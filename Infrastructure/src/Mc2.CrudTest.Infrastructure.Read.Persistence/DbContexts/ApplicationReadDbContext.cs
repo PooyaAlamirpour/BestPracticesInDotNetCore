@@ -1,4 +1,6 @@
 ﻿using Mc2.CrudTest.framework.DDD.Abstracts;
+using Mc2.CrudTest.Infrastructure.Persistence.Configurations;
+using Mc2.CrudTest.Infrastructure.SharedKernel.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -16,7 +18,7 @@ public class ApplicationDbContext : DbContext
         foreach (var property in entity.GetProperties().Where(p => p.IsPrimaryKey()))
             property.ValueGenerated = ValueGenerated.Never;
         
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+        modelBuilder.ApplyConfiguration(new CustomerConfiguration());
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
