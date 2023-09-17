@@ -4,6 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,8 +25,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\Framework\Mc2.CrudTest.framework.Mediator\Mc2.CrudTest.framework.Mediator.csproj" />
+      <ProjectReference Include="..\..\..\Infrastructure\src\Mc2.CrudTest.Infrastructure.Write.Persistence\Mc2.CrudTest.Infrastructure.Write.Persistence.csproj" />
       <ProjectReference Include="..\..\src\Mc2.CrudTest.Presentation\Mc2.CrudTest.Presentation.Api.csproj" />
     </ItemGroup>
-    
+
 </Project>

@@ -8,11 +8,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="libphonenumber-csharp" Version="8.13.20" />
+      <ProjectReference Include="..\Mc2.CrudTest.Infrastructure.Read.Persistence\Mc2.CrudTest.Infrastructure.Read.Persistence.csproj" />
+      <ProjectReference Include="..\Mc2.CrudTest.Infrastructure.Write.Persistence\Mc2.CrudTest.Infrastructure.Write.Persistence.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\Framework\Mc2.CrudTest.framework.domain\Mc2.CrudTest.framework.domain.csproj" />
+      <Folder Include="Migrations\" />
     </ItemGroup>
 
 </Project>

@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Mc2.CrudTest.Presentation.Server</RootNamespace>
+    <LangVersion>10</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Application\src\Mc2.CrudTest.Application.Command\Mc2.CrudTest.Application.Command.csproj" />
     <ProjectReference Include="..\..\..\Application\src\Mc2.CrudTest.Application.Queries\Mc2.CrudTest.Application.Queries.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\src\Mc2.CrudTest.Infrastructure.Write.Persistence\Mc2.CrudTest.Infrastructure.Write.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

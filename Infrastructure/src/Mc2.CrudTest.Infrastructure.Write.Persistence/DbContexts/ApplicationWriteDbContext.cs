@@ -3,11 +3,11 @@ using Mc2.CrudTest.Infrastructure.SharedKernel.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
+namespace Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
 
-public class ApplicationReadDbContext : DbContext
+public class ApplicationWriteDbContext : DbContext
 {
-    public ApplicationReadDbContext(DbContextOptions<ApplicationReadDbContext> options) : base(options)
+    public ApplicationWriteDbContext(DbContextOptions<ApplicationWriteDbContext> options) : base(options)
     {
     }
     

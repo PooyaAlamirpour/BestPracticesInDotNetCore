@@ -5,6 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Mc2.CrudTest.Infrastructure.Persistence</RootNamespace>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,7 +20,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\..\..\Domain\src\Mc2.CrudTest.Domain.Core\Mc2.CrudTest.Domain.Core.csproj" />
+      <ProjectReference Include="..\Mc2.CrudTest.Infrastructure.SharedKernel.Persistence\Mc2.CrudTest.Infrastructure.SharedKernel.Persistence.csproj" />
     </ItemGroup>
 
 </Project>

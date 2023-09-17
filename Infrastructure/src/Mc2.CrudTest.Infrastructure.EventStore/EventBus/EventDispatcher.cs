@@ -1,7 +1,8 @@
 ﻿using Mc2.CrudTest.framework.Mediator.Abstracts;
+using Mc2.CrudTest.Infrastructure.EventStore.Abstracts;
 using MediatR;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.EventBus;
+namespace Mc2.CrudTest.Infrastructure.EventStore.EventBus;
 
 public class EventDispatcher : IEventDispatcher
 {

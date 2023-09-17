@@ -1,6 +1,4 @@
-﻿using Mc2.CrudTest.framework.Mediator.Abstracts;
-using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
-using Mc2.CrudTest.Infrastructure.Persistence.EventBus;
+﻿using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
 using Mc2.CrudTest.Infrastructure.Persistence.Repositories;
 using Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
 using Microsoft.EntityFrameworkCore;
@@ -11,24 +9,20 @@ namespace Mc2.CrudTest.Infrastructure.Persistence;
 
 public static class DependencyInjection
 {
-    public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static void AddReadInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<ApplicationDbContext>(options =>
+        services.AddDbContext<ApplicationReadDbContext>(options =>
             options.UseMySql(
-                configuration.GetConnectionString("DbConnectionString"),
-                ServerVersion.AutoDetect(configuration.GetConnectionString("DbConnectionString"))
+                configuration.GetConnectionString("ReadDbConnectionString"),
+                ServerVersion.AutoDetect(configuration.GetConnectionString("ReadDbConnectionString"))
             ));
 
-        services.AddTransient<IEventDispatcher, EventDispatcher>();
-        
         services.AddRepositories();
     }
 
     private static void AddRepositories(this IServiceCollection services)
     {
-        services.AddTransient<ICustomerWriteRepository, CustomerWriteRepository>();
-        services.AddTransient<ICustomerReadRepository, CustomerReadRepository>();
-        services.AddTransient(typeof(IEventStoreRepository<,>), typeof(EventStoreRepository<,>));
-        services.AddTransient(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
+        services.AddTransient<ICustomerReadRepository, CustomerReadReadRepository>();
+        services.AddTransient(typeof(IGenericReadRepository<,>), typeof(GenericReadRepository<,>));
     }
 }

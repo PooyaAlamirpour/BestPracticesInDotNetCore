@@ -1,23 +1,26 @@
 ﻿using Mc2.CrudTest.framework.DDD;
 using Mc2.CrudTest.framework.Mediator.Abstracts;
-using Mc2.CrudTest.Infrastructure.Persistence.Entities;
-using Mc2.CrudTest.Infrastructure.Persistence.Projections;
+using Mc2.CrudTest.Infrastructure.EventStore.Abstracts;
+using Mc2.CrudTest.Infrastructure.EventStore.Entities;
+using Mc2.CrudTest.Infrastructure.EventStore.Projections;
+using Mc2.CrudTest.Infrastructure.EventStore.Repositories.Abstracts;
 using Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
+using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository.Abstracts;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.Repositories;
+namespace Mc2.CrudTest.Infrastructure.EventStore.Repositories;
 
 public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<TAggregateRoot, Tkey> 
     where TAggregateRoot : AggregateRoot<Tkey>, new()
     where Tkey : ValueObject<Tkey>
 {
-    private readonly IGenericRepository<EventEntity, Guid> _repository;
+    private readonly IGenericEventRepository<EventEntity, Guid> _eventRepository;
     private readonly IEventDispatcher _eventDispatcher;
 
-    public EventStoreRepository(IGenericRepository<EventEntity, Guid> repository, IEventDispatcher eventDispatcher)
+    public EventStoreRepository(IGenericEventRepository<EventEntity, Guid> eventRepository, IEventDispatcher eventDispatcher)
     {
-        _repository = repository;
+        _eventRepository = eventRepository;
         _eventDispatcher = eventDispatcher;
     }
 
@@ -37,7 +40,7 @@ public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<
 
     public async Task<TAggregateRoot> FetchStreamAsync(Guid id, int? version = null, CancellationToken cancellationToken = default)
     {
-        var query = _repository.QueryableFilter();
+        var query = _eventRepository.QueryableFilter();
         query = query?.Where(x => x.AggregateId == id);
         if (version is not null)
         {
@@ -45,7 +48,7 @@ public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<
         }
 
         var items = await query?.ToListAsync(cancellationToken: cancellationToken)!;
-        var @event = items.MaxBy(x => x.Version);
+        EventEntity? @event = items.MaxBy(x => x.Version);
         
         return new EventProjection<TAggregateRoot, Tkey>().Project(@event?.Payload, @event?.AggregateType!);
     }
@@ -62,14 +65,14 @@ public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<
                 Version = nextVersion,
                 Payload = JsonConvert.SerializeObject(@event)
             };
-            _repository.Add(@entity);
+            _eventRepository.Add(@entity);
         }
         
         return Task.CompletedTask;
     }
     
     private async Task CommitAsync(CancellationToken cancellationToken) =>
-        await _repository.CommitAsync(cancellationToken);
+        await _eventRepository.CommitAsync(cancellationToken);
     
     private void DispatchEvents(IDomainEvent[] events)
     {

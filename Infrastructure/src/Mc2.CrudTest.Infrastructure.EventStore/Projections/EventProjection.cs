@@ -1,8 +1,9 @@
 ﻿using Mc2.CrudTest.Domain.Core.Events;
 using Mc2.CrudTest.framework.DDD;
+using Mc2.CrudTest.framework.Mediator.Abstracts;
 using Newtonsoft.Json;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.Projections;
+namespace Mc2.CrudTest.Infrastructure.EventStore.Projections;
 
 public class EventProjection<TAggregateRoot, Tkey> 
     where TAggregateRoot : AggregateRoot<Tkey>, new()
@@ -29,4 +30,6 @@ public class EventProjection<TAggregateRoot, Tkey>
         };
     }
 
+    public TAggregateRoot Project<TEvent>(string? payload, string aggregateType) where TEvent : IDomainEvent =>
+        ProjectEvent<TEvent>((item, @event) => item.Apply(@event), payload);
 }

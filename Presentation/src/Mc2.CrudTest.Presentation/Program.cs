@@ -1,6 +1,8 @@
 using Mc2.CrudTest.Application.Command;
 using Mc2.CrudTest.Application.Queries;
+using Mc2.CrudTest.Infrastructure.EventStore;
 using Mc2.CrudTest.Infrastructure.Persistence;
+using Mc2.CrudTest.Infrastructure.Write.Persistence;
 using Mc2.CrudTest.Presentation.Server.Middlewares;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
@@ -15,7 +17,9 @@ namespace Mc2.CrudTest.Presentation.Server
             builder.Services.AddPresentation();
             builder.Services.AddCommandPipeline(CommandApplicationAssembly.Assembly);
             builder.Services.AddQueryPipeline(QueryApplicationAssembly.Assembly);
-            builder.Services.AddInfrastructure(builder.Configuration);
+            builder.Services.AddReadInfrastructure(builder.Configuration);
+            builder.Services.AddWriteInfrastructure(builder.Configuration);
+            builder.Services.AddEventStore(builder.Configuration);
 
             builder.Services.AddSwaggerGen();
             

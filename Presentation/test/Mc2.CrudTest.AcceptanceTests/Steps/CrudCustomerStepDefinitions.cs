@@ -1,23 +1,20 @@
-﻿using System.Globalization;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mime;
 using System.Text;
-using System.Text.Json.Serialization;
+using System.Text.Json;
 using FluentAssertions;
 using Mc2.CrudTest.AcceptanceTests.Convertors;
 using Mc2.CrudTest.AcceptanceTests.Extensions;
 using Mc2.CrudTest.AcceptanceTests.Repositories;
 using Mc2.CrudTest.Domain.Core.Customer;
 using Mc2.CrudTest.Domain.Core.Events;
-using Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
+using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository.Abstracts;
 using Mc2.CrudTest.Presentation.Server;
 using Mc2.CrudTest.Presentation.Server.Models;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Xunit;
 using JsonSerializer = System.Text.Json.JsonSerializer;
-using JsonSerializerOptions = System.Text.Json.JsonSerializerOptions;
 
 namespace Mc2.CrudTest.AcceptanceTests.Steps;
 

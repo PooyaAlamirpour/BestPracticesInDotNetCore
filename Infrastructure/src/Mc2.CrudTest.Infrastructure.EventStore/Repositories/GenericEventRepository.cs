@@ -1,20 +1,21 @@
 ﻿using System.Linq.Expressions;
 using Mc2.CrudTest.framework.DDD;
-using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
-using Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
+using Mc2.CrudTest.Infrastructure.EventStore.DbContexts;
+using Mc2.CrudTest.Infrastructure.EventStore.Repositories.Abstracts;
+using Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.Repositories;
+namespace Mc2.CrudTest.Infrastructure.EventStore.Repositories;
 
-public class GenericReadRepository<TAggregate, TId> : IGenericReadRepository<TAggregate, TId> where TAggregate : Entity<TId> 
+public class GenericEventRepository<TAggregate, TId> : IGenericEventRepository<TAggregate, TId> where TAggregate : Entity<TId> 
     where TId : notnull
 {
-    private readonly ApplicationReadDbContext? _dbContext;
+    private readonly ApplicationEventDbContext? _dbContext;
 
-    public GenericReadRepository(IServiceProvider serviceProvider)
+    public GenericEventRepository(IServiceProvider serviceProvider)
     {
-        _dbContext = serviceProvider.GetRequiredService<ApplicationReadDbContext>();
+        _dbContext = serviceProvider.GetRequiredService<ApplicationEventDbContext>();
     }
 
     private DbSet<TAggregate>? EntitySet
@@ -25,7 +26,7 @@ public class GenericReadRepository<TAggregate, TId> : IGenericReadRepository<TAg
             return entitySet;
         }
     }
-
+    
     public bool Any(Expression<Func<TAggregate, bool>> predicate)
     {
         var result = QueryableFilter(predicate)?.Any();
@@ -60,4 +61,26 @@ public class GenericReadRepository<TAggregate, TId> : IGenericReadRepository<TAg
             return entities;
         }
     }
+    
+    public void Add(TAggregate aggregate)
+    {
+        EntitySet?.Add(aggregate);
+    }
+
+    public void Update(TAggregate aggregate)
+    {
+        EntitySet.Entry(aggregate).State = EntityState.Modified;
+    }
+
+    public void Attach<TProperty>(TAggregate aggregateRoot, Expression<Func<TAggregate, TProperty>> expression)
+    {
+        EntitySet.Entry(aggregateRoot).Property(expression).IsModified = true;
+    }
+    
+    public void Delete(TAggregate aggregate)
+    {
+        EntitySet.Remove(aggregate);
+    }
+
+    public async Task CommitAsync(CancellationToken cancellationToken = default) => await _dbContext.SaveChangesAsync(cancellationToken);
 }

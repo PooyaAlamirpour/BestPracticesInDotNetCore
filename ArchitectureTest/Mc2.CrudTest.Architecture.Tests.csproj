@@ -2,11 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,7 +28,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Application\src\Mc2.CrudTest.Application.Command\Mc2.CrudTest.Application.Command.csproj" />
       <ProjectReference Include="..\Application\src\Mc2.CrudTest.Application.Queries\Mc2.CrudTest.Application.Queries.csproj" />
-      <ProjectReference Include="..\Domain\src\Mc2.CrudTest.Domain.Core\Mc2.CrudTest.Domain.Core.csproj" />
+      <ProjectReference Include="..\Infrastructure\src\Mc2.CrudTest.Infrastructure.Write.Persistence\Mc2.CrudTest.Infrastructure.Write.Persistence.csproj" />
     </ItemGroup>
 
 </Project>

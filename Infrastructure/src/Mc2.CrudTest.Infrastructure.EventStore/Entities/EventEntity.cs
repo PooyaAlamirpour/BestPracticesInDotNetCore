@@ -1,7 +1,7 @@
 ﻿using Mc2.CrudTest.framework.DDD;
 using Mc2.CrudTest.framework.DDD.Abstracts;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.Entities;
+namespace Mc2.CrudTest.Infrastructure.EventStore.Entities;
 
 public class EventEntity : Entity<Guid>, IAuditable
 {

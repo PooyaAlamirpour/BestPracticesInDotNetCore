@@ -1,6 +1,9 @@
 ﻿using Mc2.CrudTest.Domain.Core.Customer;
 using Mc2.CrudTest.Domain.Core.Customer.ValueObjects;
 using Mc2.CrudTest.framework.Mediator.Abstracts;
+using Mc2.CrudTest.Infrastructure.EventStore;
+using Mc2.CrudTest.Infrastructure.EventStore.Abstracts;
+using Mc2.CrudTest.Infrastructure.EventStore.Repositories.Abstracts;
 
 namespace Mc2.CrudTest.Application.Command.Customer.Create;
 

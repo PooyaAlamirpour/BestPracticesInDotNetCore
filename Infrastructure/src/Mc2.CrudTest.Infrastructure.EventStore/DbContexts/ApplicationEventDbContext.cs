@@ -1,13 +1,12 @@
 ﻿using Mc2.CrudTest.framework.DDD.Abstracts;
-using Mc2.CrudTest.Infrastructure.SharedKernel.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
+namespace Mc2.CrudTest.Infrastructure.EventStore.DbContexts;
 
-public class ApplicationReadDbContext : DbContext
+public class ApplicationEventDbContext : DbContext
 {
-    public ApplicationReadDbContext(DbContextOptions<ApplicationReadDbContext> options) : base(options)
+    public ApplicationEventDbContext(DbContextOptions<ApplicationEventDbContext> options) : base(options)
     {
     }
     
@@ -17,7 +16,7 @@ public class ApplicationReadDbContext : DbContext
         foreach (var property in entity.GetProperties().Where(p => p.IsPrimaryKey()))
             property.ValueGenerated = ValueGenerated.Never;
         
-        modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationEventDbContext).Assembly);
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

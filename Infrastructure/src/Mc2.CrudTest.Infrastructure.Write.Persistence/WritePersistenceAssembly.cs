@@ -1,8 +1,9 @@
 ﻿using System.Reflection;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence;
+namespace Mc2.CrudTest.Infrastructure.Write.Persistence;
 
-public class ReadPersistenceAssembly
+public class WritePersistenceAssembly
 {
     public static Assembly Assembly => Assembly.GetExecutingAssembly();
+
 }

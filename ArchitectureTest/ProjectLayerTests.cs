@@ -5,6 +5,8 @@ using Mc2.CrudTest.Application.Queries;
 using Mc2.CrudTest.Domain.Core;
 using Mc2.CrudTest.Infrastructure.Persistence;
 using Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
+using Mc2.CrudTest.Infrastructure.Write.Persistence;
+using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository.Abstracts;
 using NetArchTest.Rules;
 
 namespace Mc2.CrudTest.Architecture.Tests;
@@ -51,7 +53,17 @@ public class ProjectLayerTests
         );
         
         ShouldNotHaveDependenciesOn(
-            typeof(PersistenceAssembly).Assembly,
+            typeof(ReadPersistenceAssembly).Assembly,
+            new[]
+            {
+                CommandApplicationNamespace,
+                QueryApplicationNamespace,
+                PresentationNamespace
+            }
+        );
+        
+        ShouldNotHaveDependenciesOn(
+            typeof(WritePersistenceAssembly).Assembly,
             new[]
             {
                 CommandApplicationNamespace,
