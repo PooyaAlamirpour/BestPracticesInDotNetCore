@@ -14,17 +14,17 @@ namespace Mc2.CrudTest.Architecture.Tests;
 public class ProjectLayerTests
 {
     // application solution
-    private const string CommandApplicationNamespace = "Mc2.CrudTest.Application.Command";
-    private const string QueryApplicationNamespace = "Mc2.CrudTest.Application.Queries";
+    private const string CommandApplicationNamespace = "BestPracticeInDotNet.Application.Command";
+    private const string QueryApplicationNamespace = "BestPracticeInDotNet.Application.Queries";
 
     // domain solution
-    private const string DomainNamespace = "Mc2.CrudTest.Domain.Core";
+    private const string DomainNamespace = "BestPracticeInDotNet.Domain.Core";
 
     // infrastructure solution
-    private const string PersistenceNamespace = "Mc2.CrudTest.Infrastructure.Read.Persistence";
+    private const string PersistenceNamespace = "BestPracticeInDotNet.Infrastructure.Read.Persistence";
 
     // presentation solution
-    private const string PresentationNamespace = "Mc2.CrudTest.Presentation.Api";
+    private const string PresentationNamespace = "BestPracticeInDotNet.Presentation.Api";
 
     private void ShouldNotHaveDependenciesOn(Assembly projectAssembly, string[] forbiddenProjects)
     {
