@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Mc2.CrudTest.framework.Mediator\Mc2.CrudTest.framework.Mediator.csproj" />
+      <ProjectReference Include="..\BestPracticeInDotNet.framework.Mediator\BestPracticeInDotNet.framework.Mediator.csproj" />
     </ItemGroup>
 
 </Project>

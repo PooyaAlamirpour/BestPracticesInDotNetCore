@@ -26,10 +26,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Framework\BestPracticeInDotNet.framework.domain\BestPracticeInDotNet.framework.domain.csproj" />
-      <ProjectReference Include="..\..\..\Mc2.CrudTest.framework.domain\Mc2.CrudTest.framework.domain.csproj" />
       <ProjectReference Include="..\..\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
-      <ProjectReference Include="..\Mc2.CrudTest.Domain.Core\Mc2.CrudTest.Domain.Core.csproj" />
-      <ProjectReference Include="..\Mc2.CrudTest.framework.domain\Mc2.CrudTest.framework.domain.csproj" />
     </ItemGroup>
 
 </Project>
