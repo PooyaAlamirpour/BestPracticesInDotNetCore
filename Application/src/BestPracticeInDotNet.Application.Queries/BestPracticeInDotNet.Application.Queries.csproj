@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Read.Persistence\BestPracticeInDotNet.Infrastructure.Read.Persistence.csproj" />
+      <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
     </ItemGroup>
 
 </Project>

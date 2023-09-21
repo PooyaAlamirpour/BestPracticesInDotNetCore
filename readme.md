@@ -39,3 +39,16 @@ Customer {
 ### Storage (Must)
 
 - Store the phone number in a database with minimized space storage (choose `varchar`/`string`, or `ulong` whichever store less space).
+
+### Generating UserSecretId for JWT
+```
+dotnet user-secrets init --project .\Presentation\src\BestPracticesInDotNet.Presentation\
+```
+
+```
+dotnet user-secrets set --project .\Presentation\src\Mc2.CrudTest.Presentation\ "JwtSettings:Secret" "super-secret-key-from-user-secrets"
+```
+
+```
+dotnet user-secrets list --project .\Presentation\src\Mc2.CrudTest.Presentation\
+```

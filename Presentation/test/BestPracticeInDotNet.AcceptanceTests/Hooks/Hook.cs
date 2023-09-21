@@ -1,5 +1,6 @@
 using BoDi;
 using Mc2.CrudTest.AcceptanceTests.Repositories;
+using Mc2.CrudTest.Application.Queries.Repositories;
 using Mc2.CrudTest.framework.Mediator.Abstracts;
 using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
 using Mc2.CrudTest.Infrastructure.Persistence.Repositories;
