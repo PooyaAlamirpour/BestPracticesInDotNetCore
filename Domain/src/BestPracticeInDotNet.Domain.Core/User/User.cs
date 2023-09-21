@@ -1,10 +1,17 @@
-﻿namespace BestPracticeInDotNet.Domain.Core.User;
+﻿using BestPracticeInDotNet.framework.DDD;
+using BestPracticeInDotNet.framework.Mediator.Abstracts;
 
-public class User
+namespace BestPracticeInDotNet.Domain.Core.User;
+
+public class User : AggregateRoot<Guid>
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
     public string Email { get; set; } = null!;
     public string Password { get; set; } = null!;
+    
+    public override void Apply(IDomainEvent @event)
+    {
+        throw new NotImplementedException();
+    }
 }

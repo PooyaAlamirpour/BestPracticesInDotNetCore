@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BestPracticeInDotNet.Infrastructure.Persistence.Repositories;
 
-public class CustomerReadReadRepository : GenericReadRepository<CustomerAggregateRoot, CustomerId>, ICustomerReadRepository
+public class CustomerReadRepository : GenericReadRepository<CustomerAggregateRoot, CustomerId>, ICustomerReadRepository
 {
-    public CustomerReadReadRepository(IServiceProvider serviceProvider) : base(serviceProvider)
+    public CustomerReadRepository(IServiceProvider serviceProvider) : base(serviceProvider)
     {
     }
     

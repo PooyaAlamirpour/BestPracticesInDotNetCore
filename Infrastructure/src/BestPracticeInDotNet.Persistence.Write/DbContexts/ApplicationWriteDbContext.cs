@@ -17,6 +17,7 @@ public class ApplicationWriteDbContext : DbContext
         foreach (var property in entity.GetProperties().Where(p => p.IsPrimaryKey()))
             property.ValueGenerated = ValueGenerated.Never;
         
+        modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new CustomerConfiguration());
     }
     

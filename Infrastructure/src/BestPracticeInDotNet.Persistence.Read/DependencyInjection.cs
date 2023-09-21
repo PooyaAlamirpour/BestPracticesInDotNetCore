@@ -24,7 +24,8 @@ public static class DependencyInjection
 
     private static void AddRepositories(this IServiceCollection services)
     {
-        services.AddTransient<ICustomerReadRepository, CustomerReadReadRepository>();
+        services.AddTransient<IUserReadRepository, UserReadRepository>();
+        services.AddTransient<ICustomerReadRepository, CustomerReadRepository>();
         services.AddTransient(typeof(IGenericReadRepository<,>), typeof(GenericReadRepository<,>));
     }
 }

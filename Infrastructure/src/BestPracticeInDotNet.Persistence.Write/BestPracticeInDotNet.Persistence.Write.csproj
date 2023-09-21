@@ -18,7 +18,6 @@
 
     <ItemGroup>
       <Folder Include="Migrations\" />
-      <Folder Include="Repository\Abstracts\" />
     </ItemGroup>
 
     <ItemGroup>

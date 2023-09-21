@@ -55,7 +55,11 @@ public class CustomerConfiguration : IEntityTypeConfiguration<CustomerAggregateR
         entity.HasIndex(x => x.Email)
             .IsUnique();
         
-        entity.Property(x => x.CreatedAt).HasColumnName("created_at");
-        entity.Property(x => x.ModifiedAt).HasColumnName("modified_at").IsRequired(false);
+        entity.Property(x => x.CreatedAt)
+            .HasColumnName("created_at");
+        
+        entity.Property(x => x.ModifiedAt)
+            .HasColumnName("modified_at")
+            .IsRequired(false);
     }
 }
