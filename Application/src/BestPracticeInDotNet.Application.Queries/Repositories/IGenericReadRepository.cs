@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
+namespace Mc2.CrudTest.Application.Queries.Repositories;
 
 public interface IGenericReadRepository<TEntity, in TId> where TEntity : class where TId : notnull
 {

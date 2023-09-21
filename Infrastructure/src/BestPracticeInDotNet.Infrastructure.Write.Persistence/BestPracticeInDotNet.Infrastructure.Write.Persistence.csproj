@@ -17,16 +17,14 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Command\BestPracticeInDotNet.Application.Command.csproj" />
-        <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
-        <ProjectReference Include="..\..\..\Framework\BestPracticeInDotNet.framework.domain\BestPracticeInDotNet.framework.domain.csproj" />
-        <ProjectReference Include="..\..\..\Framework\BestPracticeInDotNet.framework.Mediator\BestPracticeInDotNet.framework.Mediator.csproj" />
-        <ProjectReference Include="..\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence.csproj" />
+      <Folder Include="Migrations\" />
+      <Folder Include="Repository\Abstracts\" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Migrations\" />
-      <Folder Include="Repository\Abstracts\" />
+      <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Command\BestPracticeInDotNet.Application.Command.csproj" />
+      <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
+      <ProjectReference Include="..\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence.csproj" />
     </ItemGroup>
 
 </Project>

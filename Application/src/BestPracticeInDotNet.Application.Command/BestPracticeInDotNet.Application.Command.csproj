@@ -19,7 +19,6 @@
       <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
       <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Generic\BestPracticeInDotNet.Domain.Generic.csproj" />
       <ProjectReference Include="..\..\..\Framework\BestPracticeInDotNet.framework.Mediator\BestPracticeInDotNet.framework.Mediator.csproj" />
-      <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.EventStore\BestPracticeInDotNet.Infrastructure.EventStore.csproj" />
     </ItemGroup>
 
 </Project>

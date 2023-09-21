@@ -1,11 +1,10 @@
 using BoDi;
 using Mc2.CrudTest.AcceptanceTests.Repositories;
+using Mc2.CrudTest.Application.Command.Repositories;
 using Mc2.CrudTest.Application.Queries.Repositories;
 using Mc2.CrudTest.framework.Mediator.Abstracts;
 using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
 using Mc2.CrudTest.Infrastructure.Persistence.Repositories;
-using Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository.Abstracts;
 using Mc2.CrudTest.Presentation.Server;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;

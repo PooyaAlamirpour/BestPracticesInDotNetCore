@@ -1,13 +1,12 @@
 ﻿using System.Reflection;
 using FluentAssertions;
 using Mc2.CrudTest.Application.Command;
+using Mc2.CrudTest.Application.Command.Repositories;
 using Mc2.CrudTest.Application.Queries;
 using Mc2.CrudTest.Application.Queries.Repositories;
 using Mc2.CrudTest.Domain.Core;
 using Mc2.CrudTest.Infrastructure.Persistence;
-using Mc2.CrudTest.Infrastructure.Persistence.Repositories.Abstracts;
 using Mc2.CrudTest.Infrastructure.Write.Persistence;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository.Abstracts;
 using NetArchTest.Rules;
 
 namespace Mc2.CrudTest.Architecture.Tests;

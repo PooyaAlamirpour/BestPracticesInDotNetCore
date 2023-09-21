@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
+using Mc2.CrudTest.Application.Command.Repositories;
 using Mc2.CrudTest.framework.DDD;
 using Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository.Abstracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 

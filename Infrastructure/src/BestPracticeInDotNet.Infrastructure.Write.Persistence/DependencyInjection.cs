@@ -1,7 +1,6 @@
-﻿using Mc2.CrudTest.framework.Mediator.Abstracts;
+﻿using Mc2.CrudTest.Application.Command.Repositories;
 using Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
 using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository.Abstracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

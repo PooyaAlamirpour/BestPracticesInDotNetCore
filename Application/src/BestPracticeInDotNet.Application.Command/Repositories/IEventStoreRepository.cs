@@ -1,4 +1,4 @@
-﻿namespace Mc2.CrudTest.Infrastructure.EventStore.Repositories.Abstracts;
+﻿namespace Mc2.CrudTest.Application.Command.Repositories;
 
 public interface IEventStoreRepository<TAggregateRoot, TKey> where TAggregateRoot : class
 {

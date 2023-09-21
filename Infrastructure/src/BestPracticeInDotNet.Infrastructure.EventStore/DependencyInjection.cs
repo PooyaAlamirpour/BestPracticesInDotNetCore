@@ -1,8 +1,8 @@
-﻿using Mc2.CrudTest.Infrastructure.EventStore.Abstracts;
+﻿using Mc2.CrudTest.Application.Command.Repositories;
+using Mc2.CrudTest.Infrastructure.EventStore.Abstracts;
 using Mc2.CrudTest.Infrastructure.EventStore.DbContexts;
 using Mc2.CrudTest.Infrastructure.EventStore.EventBus;
 using Mc2.CrudTest.Infrastructure.EventStore.Repositories;
-using Mc2.CrudTest.Infrastructure.EventStore.Repositories.Abstracts;
 using Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

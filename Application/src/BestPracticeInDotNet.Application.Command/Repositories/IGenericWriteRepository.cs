@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Mc2.CrudTest.Infrastructure.Write.Persistence.Repository.Abstracts;
+namespace Mc2.CrudTest.Application.Command.Repositories;
 
 public interface IGenericWriteRepository<TEntity, in TId> where TEntity : class where TId : notnull
 {
