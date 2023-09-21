@@ -51,13 +51,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Applic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Application.Command.UnitTests", "Application\test\BestPracticeInDotNet.Application.Command.UnitTests\BestPracticeInDotNet.Application.Command.UnitTests.csproj", "{F8C70835-9380-4BB0-BB92-E3DCE437455C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Infrastructure.Read.Persistence", "Infrastructure\src\BestPracticeInDotNet.Infrastructure.Read.Persistence\BestPracticeInDotNet.Infrastructure.Read.Persistence.csproj", "{6069DA6D-FE83-44FC-83EE-99BDD731E6E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Persistence.Read", "Infrastructure\src\BestPracticeInDotNet.Persistence.Read\BestPracticeInDotNet.Persistence.Read.csproj", "{6069DA6D-FE83-44FC-83EE-99BDD731E6E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.framework.domain", "Framework\BestPracticeInDotNet.framework.domain\BestPracticeInDotNet.framework.domain.csproj", "{5E60ECC7-8DE3-4AB3-A93D-3722F79E4759}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Architecture.Tests", "ArchitectureTest\BestPracticeInDotNet.Architecture.Tests.csproj", "{2077B734-1D02-4705-8F6A-B7DCF08917F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Infrastructure.Write.Persistence", "Infrastructure\src\BestPracticeInDotNet.Infrastructure.Write.Persistence\BestPracticeInDotNet.Infrastructure.Write.Persistence.csproj", "{6878F57D-7B3F-49EA-8069-E6F919CCC27A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Persistence.Write", "Infrastructure\src\BestPracticeInDotNet.Persistence.Write\BestPracticeInDotNet.Persistence.Write.csproj", "{6878F57D-7B3F-49EA-8069-E6F919CCC27A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence", "Infrastructure\src\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence.csproj", "{F62F7AD0-5180-4BD0-B0EB-95CBE5ACC67F}"
 EndProject

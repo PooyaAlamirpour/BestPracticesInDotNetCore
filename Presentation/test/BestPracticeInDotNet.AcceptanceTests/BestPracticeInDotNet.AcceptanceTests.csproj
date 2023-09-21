@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Write.Persistence\BestPracticeInDotNet.Infrastructure.Write.Persistence.csproj" />
+      <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Persistence.Write\BestPracticeInDotNet.Persistence.Write.csproj" />
       <ProjectReference Include="..\..\src\BestPracticeInDotNet.Presentation\BestPracticeInDotNet.Presentation.Api.csproj" />
     </ItemGroup>
 

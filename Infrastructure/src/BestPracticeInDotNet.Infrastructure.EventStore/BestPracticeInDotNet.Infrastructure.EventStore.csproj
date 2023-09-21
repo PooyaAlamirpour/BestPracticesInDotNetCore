@@ -9,8 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BestPracticeInDotNet.Infrastructure.Read.Persistence\BestPracticeInDotNet.Infrastructure.Read.Persistence.csproj" />
-      <ProjectReference Include="..\BestPracticeInDotNet.Infrastructure.Write.Persistence\BestPracticeInDotNet.Infrastructure.Write.Persistence.csproj" />
+      <ProjectReference Include="..\BestPracticeInDotNet.Persistence.Read\BestPracticeInDotNet.Persistence.Read.csproj" />
+      <ProjectReference Include="..\BestPracticeInDotNet.Persistence.Write\BestPracticeInDotNet.Persistence.Write.csproj" />
     </ItemGroup>
 
     <ItemGroup>

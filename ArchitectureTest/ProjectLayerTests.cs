@@ -21,7 +21,7 @@ public class ProjectLayerTests
     private const string DomainNamespace = "BestPracticeInDotNet.Domain.Core";
 
     // infrastructure solution
-    private const string PersistenceNamespace = "BestPracticeInDotNet.Infrastructure.Read.Persistence";
+    private const string PersistenceNamespace = "BestPracticeInDotNet.Persistence.Read";
 
     // presentation solution
     private const string PresentationNamespace = "BestPracticeInDotNet.Presentation.Api";
