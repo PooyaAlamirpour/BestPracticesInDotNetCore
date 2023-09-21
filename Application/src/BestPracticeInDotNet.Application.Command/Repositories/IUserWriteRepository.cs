@@ -1,6 +1,8 @@
-﻿namespace BestPracticeInDotNet.Application.Command.Repositories;
+﻿using BestPracticeInDotNet.Domain.Core.User;
 
-public interface IUserWriteRepository
+namespace BestPracticeInDotNet.Application.Command.Repositories;
+
+public interface IUserWriteRepository : IGenericWriteRepository<User, Guid>
 {
     
 }

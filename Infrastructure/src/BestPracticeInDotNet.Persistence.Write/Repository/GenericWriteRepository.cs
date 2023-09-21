@@ -29,6 +29,7 @@ public class GenericWriteRepository<TAggregate, TId> : IGenericWriteRepository<T
     public void Add(TAggregate aggregate)
     {
         EntitySet?.Add(aggregate);
+        _dbContext?.SaveChanges();
     }
 
     public void Update(TAggregate aggregate)

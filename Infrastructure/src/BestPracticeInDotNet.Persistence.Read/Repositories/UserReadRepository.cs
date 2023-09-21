@@ -8,4 +8,10 @@ public class UserReadRepository : GenericReadRepository<User, Guid>, IUserReadRe
     public UserReadRepository(IServiceProvider serviceProvider) : base(serviceProvider)
     {
     }
+
+    public async Task<User?> GetByEmailAsync(string email)
+    {
+        return QueryableFilter(x => x.Email == email)?
+            .FirstOrDefault();
+    }
 }
