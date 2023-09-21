@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Mc2.CrudTest.Presentation.Server</RootNamespace>
     <LangVersion>10</LangVersion>
   </PropertyGroup>

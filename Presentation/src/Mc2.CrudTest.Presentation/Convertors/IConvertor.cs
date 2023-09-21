@@ -3,7 +3,6 @@ using Mc2.CrudTest.Application.Command.Customer.Update;
 using Mc2.CrudTest.Application.Queries.Customer.Get;
 using Mc2.CrudTest.Domain.Core.Customer;
 using Mc2.CrudTest.Presentation.Server.Models;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Mc2.CrudTest.Presentation.Server.Convertors;
 

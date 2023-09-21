@@ -2,6 +2,7 @@
 using Mc2.CrudTest.Presentation.Server.Middlewares;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Mc2.CrudTest.Presentation.Server;
 

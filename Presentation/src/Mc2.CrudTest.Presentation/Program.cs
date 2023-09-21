@@ -1,10 +1,14 @@
+using System.Linq;
 using Mc2.CrudTest.Application.Command;
 using Mc2.CrudTest.Application.Queries;
 using Mc2.CrudTest.Infrastructure.EventStore;
 using Mc2.CrudTest.Infrastructure.Persistence;
 using Mc2.CrudTest.Infrastructure.Write.Persistence;
 using Mc2.CrudTest.Presentation.Server.Middlewares;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace Mc2.CrudTest.Presentation.Server
 {
@@ -24,7 +28,7 @@ namespace Mc2.CrudTest.Presentation.Server
             builder.Services.AddSwaggerGen();
             
             var app = builder.Build();
-
+            
             app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             // Configure the HTTP request pipeline.
