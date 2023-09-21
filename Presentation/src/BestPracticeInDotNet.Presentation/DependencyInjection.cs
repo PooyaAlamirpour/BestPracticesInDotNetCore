@@ -1,4 +1,5 @@
 ﻿using BestPracticeInDotNet.Presentation.Server.Convertors;
+using BestPracticeInDotNet.Presentation.Server.Filters;
 using BestPracticeInDotNet.Presentation.Server.Middlewares;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
@@ -9,8 +10,8 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddPresentation(this IServiceCollection services)
     {
-        services.AddScoped<ExceptionHandlingMiddleware>();
-        services.AddControllersWithViews();
+        // services.AddScoped<ExceptionHandlingMiddleware>();
+        services.AddControllers(x => x.Filters.Add<ExceptionHandlingFilterAttribute>());
         services.AddRazorPages();
         
         services.AddVersionedApiExplorer(options =>
