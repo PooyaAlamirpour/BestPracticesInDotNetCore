@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
 using BestPracticeInDotNet.Application.Services.DateTimeProvider;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 namespace BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
@@ -10,16 +11,17 @@ namespace BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
 public class JwtTokenGenerator : IJwtTokenGenerator
 {
     private readonly IDateTimeProvider _dateTimeProvider;
-
-    public JwtTokenGenerator(IDateTimeProvider dateTimeProvider)
+    private readonly JwtSettings _jwtSettings;
+    public JwtTokenGenerator(IDateTimeProvider dateTimeProvider, IOptionsMonitor<JwtSettings> options)
     {
         _dateTimeProvider = dateTimeProvider;
+        _jwtSettings = options.CurrentValue;
     }
 
     public string GenerateToken(Guid userId, string firstName, string lastName)
     {
         var signingCredentials = new SigningCredentials(
-            new SymmetricSecurityKey(Encoding.UTF8.GetBytes("super-secret-keysuper-secret-key")),
+            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret)),
             SecurityAlgorithms.HmacSha256);
         
         var claims = new[]
@@ -31,8 +33,9 @@ public class JwtTokenGenerator : IJwtTokenGenerator
         };
 
         var securityToken = new JwtSecurityToken(
-            issuer: "Pooya.Alamirpour",
-            expires: _dateTimeProvider.Now.AddDays(1).Date,
+            issuer: _jwtSettings.Issuer,
+            audience: _jwtSettings.Audience,
+            expires: _dateTimeProvider.Now.AddMinutes(_jwtSettings.ExpiryMinutes).Date,
             claims: claims,
             signingCredentials: signingCredentials);
 

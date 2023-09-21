@@ -24,7 +24,7 @@ namespace Mc2.CrudTest.Presentation.Server
                     .AddWriteInfrastructure(builder.Configuration)
                     .AddEventStore(builder.Configuration)
                     .AddAuthenticationService()
-                    .AddJwtTokenGenerator();
+                    .AddJwtTokenGenerator(builder.Configuration);
 
                 builder.Services.AddSwaggerGen();
             }
