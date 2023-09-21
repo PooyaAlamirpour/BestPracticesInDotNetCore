@@ -23,9 +23,9 @@ public class ExceptionHandlingMiddleware : IMiddleware
 
         var result = JsonConvert.SerializeObject(new
         {
-            message = exception.Message,
-            isError = true,
-            detail = exception.StackTrace
+            Message = exception.Message,
+            HasError = true,
+            Detail = exception.StackTrace
         });
 
         await context.Response.WriteAsync(result);
