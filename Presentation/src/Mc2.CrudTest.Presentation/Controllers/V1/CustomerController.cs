@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Mc2.CrudTest.Application.Command.Customer.Create;
+﻿using Mc2.CrudTest.Application.Command.Customer.Create;
 using Mc2.CrudTest.Application.Command.Customer.Delete;
 using Mc2.CrudTest.Application.Command.Customer.Update;
 using Mc2.CrudTest.Application.Queries.Customer.Get;

@@ -4,10 +4,7 @@ using Mc2.CrudTest.Infrastructure.EventStore;
 using Mc2.CrudTest.Infrastructure.Persistence;
 using Mc2.CrudTest.Infrastructure.Write.Persistence;
 using Mc2.CrudTest.Presentation.Server.Middlewares;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace Mc2.CrudTest.Presentation.Server
 {

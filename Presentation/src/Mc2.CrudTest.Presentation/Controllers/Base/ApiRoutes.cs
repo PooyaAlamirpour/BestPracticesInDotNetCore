@@ -2,6 +2,12 @@
 
 public static partial class ApiRoutes
 {
+    public static class Authentication
+    {
+        public const string Register = "register";
+        public const string Login = "login";
+    }
+    
     public static class Customer
     {
         public const string Get = "customer";

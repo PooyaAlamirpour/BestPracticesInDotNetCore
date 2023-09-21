@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Mc2.CrudTest.Presentation.Server</RootNamespace>
     <LangVersion>10</LangVersion>
   </PropertyGroup>
@@ -20,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Command\BestPracticeInDotNet.Application.Command.csproj" />
     <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Queries\BestPracticeInDotNet.Application.Queries.csproj" />
+    <ProjectReference Include="..\..\..\BestPracticeInDotNet.Presentation.Contracts\BestPracticeInDotNet.Presentation.Contracts.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Write.Persistence\BestPracticeInDotNet.Infrastructure.Write.Persistence.csproj" />
   </ItemGroup>
 

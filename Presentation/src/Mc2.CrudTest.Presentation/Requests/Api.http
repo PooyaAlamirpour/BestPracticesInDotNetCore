@@ -1,0 +1,19 @@
+﻿### Register a new user
+POST {{host}}/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "password": "string"
+}
+
+### Login user
+POST {{host}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "string",
+  "password": "string"
+}
