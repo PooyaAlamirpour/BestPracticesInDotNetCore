@@ -2,12 +2,20 @@
 using System.Security.Claims;
 using System.Text;
 using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
+using BestPracticeInDotNet.Application.Services.DatetimeProvider;
 using Microsoft.IdentityModel.Tokens;
 
-namespace BestPracticeInDotNet.Infrastructure.Authentication;
+namespace BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
 
 public class JwtTokenGenerator : IJwtTokenGenerator
 {
+    private readonly IDateTimeProvider _dateTimeProvider;
+
+    public JwtTokenGenerator(IDateTimeProvider dateTimeProvider)
+    {
+        _dateTimeProvider = dateTimeProvider;
+    }
+
     public string GenerateToken(Guid userId, string firstName, string lastName)
     {
         var signingCredentials = new SigningCredentials(
@@ -24,7 +32,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
 
         var securityToken = new JwtSecurityToken(
             issuer: "Pooya.Alamirpour",
-            expires: DateTime.Now.AddDays(1),
+            expires: _dateTimeProvider.Now.AddDays(1).Date,
             claims: claims,
             signingCredentials: signingCredentials);
 

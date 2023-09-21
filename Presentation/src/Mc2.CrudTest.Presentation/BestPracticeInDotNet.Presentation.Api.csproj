@@ -21,7 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Command\BestPracticeInDotNet.Application.Command.csproj" />
     <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Queries\BestPracticeInDotNet.Application.Queries.csproj" />
-    <ProjectReference Include="..\..\..\BestPracticeInDotNet.Infrastructure.Authentication\BestPracticeInDotNet.Infrastructure.Authentication.csproj" />
+    <ProjectReference Include="..\..\..\BestPracticeInDotNet.Infrastructure.Services\BestPracticeInDotNet.Infrastructure.Services.csproj" />
     <ProjectReference Include="..\..\..\BestPracticeInDotNet.Presentation.Contracts\BestPracticeInDotNet.Presentation.Contracts.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Write.Persistence\BestPracticeInDotNet.Infrastructure.Write.Persistence.csproj" />
   </ItemGroup>

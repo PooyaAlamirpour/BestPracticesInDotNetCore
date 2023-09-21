@@ -69,7 +69,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Presen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Application.Services", "BestPracticeInDotNet.Application.Services\BestPracticeInDotNet.Application.Services.csproj", "{710B580C-61F7-4EDE-AE97-47B94B870E94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Infrastructure.Authentication", "BestPracticeInDotNet.Infrastructure.Authentication\BestPracticeInDotNet.Infrastructure.Authentication.csproj", "{27CF1923-505C-49BA-92EA-C1FCEFF5E8B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Infrastructure.Services", "BestPracticeInDotNet.Infrastructure.Services\BestPracticeInDotNet.Infrastructure.Services.csproj", "{27CF1923-505C-49BA-92EA-C1FCEFF5E8B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
