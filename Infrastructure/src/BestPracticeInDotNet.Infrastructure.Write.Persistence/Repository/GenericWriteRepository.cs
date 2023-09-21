@@ -1,11 +1,11 @@
 ﻿using System.Linq.Expressions;
-using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.framework.DDD;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
+using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.framework.DDD;
+using BestPracticeInDotNet.Infrastructure.Write.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Infrastructure.Write.Persistence.Repository;
+namespace BestPracticeInDotNet.Infrastructure.Write.Persistence.Repository;
 
 public class GenericWriteRepository<TAggregate, TId> : IGenericWriteRepository<TAggregate, TId> where TAggregate : Entity<TId> 
     where TId : notnull

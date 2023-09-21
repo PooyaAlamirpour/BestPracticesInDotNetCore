@@ -1,10 +1,9 @@
-﻿using Mc2.CrudTest.Presentation.Server.Convertors;
-using Mc2.CrudTest.Presentation.Server.Middlewares;
+﻿using BestPracticeInDotNet.Presentation.Server.Convertors;
+using BestPracticeInDotNet.Presentation.Server.Middlewares;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Presentation.Server;
+namespace BestPracticeInDotNet.Presentation.Server;
 
 public static class DependencyInjection
 {

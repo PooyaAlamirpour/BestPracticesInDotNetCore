@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Mc2.CrudTest.AcceptanceTests.Convertors;
+namespace BestPracticeInDotNet.AcceptanceTests.Convertors;
 
 public class DateOnlyJsonConverter : JsonConverter<DateOnly>
 {

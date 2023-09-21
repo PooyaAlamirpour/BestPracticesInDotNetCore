@@ -1,11 +1,11 @@
-﻿using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.Repository;
+﻿using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.Infrastructure.Write.Persistence.DbContexts;
+using BestPracticeInDotNet.Infrastructure.Write.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Infrastructure.Write.Persistence;
+namespace BestPracticeInDotNet.Infrastructure.Write.Persistence;
 
 public static class DependencyInjection
 {

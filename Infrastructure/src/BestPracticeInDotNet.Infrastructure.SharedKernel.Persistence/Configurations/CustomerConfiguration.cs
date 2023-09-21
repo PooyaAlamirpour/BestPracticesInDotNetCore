@@ -1,9 +1,9 @@
-﻿using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.Domain.Core.Customer.ValueObjects;
+﻿using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Mc2.CrudTest.Infrastructure.SharedKernel.Persistence.Configurations;
+namespace BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence.Configurations;
 
 public class CustomerConfiguration : IEntityTypeConfiguration<CustomerAggregateRoot>
 {

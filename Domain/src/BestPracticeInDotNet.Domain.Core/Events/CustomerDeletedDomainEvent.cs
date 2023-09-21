@@ -1,5 +1,5 @@
-﻿using Mc2.CrudTest.framework.Mediator.Abstracts;
+﻿using BestPracticeInDotNet.framework.Mediator.Abstracts;
 
-namespace Mc2.CrudTest.Domain.Core.Events;
+namespace BestPracticeInDotNet.Domain.Core.Events;
 
 public record CustomerDeletedDomainEvent(Guid CustomerId) : IDomainEvent;

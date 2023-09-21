@@ -1,14 +1,14 @@
+using BestPracticeInDotNet.Application.Command;
+using BestPracticeInDotNet.Application.Queries;
 using BestPracticeInDotNet.Application.Services;
 using BestPracticeInDotNet.Infrastructure.Authentication;
-using Mc2.CrudTest.Application.Command;
-using Mc2.CrudTest.Application.Queries;
-using Mc2.CrudTest.Infrastructure.EventStore;
-using Mc2.CrudTest.Infrastructure.Persistence;
-using Mc2.CrudTest.Infrastructure.Write.Persistence;
-using Mc2.CrudTest.Presentation.Server.Middlewares;
+using BestPracticeInDotNet.Infrastructure.Write.Persistence;
+using BestPracticeInDotNet.Presentation.Server.Middlewares;
+using BestPracticeInDotNet.Infrastructure.EventStore;
+using BestPracticeInDotNet.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
-namespace Mc2.CrudTest.Presentation.Server
+namespace BestPracticeInDotNet.Presentation.Server
 {
     public class Program
     {

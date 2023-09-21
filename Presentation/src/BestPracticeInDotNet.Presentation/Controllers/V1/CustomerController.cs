@@ -1,15 +1,15 @@
-﻿using Mc2.CrudTest.Application.Command.Customer.Create;
-using Mc2.CrudTest.Application.Command.Customer.Delete;
-using Mc2.CrudTest.Application.Command.Customer.Update;
-using Mc2.CrudTest.Application.Queries.Customer.Get;
-using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.Presentation.Server.Controllers.Base;
-using Mc2.CrudTest.Presentation.Server.Convertors;
-using Mc2.CrudTest.Presentation.Server.Models;
+﻿using BestPracticeInDotNet.Application.Command.Customer.Create;
+using BestPracticeInDotNet.Application.Command.Customer.Delete;
+using BestPracticeInDotNet.Application.Command.Customer.Update;
+using BestPracticeInDotNet.Application.Queries.Customer.Get;
+using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
+using BestPracticeInDotNet.Presentation.Server.Convertors;
+using BestPracticeInDotNet.Presentation.Server.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Mc2.CrudTest.Presentation.Server.Controllers.V1;
+namespace BestPracticeInDotNet.Presentation.Server.Controllers.V1;
 
 [ApiVersion("1.0")]
 public class CustomerController : ApiBase

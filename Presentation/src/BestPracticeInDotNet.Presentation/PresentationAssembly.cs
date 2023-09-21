@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Mc2.CrudTest.Presentation.Server;
+namespace BestPracticeInDotNet.Presentation.Server;
 
 public class PresentationAssembly
 {

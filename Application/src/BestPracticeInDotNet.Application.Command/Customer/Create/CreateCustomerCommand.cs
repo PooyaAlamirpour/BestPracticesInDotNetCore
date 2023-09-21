@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Mc2.CrudTest.Application.Command.Customer.Create;
+namespace BestPracticeInDotNet.Application.Command.Customer.Create;
 
 public record CreateCustomerCommand(
     string Firstname,

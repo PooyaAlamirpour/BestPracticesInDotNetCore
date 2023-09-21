@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Mc2.CrudTest.Infrastructure.Write.Persistence.Migrations
+namespace BestPracticeInDotNet.Infrastructure.Write.Persistence.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration

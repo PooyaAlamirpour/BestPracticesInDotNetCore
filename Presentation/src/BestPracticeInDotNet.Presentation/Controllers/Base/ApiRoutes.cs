@@ -1,4 +1,4 @@
-﻿namespace Mc2.CrudTest.Presentation.Server.Controllers.Base;
+﻿namespace BestPracticeInDotNet.Presentation.Server.Controllers.Base;
 
 public static partial class ApiRoutes
 {

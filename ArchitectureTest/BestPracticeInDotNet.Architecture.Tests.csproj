@@ -8,7 +8,7 @@
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
         <LangVersion>10</LangVersion>
-        <RootNamespace>Mc2.CrudTest.Architecture.Tests</RootNamespace>
+        <RootNamespace>BestPracticeInDotNet.Architecture.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

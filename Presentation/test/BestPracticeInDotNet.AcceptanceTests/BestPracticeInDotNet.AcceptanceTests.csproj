@@ -5,7 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>10</LangVersion>
-        <RootNamespace>Mc2.CrudTest.AcceptanceTests</RootNamespace>
+        <RootNamespace>BestPracticeInDotNet.AcceptanceTests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -31,7 +31,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Write.Persistence\BestPracticeInDotNet.Infrastructure.Write.Persistence.csproj" />
-      <ProjectReference Include="..\..\src\Mc2.CrudTest.Presentation\BestPracticeInDotNet.Presentation.Api.csproj" />
+      <ProjectReference Include="..\..\src\BestPracticeInDotNet.Presentation\BestPracticeInDotNet.Presentation.Api.csproj" />
     </ItemGroup>
 
 </Project>

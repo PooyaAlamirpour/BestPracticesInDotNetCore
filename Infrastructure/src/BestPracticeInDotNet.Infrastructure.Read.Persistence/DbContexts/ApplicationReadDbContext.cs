@@ -1,9 +1,9 @@
-﻿using Mc2.CrudTest.framework.DDD.Abstracts;
-using Mc2.CrudTest.Infrastructure.SharedKernel.Persistence.Configurations;
+﻿using BestPracticeInDotNet.framework.DDD.Abstracts;
+using BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
+namespace BestPracticeInDotNet.Infrastructure.Persistence.DbContexts;
 
 public class ApplicationReadDbContext : DbContext
 {

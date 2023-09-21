@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
-using Mc2.CrudTest.Domain.Generic.Errors;
-using Mc2.CrudTest.framework.Mediator.Extensions;
+using BestPracticeInDotNet.Domain.Generic.Errors;
+using BestPracticeInDotNet.framework.Mediator.Extensions;
 
-namespace Mc2.CrudTest.Application.Command.Customer.Delete;
+namespace BestPracticeInDotNet.Application.Command.Customer.Delete;
 
 public class DeleteCustomerCommandValidator : AbstractValidator<DeleteCustomerCommand>
 {

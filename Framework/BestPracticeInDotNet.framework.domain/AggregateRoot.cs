@@ -1,7 +1,7 @@
-﻿using Mc2.CrudTest.framework.DDD.Abstracts;
-using Mc2.CrudTest.framework.Mediator.Abstracts;
+﻿using BestPracticeInDotNet.framework.DDD.Abstracts;
+using BestPracticeInDotNet.framework.Mediator.Abstracts;
 
-namespace Mc2.CrudTest.framework.DDD;
+namespace BestPracticeInDotNet.framework.DDD;
 
 public abstract class AggregateRoot<TKey> : Entity<TKey>,  IAggregateRoot<TKey>, IAuditable
 {

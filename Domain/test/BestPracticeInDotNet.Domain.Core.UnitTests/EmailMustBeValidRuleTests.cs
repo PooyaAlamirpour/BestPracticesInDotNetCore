@@ -1,8 +1,8 @@
 using FluentAssertions;
-using Mc2.CrudTest.Domain.Core.Customer.Rules;
-using Mc2.CrudTest.framework.DDD.Abstracts;
+using BestPracticeInDotNet.Domain.Core.Customer.Rules;
+using BestPracticeInDotNet.framework.DDD.Abstracts;
 
-namespace Mc2.CrudTest.Domain.Core.Tests;
+namespace BestPracticeInDotNet.Domain.Core.Tests;
 
 // [ClassName]Tests
 public class EmailMustBeValidRuleTests

@@ -1,12 +1,11 @@
 ﻿using System.Linq.Expressions;
-using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.framework.DDD;
-using Mc2.CrudTest.Infrastructure.EventStore.DbContexts;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
+using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.framework.DDD;
+using BestPracticeInDotNet.Infrastructure.EventStore.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Infrastructure.EventStore.Repositories;
+namespace BestPracticeInDotNet.Infrastructure.EventStore.Repositories;
 
 public class GenericEventRepository<TAggregate, TId> : IGenericEventRepository<TAggregate, TId> where TAggregate : Entity<TId> 
     where TId : notnull

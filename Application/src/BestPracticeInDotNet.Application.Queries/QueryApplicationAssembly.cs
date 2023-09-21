@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Mc2.CrudTest.Application.Queries;
+namespace BestPracticeInDotNet.Application.Queries;
 
 public class QueryApplicationAssembly
 {

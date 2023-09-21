@@ -1,10 +1,10 @@
-﻿using Mc2.CrudTest.Application.Command.Customer.Create;
-using Mc2.CrudTest.Application.Command.Customer.Update;
-using Mc2.CrudTest.Application.Queries.Customer.Get;
-using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.Presentation.Server.Models;
+﻿using BestPracticeInDotNet.Application.Command.Customer.Create;
+using BestPracticeInDotNet.Application.Command.Customer.Update;
+using BestPracticeInDotNet.Application.Queries.Customer.Get;
+using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Presentation.Server.Models;
 
-namespace Mc2.CrudTest.Presentation.Server.Convertors;
+namespace BestPracticeInDotNet.Presentation.Server.Convertors;
 
 public class Convertor : IConvertor
 {

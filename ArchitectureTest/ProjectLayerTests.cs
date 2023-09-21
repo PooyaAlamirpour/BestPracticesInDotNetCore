@@ -1,15 +1,15 @@
 ﻿using System.Reflection;
+using BestPracticeInDotNet.Application.Command;
+using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.Application.Queries;
+using BestPracticeInDotNet.Application.Queries.Repositories;
+using BestPracticeInDotNet.Domain.Core;
 using FluentAssertions;
-using Mc2.CrudTest.Application.Command;
-using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.Application.Queries;
-using Mc2.CrudTest.Application.Queries.Repositories;
-using Mc2.CrudTest.Domain.Core;
-using Mc2.CrudTest.Infrastructure.Persistence;
-using Mc2.CrudTest.Infrastructure.Write.Persistence;
+using BestPracticeInDotNet.Infrastructure.Persistence;
+using BestPracticeInDotNet.Infrastructure.Write.Persistence;
 using NetArchTest.Rules;
 
-namespace Mc2.CrudTest.Architecture.Tests;
+namespace BestPracticeInDotNet.Architecture.Tests;
 
 public class ProjectLayerTests
 {

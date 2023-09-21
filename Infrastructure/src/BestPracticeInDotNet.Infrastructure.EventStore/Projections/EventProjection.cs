@@ -1,9 +1,9 @@
-﻿using Mc2.CrudTest.Domain.Core.Events;
-using Mc2.CrudTest.framework.DDD;
-using Mc2.CrudTest.framework.Mediator.Abstracts;
+﻿using BestPracticeInDotNet.Domain.Core.Events;
+using BestPracticeInDotNet.framework.DDD;
+using BestPracticeInDotNet.framework.Mediator.Abstracts;
 using Newtonsoft.Json;
 
-namespace Mc2.CrudTest.Infrastructure.EventStore.Projections;
+namespace BestPracticeInDotNet.Infrastructure.EventStore.Projections;
 
 public class EventProjection<TAggregateRoot, Tkey> 
     where TAggregateRoot : AggregateRoot<Tkey>, new()

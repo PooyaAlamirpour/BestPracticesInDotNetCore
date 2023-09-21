@@ -1,7 +1,7 @@
-﻿using Mc2.CrudTest.Domain.Core.Customer;
+﻿using BestPracticeInDotNet.Domain.Core.Customer;
 using MediatR;
 
-namespace Mc2.CrudTest.Application.Queries.Customer.Get;
+namespace BestPracticeInDotNet.Application.Queries.Customer.Get;
 
 public record GetCustomerQuery(
     string Firstname,

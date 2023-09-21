@@ -1,6 +1,6 @@
-﻿using Mc2.CrudTest.framework.DDD;
+﻿using BestPracticeInDotNet.framework.DDD;
 
-namespace Mc2.CrudTest.Domain.Core.Customer.ValueObjects;
+namespace BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 
 public class CustomerId : ValueObject<CustomerId>
 {

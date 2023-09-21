@@ -1,4 +1,4 @@
-﻿namespace Mc2.CrudTest.Domain.Core.Exceptions;
+﻿namespace BestPracticeInDotNet.Domain.Core.Exceptions;
 
 public class CustomerNotFoundException : Exception
 {

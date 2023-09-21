@@ -1,4 +1,4 @@
-﻿namespace Mc2.CrudTest.AcceptanceTests.Repositories;
+﻿namespace BestPracticeInDotNet.AcceptanceTests.Repositories;
 
 public class JsonFilesRepository
 {

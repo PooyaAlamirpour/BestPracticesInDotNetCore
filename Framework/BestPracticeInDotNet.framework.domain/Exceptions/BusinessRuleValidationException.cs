@@ -1,6 +1,6 @@
-﻿using Mc2.CrudTest.framework.DDD.Abstracts;
+﻿using BestPracticeInDotNet.framework.DDD.Abstracts;
 
-namespace Mc2.CrudTest.framework.DDD.Exceptions;
+namespace BestPracticeInDotNet.framework.DDD.Exceptions;
 
 public class BusinessRuleValidationException : Exception
 {

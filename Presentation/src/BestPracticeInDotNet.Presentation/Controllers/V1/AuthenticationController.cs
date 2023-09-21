@@ -1,10 +1,9 @@
-﻿using BestPracticeInDotNet.Application.Services.Authentication;
-using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
+﻿using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
 using BestPracticeInDotNet.Presentation.Contracts.Authentication;
-using Mc2.CrudTest.Presentation.Server.Controllers.Base;
+using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Mc2.CrudTest.Presentation.Server.Controllers.V1;
+namespace BestPracticeInDotNet.Presentation.Server.Controllers.V1;
 
 [ApiController]
 [Route("auth")]

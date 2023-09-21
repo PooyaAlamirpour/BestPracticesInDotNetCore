@@ -1,8 +1,8 @@
-﻿using Mc2.CrudTest.Infrastructure.EventStore.Entities;
+﻿using BestPracticeInDotNet.Infrastructure.EventStore.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Mc2.CrudTest.Infrastructure.EventStore.Configurations;
+namespace BestPracticeInDotNet.Infrastructure.EventStore.Configurations;
 
 public class EventConfiguration : IEntityTypeConfiguration<EventEntity>
 {

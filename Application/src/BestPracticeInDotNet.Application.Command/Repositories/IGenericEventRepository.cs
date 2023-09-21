@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Mc2.CrudTest.Application.Command.Repositories;
+namespace BestPracticeInDotNet.Application.Command.Repositories;
 
 public interface IGenericEventRepository<TEntity, in TId> where TEntity : class where TId : notnull
 {

@@ -1,7 +1,7 @@
-﻿using Mc2.CrudTest.framework.DDD.Abstracts;
-using Mc2.CrudTest.framework.DDD.Exceptions;
+﻿using BestPracticeInDotNet.framework.DDD.Abstracts;
+using BestPracticeInDotNet.framework.DDD.Exceptions;
 
-namespace Mc2.CrudTest.framework.DDD.Logics;
+namespace BestPracticeInDotNet.framework.DDD.Logics;
 
 public abstract class GenericLogic
 {

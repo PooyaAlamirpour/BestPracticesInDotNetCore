@@ -1,7 +1,7 @@
 ﻿using ErrorOr;
 using FluentValidation;
 
-namespace Mc2.CrudTest.framework.Mediator.Extensions;
+namespace BestPracticeInDotNet.framework.Mediator.Extensions;
 
 public static class FluentValidationExtensions
 {

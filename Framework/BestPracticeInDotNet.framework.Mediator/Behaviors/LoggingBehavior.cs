@@ -3,7 +3,7 @@ using ErrorOr;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace Mc2.CrudTest.framework.Mediator.Behaviors;
+namespace BestPracticeInDotNet.framework.Mediator.Behaviors;
 
 public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>

@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
-        <RootNamespace>Mc2.CrudTest.Infrastructure.EventStore</RootNamespace>
+        <RootNamespace>BestPracticeInDotNet.Infrastructure.EventStore</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

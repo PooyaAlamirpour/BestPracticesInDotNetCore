@@ -1,13 +1,13 @@
-﻿using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.framework.DDD;
-using Mc2.CrudTest.framework.Mediator.Abstracts;
-using Mc2.CrudTest.Infrastructure.EventStore.Abstracts;
-using Mc2.CrudTest.Infrastructure.EventStore.Entities;
-using Mc2.CrudTest.Infrastructure.EventStore.Projections;
+﻿using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.framework.DDD;
+using BestPracticeInDotNet.framework.Mediator.Abstracts;
+using BestPracticeInDotNet.Infrastructure.EventStore.Abstracts;
+using BestPracticeInDotNet.Infrastructure.EventStore.Entities;
+using BestPracticeInDotNet.Infrastructure.EventStore.Projections;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
-namespace Mc2.CrudTest.Infrastructure.EventStore.Repositories;
+namespace BestPracticeInDotNet.Infrastructure.EventStore.Repositories;
 
 public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<TAggregateRoot, Tkey> 
     where TAggregateRoot : AggregateRoot<Tkey>, new()

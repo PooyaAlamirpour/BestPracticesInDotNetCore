@@ -4,7 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Mc2.CrudTest.framework.DDD</RootNamespace>
+        <RootNamespace>BestPracticeInDotNet.framework.DDD</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

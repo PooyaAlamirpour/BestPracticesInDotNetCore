@@ -9,14 +9,10 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
+
 #pragma warning disable
-namespace Mc2.CrudTest.AcceptanceTests.Features
+namespace BestPracticeInDotNet.AcceptanceTests.Features
 {
-    using TechTalk.SpecFlow;
-    using System;
-    using System.Linq;
-    
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public partial class CustomerManagerFeature : object, Xunit.IClassFixture<CustomerManagerFeature.FixtureData>, System.IDisposable
@@ -31,7 +27,7 @@ namespace Mc2.CrudTest.AcceptanceTests.Features
 #line 1 "CustomerManager.feature"
 #line hidden
         
-        public CustomerManagerFeature(CustomerManagerFeature.FixtureData fixtureData, Mc2_CrudTest_AcceptanceTests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CustomerManagerFeature(CustomerManagerFeature.FixtureData fixtureData, BestPracticeInDotNet_AcceptanceTests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();

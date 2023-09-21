@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
+using BestPracticeInDotNet.Application.Queries.Customer.Get;
+using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.framework.Mediator.Behaviors;
 using FluentValidation;
-using Mc2.CrudTest.Application.Queries.Customer.Get;
-using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.framework.Mediator.Behaviors;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Application.Queries;
+namespace BestPracticeInDotNet.Application.Queries;
 
 public static class DependencyInjection
 {

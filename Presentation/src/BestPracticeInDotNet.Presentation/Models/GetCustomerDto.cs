@@ -1,4 +1,4 @@
-﻿namespace Mc2.CrudTest.Presentation.Server.Models;
+﻿namespace BestPracticeInDotNet.Presentation.Server.Models;
 
 public record GetCustomerDto(
     string? Firstname,

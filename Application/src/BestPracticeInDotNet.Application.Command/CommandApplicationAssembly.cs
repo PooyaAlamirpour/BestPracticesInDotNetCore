@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Mc2.CrudTest.Application.Command;
+namespace BestPracticeInDotNet.Application.Command;
 
 public static class CommandApplicationAssembly
 {

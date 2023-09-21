@@ -1,11 +1,11 @@
 ﻿using System.Linq.Expressions;
-using Mc2.CrudTest.Application.Queries.Repositories;
-using Mc2.CrudTest.framework.DDD;
-using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
+using BestPracticeInDotNet.Application.Queries.Repositories;
+using BestPracticeInDotNet.framework.DDD;
+using BestPracticeInDotNet.Infrastructure.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.Repositories;
+namespace BestPracticeInDotNet.Infrastructure.Persistence.Repositories;
 
 public class GenericReadRepository<TAggregate, TId> : IGenericReadRepository<TAggregate, TId> where TAggregate : Entity<TId> 
     where TId : notnull

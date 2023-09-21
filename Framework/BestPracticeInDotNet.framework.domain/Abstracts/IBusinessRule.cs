@@ -1,4 +1,4 @@
-﻿namespace Mc2.CrudTest.framework.DDD.Abstracts;
+﻿namespace BestPracticeInDotNet.framework.DDD.Abstracts;
 
 public interface IBusinessRule
 {

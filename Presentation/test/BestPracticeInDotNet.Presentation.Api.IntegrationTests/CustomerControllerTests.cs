@@ -1,11 +1,11 @@
 using System.Net.Http.Json;
+using BestPracticeInDotNet.Presentation.Server;
+using BestPracticeInDotNet.Presentation.Server.Models;
 using FluentAssertions;
-using Mc2.CrudTest.Presentation.Server;
-using Mc2.CrudTest.Presentation.Server.Models;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 
-namespace Mc2.CrudTest.Presentation.Api.IntegrationTests;
+namespace BestPracticeInDotNet.Presentation.Api.IntegrationTests;
 
 // ClassName + Tests
 public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Program>>

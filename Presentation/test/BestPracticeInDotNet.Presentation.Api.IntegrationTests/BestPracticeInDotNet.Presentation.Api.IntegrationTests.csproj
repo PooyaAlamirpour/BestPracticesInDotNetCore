@@ -4,11 +4,10 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
         <LangVersion>10</LangVersion>
-        <RootNamespace>Mc2.CrudTest.Presentation.Api.IntegrationTests</RootNamespace>
+        <RootNamespace>BestPracticeInDotNet.Presentation.Api.IntegrationTests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Mc2.CrudTest.Presentation\BestPracticeInDotNet.Presentation.Api.csproj" />
+      <ProjectReference Include="..\..\src\BestPracticeInDotNet.Presentation\BestPracticeInDotNet.Presentation.Api.csproj" />
     </ItemGroup>
 
 </Project>

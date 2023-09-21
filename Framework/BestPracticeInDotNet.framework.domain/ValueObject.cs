@@ -1,6 +1,6 @@
-﻿using Mc2.CrudTest.framework.DDD.Logics;
+﻿using BestPracticeInDotNet.framework.DDD.Logics;
 
-namespace Mc2.CrudTest.framework.DDD;
+namespace BestPracticeInDotNet.framework.DDD;
 
 public class ValueObject<TKey> : GenericLogic
 {

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace Mc2.CrudTest.AcceptanceTests.Extensions;
+namespace BestPracticeInDotNet.AcceptanceTests.Extensions;
 
 public static class JsonExtensions
 {

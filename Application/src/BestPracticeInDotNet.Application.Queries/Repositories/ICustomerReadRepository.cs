@@ -1,7 +1,7 @@
-﻿using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.Domain.Core.Customer.ValueObjects;
+﻿using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 
-namespace Mc2.CrudTest.Application.Queries.Repositories;
+namespace BestPracticeInDotNet.Application.Queries.Repositories;
 
 public interface ICustomerReadRepository : IGenericReadRepository<CustomerAggregateRoot, CustomerId>
 {

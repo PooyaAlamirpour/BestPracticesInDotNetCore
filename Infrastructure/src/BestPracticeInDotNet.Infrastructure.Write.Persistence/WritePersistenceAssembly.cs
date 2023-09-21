@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Mc2.CrudTest.Infrastructure.Write.Persistence;
+namespace BestPracticeInDotNet.Infrastructure.Write.Persistence;
 
 public class WritePersistenceAssembly
 {

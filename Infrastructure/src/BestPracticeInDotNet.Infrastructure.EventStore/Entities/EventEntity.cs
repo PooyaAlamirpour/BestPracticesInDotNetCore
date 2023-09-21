@@ -1,7 +1,7 @@
-﻿using Mc2.CrudTest.framework.DDD;
-using Mc2.CrudTest.framework.DDD.Abstracts;
+﻿using BestPracticeInDotNet.framework.DDD;
+using BestPracticeInDotNet.framework.DDD.Abstracts;
 
-namespace Mc2.CrudTest.Infrastructure.EventStore.Entities;
+namespace BestPracticeInDotNet.Infrastructure.EventStore.Entities;
 
 public class EventEntity : Entity<Guid>, IAuditable
 {

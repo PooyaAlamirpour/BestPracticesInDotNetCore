@@ -2,21 +2,21 @@
 using System.Net.Mime;
 using System.Text;
 using System.Text.Json;
+using BestPracticeInDotNet.AcceptanceTests.Convertors;
+using BestPracticeInDotNet.AcceptanceTests.Extensions;
+using BestPracticeInDotNet.AcceptanceTests.Repositories;
+using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.Events;
+using BestPracticeInDotNet.Presentation.Server;
+using BestPracticeInDotNet.Presentation.Server.Models;
 using FluentAssertions;
-using Mc2.CrudTest.AcceptanceTests.Convertors;
-using Mc2.CrudTest.AcceptanceTests.Extensions;
-using Mc2.CrudTest.AcceptanceTests.Repositories;
-using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.Domain.Core.Events;
-using Mc2.CrudTest.Presentation.Server;
-using Mc2.CrudTest.Presentation.Server.Models;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-namespace Mc2.CrudTest.AcceptanceTests.Steps;
+namespace BestPracticeInDotNet.AcceptanceTests.Steps;
 
 [Binding]
 public sealed class CrudCustomerStepDefinitions

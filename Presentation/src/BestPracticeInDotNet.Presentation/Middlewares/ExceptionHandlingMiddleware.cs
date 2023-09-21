@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace Mc2.CrudTest.Presentation.Server.Middlewares;
+namespace BestPracticeInDotNet.Presentation.Server.Middlewares;
 
 public class ExceptionHandlingMiddleware : IMiddleware
 {

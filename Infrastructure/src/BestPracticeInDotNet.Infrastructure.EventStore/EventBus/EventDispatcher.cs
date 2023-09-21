@@ -1,8 +1,8 @@
-﻿using Mc2.CrudTest.framework.Mediator.Abstracts;
-using Mc2.CrudTest.Infrastructure.EventStore.Abstracts;
+﻿using BestPracticeInDotNet.framework.Mediator.Abstracts;
+using BestPracticeInDotNet.Infrastructure.EventStore.Abstracts;
 using MediatR;
 
-namespace Mc2.CrudTest.Infrastructure.EventStore.EventBus;
+namespace BestPracticeInDotNet.Infrastructure.EventStore.EventBus;
 
 public class EventDispatcher : IEventDispatcher
 {

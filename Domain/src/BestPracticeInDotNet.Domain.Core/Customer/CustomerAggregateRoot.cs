@@ -1,9 +1,9 @@
-﻿using Mc2.CrudTest.Domain.Core.Customer.ValueObjects;
-using Mc2.CrudTest.Domain.Core.Events;
-using Mc2.CrudTest.framework.DDD;
-using Mc2.CrudTest.framework.Mediator.Abstracts;
+﻿using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
+using BestPracticeInDotNet.Domain.Core.Events;
+using BestPracticeInDotNet.framework.DDD;
+using BestPracticeInDotNet.framework.Mediator.Abstracts;
 
-namespace Mc2.CrudTest.Domain.Core.Customer;
+namespace BestPracticeInDotNet.Domain.Core.Customer;
 
 public class CustomerAggregateRoot : AggregateRoot<CustomerId>
 {

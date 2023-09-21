@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
-using Mc2.CrudTest.framework.DDD.Abstracts;
+using BestPracticeInDotNet.framework.DDD.Abstracts;
 
-namespace Mc2.CrudTest.Domain.Core.Customer.Rules;
+namespace BestPracticeInDotNet.Domain.Core.Customer.Rules;
 
 public class BankAccountNumberMustBeValidRule : IBusinessRule
 {

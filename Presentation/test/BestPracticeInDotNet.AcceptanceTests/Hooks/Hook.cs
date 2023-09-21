@@ -1,17 +1,15 @@
+using BestPracticeInDotNet.AcceptanceTests.Repositories;
+using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.Application.Queries.Repositories;
+using BestPracticeInDotNet.Presentation.Server;
 using BoDi;
-using Mc2.CrudTest.AcceptanceTests.Repositories;
-using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.Application.Queries.Repositories;
-using Mc2.CrudTest.framework.Mediator.Abstracts;
-using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
-using Mc2.CrudTest.Infrastructure.Persistence.Repositories;
-using Mc2.CrudTest.Presentation.Server;
+using BestPracticeInDotNet.Infrastructure.Persistence.DbContexts;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.AcceptanceTests.Hooks
+namespace BestPracticeInDotNet.AcceptanceTests.Hooks
 {
     [Binding]
     public class CustomerHooks

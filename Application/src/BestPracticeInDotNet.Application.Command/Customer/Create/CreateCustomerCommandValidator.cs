@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
-using Mc2.CrudTest.Domain.Generic.Errors;
-using Mc2.CrudTest.framework.Mediator.Extensions;
+using BestPracticeInDotNet.Domain.Generic.Errors;
+using BestPracticeInDotNet.framework.Mediator.Extensions;
 
-namespace Mc2.CrudTest.Application.Command.Customer.Create;
+namespace BestPracticeInDotNet.Application.Command.Customer.Create;
 
 public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCommand>
 {

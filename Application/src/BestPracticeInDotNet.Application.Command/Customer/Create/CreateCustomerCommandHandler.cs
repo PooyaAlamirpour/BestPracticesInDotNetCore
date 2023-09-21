@@ -1,9 +1,9 @@
-﻿using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.Domain.Core.Customer.ValueObjects;
-using Mc2.CrudTest.framework.Mediator.Abstracts;
+﻿using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
+using BestPracticeInDotNet.framework.Mediator.Abstracts;
 
-namespace Mc2.CrudTest.Application.Command.Customer.Create;
+namespace BestPracticeInDotNet.Application.Command.Customer.Create;
 
 public class CreateCustomerCommandHandler : ICommandHandler<CreateCustomerCommand>
 {

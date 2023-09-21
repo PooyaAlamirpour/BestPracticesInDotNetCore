@@ -1,6 +1,6 @@
-﻿using Mc2.CrudTest.framework.Mediator.Abstracts;
+﻿using BestPracticeInDotNet.framework.Mediator.Abstracts;
 
-namespace Mc2.CrudTest.framework.DDD.Abstracts;
+namespace BestPracticeInDotNet.framework.DDD.Abstracts;
 
 public interface IAggregateRoot<out TKey> : IEntity<TKey>
 {

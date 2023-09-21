@@ -35,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Accept
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Presentation.Api.IntegrationTests", "Presentation\test\BestPracticeInDotNet.Presentation.Api.IntegrationTests\BestPracticeInDotNet.Presentation.Api.IntegrationTests.csproj", "{020A3ED1-8C39-4F8E-A473-E03A0813EA9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Presentation.Api", "Presentation\src\Mc2.CrudTest.Presentation\BestPracticeInDotNet.Presentation.Api.csproj", "{A89AD7C3-2BD1-42A1-8E3A-93E7291A3540}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Presentation.Api", "Presentation\src\BestPracticeInDotNet.Presentation\BestPracticeInDotNet.Presentation.Api.csproj", "{A89AD7C3-2BD1-42A1-8E3A-93E7291A3540}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Domain.Core", "Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj", "{244EDFAF-C542-4A8E-B671-51A8757E3542}"
 EndProject

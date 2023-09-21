@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
-        <RootNamespace>Mc2.CrudTest.Application.Queries</RootNamespace>
+        <RootNamespace>BestPracticeInDotNet.Application.Queries</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

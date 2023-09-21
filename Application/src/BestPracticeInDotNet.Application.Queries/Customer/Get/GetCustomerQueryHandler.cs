@@ -1,8 +1,8 @@
-﻿using Mc2.CrudTest.Application.Queries.Repositories;
-using Mc2.CrudTest.Domain.Core.Customer;
+﻿using BestPracticeInDotNet.Application.Queries.Repositories;
+using BestPracticeInDotNet.Domain.Core.Customer;
 using MediatR;
 
-namespace Mc2.CrudTest.Application.Queries.Customer.Get;
+namespace BestPracticeInDotNet.Application.Queries.Customer.Get;
 
 public class GetCustomerQueryHandler : IRequestHandler<GetCustomerQuery, List<CustomerAggregateRoot>>
 {

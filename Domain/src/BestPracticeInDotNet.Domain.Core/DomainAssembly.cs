@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Mc2.CrudTest.Domain.Core;
+namespace BestPracticeInDotNet.Domain.Core;
 
 public static class DomainAssembly
 {

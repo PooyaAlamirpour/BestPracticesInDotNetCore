@@ -7,7 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>Mc2.CrudTest.Domain.Core.Tests</RootNamespace>
+        <RootNamespace>BestPracticeInDotNet.Domain.Core.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

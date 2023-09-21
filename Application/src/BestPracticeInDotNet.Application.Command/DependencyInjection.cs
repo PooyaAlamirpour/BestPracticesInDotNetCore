@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using FluentValidation;
-using Mc2.CrudTest.Application.Command.Customer.Delete;
-using Mc2.CrudTest.framework.Mediator.Behaviors;
+using BestPracticeInDotNet.Application.Command.Customer.Delete;
+using BestPracticeInDotNet.framework.Mediator.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Application.Command;
+namespace BestPracticeInDotNet.Application.Command;
 
 public static class DependencyInjection
 {

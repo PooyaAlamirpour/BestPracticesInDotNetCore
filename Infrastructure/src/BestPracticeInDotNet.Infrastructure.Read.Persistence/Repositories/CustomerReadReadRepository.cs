@@ -1,9 +1,9 @@
-﻿using Mc2.CrudTest.Application.Queries.Repositories;
-using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.Domain.Core.Customer.ValueObjects;
+﻿using BestPracticeInDotNet.Application.Queries.Repositories;
+using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence.Repositories;
+namespace BestPracticeInDotNet.Infrastructure.Persistence.Repositories;
 
 public class CustomerReadReadRepository : GenericReadRepository<CustomerAggregateRoot, CustomerId>, ICustomerReadRepository
 {

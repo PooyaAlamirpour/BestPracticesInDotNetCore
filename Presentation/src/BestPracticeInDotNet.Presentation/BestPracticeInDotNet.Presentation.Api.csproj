@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Mc2.CrudTest.Presentation.Server</RootNamespace>
+    <RootNamespace>BestPracticeInDotNet.Presentation.Server</RootNamespace>
     <LangVersion>10</LangVersion>
     <UserSecretsId>5ad69e2c-53be-49cf-b068-60d6f3d009de</UserSecretsId>
   </PropertyGroup>

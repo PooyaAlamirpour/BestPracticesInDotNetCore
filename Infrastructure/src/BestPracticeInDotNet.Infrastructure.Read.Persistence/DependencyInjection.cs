@@ -1,11 +1,11 @@
-﻿using Mc2.CrudTest.Application.Queries.Repositories;
-using Mc2.CrudTest.Infrastructure.Persistence.DbContexts;
-using Mc2.CrudTest.Infrastructure.Persistence.Repositories;
+﻿using BestPracticeInDotNet.Application.Queries.Repositories;
+using BestPracticeInDotNet.Infrastructure.Persistence.DbContexts;
+using BestPracticeInDotNet.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence;
+namespace BestPracticeInDotNet.Infrastructure.Persistence;
 
 public static class DependencyInjection
 {

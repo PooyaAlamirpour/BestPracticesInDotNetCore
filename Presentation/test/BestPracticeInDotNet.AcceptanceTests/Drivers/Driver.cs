@@ -1,4 +1,4 @@
-namespace Mc2.CrudTest.AcceptanceTests.Drivers
+namespace BestPracticeInDotNet.AcceptanceTests.Drivers
 {
     public class Driver
     {

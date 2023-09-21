@@ -1,8 +1,8 @@
-﻿using Mc2.CrudTest.framework.DDD.Abstracts;
+﻿using BestPracticeInDotNet.framework.DDD.Abstracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Mc2.CrudTest.Infrastructure.EventStore.DbContexts;
+namespace BestPracticeInDotNet.Infrastructure.EventStore.DbContexts;
 
 public class ApplicationEventDbContext : DbContext
 {

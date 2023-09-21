@@ -1,14 +1,13 @@
-﻿using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.Infrastructure.EventStore.Abstracts;
-using Mc2.CrudTest.Infrastructure.EventStore.DbContexts;
-using Mc2.CrudTest.Infrastructure.EventStore.EventBus;
-using Mc2.CrudTest.Infrastructure.EventStore.Repositories;
-using Mc2.CrudTest.Infrastructure.Write.Persistence.DbContexts;
+﻿using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.Infrastructure.EventStore.Abstracts;
+using BestPracticeInDotNet.Infrastructure.EventStore.DbContexts;
+using BestPracticeInDotNet.Infrastructure.EventStore.EventBus;
+using BestPracticeInDotNet.Infrastructure.EventStore.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mc2.CrudTest.Infrastructure.EventStore;
+namespace BestPracticeInDotNet.Infrastructure.EventStore;
 
 public static class DependencyInjection
 {

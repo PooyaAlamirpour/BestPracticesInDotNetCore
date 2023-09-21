@@ -4,7 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Mc2.CrudTest.Infrastructure.Persistence</RootNamespace>
+        <RootNamespace>BestPracticeInDotNet.Infrastructure.Persistence</RootNamespace>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
 

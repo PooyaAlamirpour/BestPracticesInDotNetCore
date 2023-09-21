@@ -1,9 +1,9 @@
-﻿using Mc2.CrudTest.Application.Command.Repositories;
-using Mc2.CrudTest.Domain.Core.Customer;
-using Mc2.CrudTest.Domain.Core.Events;
-using Mc2.CrudTest.framework.Mediator.Abstracts;
+﻿using BestPracticeInDotNet.Application.Command.Repositories;
+using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.Events;
+using BestPracticeInDotNet.framework.Mediator.Abstracts;
 
-namespace Mc2.CrudTest.Application.Command.EventHandlers;
+namespace BestPracticeInDotNet.Application.Command.EventHandlers;
 
 public class CustomerUpdatedDomainEventHandler : ICommandEventHandler<CustomerUpdatedDomainEvent>
 {

@@ -1,8 +1,8 @@
-﻿using FluentValidation;
-using Mc2.CrudTest.Domain.Generic.Errors;
-using Mc2.CrudTest.framework.Mediator.Extensions;
+﻿using BestPracticeInDotNet.Domain.Generic.Errors;
+using BestPracticeInDotNet.framework.Mediator.Extensions;
+using FluentValidation;
 
-namespace Mc2.CrudTest.Application.Command.Customer.Update;
+namespace BestPracticeInDotNet.Application.Command.Customer.Update;
 
 public class UpdateCustomerCommandValidator : AbstractValidator<UpdateCustomerCommand>
 {

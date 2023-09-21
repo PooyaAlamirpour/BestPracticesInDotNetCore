@@ -1,6 +1,6 @@
 ﻿using ErrorOr;
 
-namespace Mc2.CrudTest.Domain.Generic.Errors;
+namespace BestPracticeInDotNet.Domain.Generic.Errors;
 
 public static partial class Errors
 {

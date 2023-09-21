@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Mc2.CrudTest.Infrastructure.Persistence;
+namespace BestPracticeInDotNet.Infrastructure.Persistence;
 
 public class ReadPersistenceAssembly
 {
