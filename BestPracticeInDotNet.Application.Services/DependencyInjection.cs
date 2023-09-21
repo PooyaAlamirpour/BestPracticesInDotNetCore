@@ -1,4 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Services.Authentication;
+using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BestPracticeInDotNet.Application.Services;

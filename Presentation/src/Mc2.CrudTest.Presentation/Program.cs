@@ -1,4 +1,5 @@
 using BestPracticeInDotNet.Application.Services;
+using BestPracticeInDotNet.Infrastructure.Authentication;
 using Mc2.CrudTest.Application.Command;
 using Mc2.CrudTest.Application.Queries;
 using Mc2.CrudTest.Infrastructure.EventStore;
@@ -22,7 +23,8 @@ namespace Mc2.CrudTest.Presentation.Server
                     .AddReadInfrastructure(builder.Configuration)
                     .AddWriteInfrastructure(builder.Configuration)
                     .AddEventStore(builder.Configuration)
-                    .AddAuthenticationService();
+                    .AddAuthenticationService()
+                    .AddJwtTokenGenerator();
 
                 builder.Services.AddSwaggerGen();
             }

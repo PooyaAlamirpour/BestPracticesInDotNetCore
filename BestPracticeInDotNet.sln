@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Presen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Application.Services", "BestPracticeInDotNet.Application.Services\BestPracticeInDotNet.Application.Services.csproj", "{710B580C-61F7-4EDE-AE97-47B94B870E94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestPracticeInDotNet.Infrastructure.Authentication", "BestPracticeInDotNet.Infrastructure.Authentication\BestPracticeInDotNet.Infrastructure.Authentication.csproj", "{27CF1923-505C-49BA-92EA-C1FCEFF5E8B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -151,6 +153,10 @@ Global
 		{710B580C-61F7-4EDE-AE97-47B94B870E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{710B580C-61F7-4EDE-AE97-47B94B870E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{710B580C-61F7-4EDE-AE97-47B94B870E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CF1923-505C-49BA-92EA-C1FCEFF5E8B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CF1923-505C-49BA-92EA-C1FCEFF5E8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CF1923-505C-49BA-92EA-C1FCEFF5E8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CF1923-505C-49BA-92EA-C1FCEFF5E8B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -186,5 +192,6 @@ Global
 		{02026D78-997C-46A9-82BA-1190462B1C32} = {200805AF-7718-4B31-BB15-1D61EBED870C}
 		{25FEA2BD-E00D-4884-AF9F-3975C466A291} = {133EF071-A72A-4F21-90AF-F778495548AD}
 		{710B580C-61F7-4EDE-AE97-47B94B870E94} = {78319092-CD32-4B75-9473-28983F26CE8D}
+		{27CF1923-505C-49BA-92EA-C1FCEFF5E8B1} = {4FB38E46-080F-4E9A-A640-FCBBDBAC512F}
 	EndGlobalSection
 EndGlobal

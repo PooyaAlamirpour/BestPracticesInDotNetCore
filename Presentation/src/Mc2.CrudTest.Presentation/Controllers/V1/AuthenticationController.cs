@@ -1,4 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Services.Authentication;
+using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
 using BestPracticeInDotNet.Presentation.Contracts.Authentication;
 using Mc2.CrudTest.Presentation.Server.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;

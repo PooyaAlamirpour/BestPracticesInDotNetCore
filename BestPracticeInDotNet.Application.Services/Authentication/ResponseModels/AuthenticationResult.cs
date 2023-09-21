@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Application.Services.Authentication;
+﻿namespace BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
 
 public record AuthenticationResult(
     Guid Id,

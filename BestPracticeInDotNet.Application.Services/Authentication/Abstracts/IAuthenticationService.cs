@@ -1,5 +1,7 @@
 ﻿
-namespace BestPracticeInDotNet.Application.Services.Authentication;
+using BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
+
+namespace BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
 
 public interface IAuthenticationService
 {
