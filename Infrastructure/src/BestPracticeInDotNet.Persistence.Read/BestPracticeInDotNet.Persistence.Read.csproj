@@ -26,7 +26,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Queries\BestPracticeInDotNet.Application.Queries.csproj" />
       <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
-      <ProjectReference Include="..\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence.csproj" />
+      <ProjectReference Include="..\BestPracticeInDotNet.Persistence.SharedKernel\BestPracticeInDotNet.Persistence.SharedKernel.csproj" />
     </ItemGroup>
 
 </Project>

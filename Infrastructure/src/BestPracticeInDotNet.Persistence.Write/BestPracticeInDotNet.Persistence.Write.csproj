@@ -23,7 +23,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Command\BestPracticeInDotNet.Application.Command.csproj" />
-      <ProjectReference Include="..\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence\BestPracticeInDotNet.Infrastructure.SharedKernel.Persistence.csproj" />
+      <ProjectReference Include="..\BestPracticeInDotNet.Persistence.SharedKernel\BestPracticeInDotNet.Persistence.SharedKernel.csproj" />
     </ItemGroup>
 
 </Project>
