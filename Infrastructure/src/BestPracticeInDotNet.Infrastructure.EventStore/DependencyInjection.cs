@@ -12,7 +12,7 @@ namespace Mc2.CrudTest.Infrastructure.EventStore;
 
 public static class DependencyInjection
 {
-    public static void AddEventStore(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddEventStore(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<ApplicationEventDbContext>(options =>
             options.UseMySql(
@@ -22,6 +22,8 @@ public static class DependencyInjection
         
         services.AddTransient<IEventDispatcher, EventDispatcher>();
         services.AddRepositories();
+
+        return services;
     }
 
     private static void AddRepositories(this IServiceCollection services)

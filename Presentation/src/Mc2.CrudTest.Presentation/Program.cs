@@ -1,3 +1,4 @@
+using BestPracticeInDotNet.Application.Services;
 using Mc2.CrudTest.Application.Command;
 using Mc2.CrudTest.Application.Queries;
 using Mc2.CrudTest.Infrastructure.EventStore;
@@ -14,12 +15,14 @@ namespace Mc2.CrudTest.Presentation.Server
         {
             var builder = WebApplication.CreateBuilder(args);
             {
-                builder.Services.AddPresentation();
-                builder.Services.AddCommandPipeline(CommandApplicationAssembly.Assembly);
-                builder.Services.AddQueryPipeline(QueryApplicationAssembly.Assembly);
-                builder.Services.AddReadInfrastructure(builder.Configuration);
-                builder.Services.AddWriteInfrastructure(builder.Configuration);
-                builder.Services.AddEventStore(builder.Configuration);
+                builder.Services
+                    .AddPresentation()
+                    .AddCommandPipeline(CommandApplicationAssembly.Assembly)
+                    .AddQueryPipeline(QueryApplicationAssembly.Assembly)
+                    .AddReadInfrastructure(builder.Configuration)
+                    .AddWriteInfrastructure(builder.Configuration)
+                    .AddEventStore(builder.Configuration)
+                    .AddAuthenticationService();
 
                 builder.Services.AddSwaggerGen();
             }

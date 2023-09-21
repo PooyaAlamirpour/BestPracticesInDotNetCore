@@ -9,7 +9,7 @@ namespace Mc2.CrudTest.Infrastructure.Persistence;
 
 public static class DependencyInjection
 {
-    public static void AddReadInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddReadInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<ApplicationReadDbContext>(options =>
             options.UseMySql(
@@ -18,6 +18,8 @@ public static class DependencyInjection
             ));
 
         services.AddRepositories();
+        
+        return services;
     }
 
     private static void AddRepositories(this IServiceCollection services)

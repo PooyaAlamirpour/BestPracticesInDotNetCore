@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\BestPracticeInDotNet.Application.Services\BestPracticeInDotNet.Application.Services.csproj" />
+    </ItemGroup>
+
 </Project>

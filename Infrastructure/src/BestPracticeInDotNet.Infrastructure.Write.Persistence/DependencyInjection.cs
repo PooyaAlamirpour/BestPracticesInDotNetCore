@@ -10,7 +10,7 @@ namespace Mc2.CrudTest.Infrastructure.Write.Persistence;
 
 public static class DependencyInjection
 {
-    public static void AddWriteInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddWriteInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<ApplicationWriteDbContext>(options =>
             options.UseMySql(
@@ -19,6 +19,8 @@ public static class DependencyInjection
             ));
 
         services.AddRepositories();
+
+        return services;
     }
 
     private static void AddRepositories(this IServiceCollection services)
