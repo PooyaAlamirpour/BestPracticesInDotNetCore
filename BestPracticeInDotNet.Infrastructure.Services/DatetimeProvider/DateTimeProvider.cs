@@ -1,4 +1,4 @@
-﻿using BestPracticeInDotNet.Application.Services.DatetimeProvider;
+﻿using BestPracticeInDotNet.Application.Services.DateTimeProvider;
 
 namespace BestPracticeInDotNet.Infrastructure.Authentication.DatetimeProvider;
 

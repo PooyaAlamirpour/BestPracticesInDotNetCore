@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
-using BestPracticeInDotNet.Application.Services.DatetimeProvider;
+using BestPracticeInDotNet.Application.Services.DateTimeProvider;
 using Microsoft.IdentityModel.Tokens;
 
 namespace BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
