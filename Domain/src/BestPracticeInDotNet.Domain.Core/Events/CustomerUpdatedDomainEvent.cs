@@ -1,5 +1,5 @@
-﻿using BestPracticeInDotNet.framework.Mediator.Abstracts;
+﻿using MediatR;
 
 namespace BestPracticeInDotNet.Domain.Core.Events;
 
-public record CustomerUpdatedDomainEvent(Guid CustomerId, string PhoneNumber, string BankAccountNumber) : IDomainEvent;
+public record CustomerUpdatedDomainEvent(Guid CustomerId, string PhoneNumber, string BankAccountNumber) : INotification;

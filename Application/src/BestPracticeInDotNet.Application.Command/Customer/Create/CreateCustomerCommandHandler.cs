@@ -1,11 +1,11 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
 using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
-using BestPracticeInDotNet.framework.Mediator.Abstracts;
+using MediatR;
 
 namespace BestPracticeInDotNet.Application.Command.Customer.Create;
 
-public class CreateCustomerCommandHandler : ICommandHandler<CreateCustomerCommand>
+public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand>
 {
     private readonly IEventStoreRepository<CustomerAggregateRoot, CustomerId> _eventStoreRepository;
 

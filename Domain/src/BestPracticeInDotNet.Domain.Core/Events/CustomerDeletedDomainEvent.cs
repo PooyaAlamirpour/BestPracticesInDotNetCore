@@ -1,5 +1,5 @@
-﻿using BestPracticeInDotNet.framework.Mediator.Abstracts;
+﻿using MediatR;
 
 namespace BestPracticeInDotNet.Domain.Core.Events;
 
-public record CustomerDeletedDomainEvent(Guid CustomerId) : IDomainEvent;
+public record CustomerDeletedDomainEvent(Guid CustomerId) : INotification;

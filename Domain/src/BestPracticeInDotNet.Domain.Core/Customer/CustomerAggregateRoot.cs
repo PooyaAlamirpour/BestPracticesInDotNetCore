@@ -1,7 +1,7 @@
 ﻿using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 using BestPracticeInDotNet.Domain.Core.Events;
 using BestPracticeInDotNet.framework.DDD;
-using BestPracticeInDotNet.framework.Mediator.Abstracts;
+using MediatR;
 
 namespace BestPracticeInDotNet.Domain.Core.Customer;
 
@@ -84,7 +84,7 @@ public class CustomerAggregateRoot : AggregateRoot<CustomerId>
         this.BankAccountNumber = BankAccountNumber.Of(@event.BankAccountNumber);
     }
 
-    public override void Apply(IDomainEvent @event)
+    public override void Apply(INotification @event)
     {
         switch (@event)
         {

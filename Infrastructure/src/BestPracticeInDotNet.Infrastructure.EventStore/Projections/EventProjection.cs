@@ -1,6 +1,6 @@
 ﻿using BestPracticeInDotNet.Domain.Core.Events;
 using BestPracticeInDotNet.framework.DDD;
-using BestPracticeInDotNet.framework.Mediator.Abstracts;
+using MediatR;
 using Newtonsoft.Json;
 
 namespace BestPracticeInDotNet.Infrastructure.EventStore.Projections;
@@ -30,6 +30,6 @@ public class EventProjection<TAggregateRoot, Tkey>
         };
     }
 
-    public TAggregateRoot Project<TEvent>(string? payload, string aggregateType) where TEvent : IDomainEvent =>
+    public TAggregateRoot Project<TEvent>(string? payload, string aggregateType) where TEvent : INotification =>
         ProjectEvent<TEvent>((item, @event) => item.Apply(@event), payload);
 }

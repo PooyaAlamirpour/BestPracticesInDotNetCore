@@ -1,11 +1,11 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
 using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Domain.Core.Events;
-using BestPracticeInDotNet.framework.Mediator.Abstracts;
+using MediatR;
 
 namespace BestPracticeInDotNet.Application.Command.EventHandlers;
 
-public class CustomerCreatedDomainEventHandler : ICommandEventHandler<CustomerCreatedDomainEvent>
+public class CustomerCreatedDomainEventHandler : INotificationHandler<CustomerCreatedDomainEvent>
 {
     private readonly ICustomerWriteRepository _customerWriteRepository;
 

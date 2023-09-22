@@ -1,9 +1,9 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
 using BestPracticeInDotNet.framework.DDD;
-using BestPracticeInDotNet.framework.Mediator.Abstracts;
 using BestPracticeInDotNet.Infrastructure.EventStore.Abstracts;
 using BestPracticeInDotNet.Infrastructure.EventStore.Entities;
 using BestPracticeInDotNet.Infrastructure.EventStore.Projections;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -24,7 +24,7 @@ public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<
 
     public async Task<Tkey> AppendEventsAsync(TAggregateRoot aggregate, CancellationToken cancellationToken = default)
     {
-        IDomainEvent[] events = aggregate.GetUncommittedEvents().ToArray();
+        INotification[] events = aggregate.GetUncommittedEvents().ToArray();
         long nextVersion = aggregate.Version + events.Length;
 
         await AppendAsync(aggregate.Id, events, nextVersion, cancellationToken);
@@ -51,7 +51,7 @@ public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<
         return new EventProjection<TAggregateRoot, Tkey>().Project(@event?.Payload, @event?.AggregateType!);
     }
 
-    private Task AppendAsync(Tkey id, IDomainEvent[] events, long nextVersion, CancellationToken cancellationToken)
+    private Task AppendAsync(Tkey id, INotification[] events, long nextVersion, CancellationToken cancellationToken)
     {
         foreach (var @event in events)
         {
@@ -72,9 +72,9 @@ public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<
     private async Task CommitAsync(CancellationToken cancellationToken) =>
         await _eventRepository.CommitAsync(cancellationToken);
     
-    private void DispatchEvents(IDomainEvent[] events)
+    private void DispatchEvents(INotification[] events)
     {
-        foreach (IDomainEvent @event in events)
+        foreach (INotification @event in events)
         {
             _eventDispatcher.DispatchAsync(@event);
         } 

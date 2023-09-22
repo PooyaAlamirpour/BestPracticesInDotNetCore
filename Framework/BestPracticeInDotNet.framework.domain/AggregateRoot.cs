@@ -1,5 +1,5 @@
 ﻿using BestPracticeInDotNet.framework.DDD.Abstracts;
-using BestPracticeInDotNet.framework.Mediator.Abstracts;
+using MediatR;
 
 namespace BestPracticeInDotNet.framework.DDD;
 
@@ -7,14 +7,14 @@ public abstract class AggregateRoot<TKey> : Entity<TKey>,  IAggregateRoot<TKey>,
 {
     public DateTime CreatedAt { get; set; }
     public DateTime? ModifiedAt { get; set; }
-    private readonly Queue<IDomainEvent> _uncommittedEvents = new();
+    private readonly Queue<INotification> _uncommittedEvents = new();
     public long Version { get; set; }
     public void ClearUncommittedEvents() => _uncommittedEvents.Clear();
-    public IEnumerable<IDomainEvent> GetUncommittedEvents() => _uncommittedEvents;
+    public IEnumerable<INotification> GetUncommittedEvents() => _uncommittedEvents;
 
-    public abstract void Apply(IDomainEvent @event);
+    public abstract void Apply(INotification @event);
     
-    protected void RaiseEvent(IDomainEvent @event)
+    protected void RaiseEvent(INotification @event)
     {
         _uncommittedEvents.Enqueue(@event);
     }

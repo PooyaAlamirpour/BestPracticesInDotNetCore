@@ -1,8 +1,8 @@
-﻿using BestPracticeInDotNet.framework.Mediator.Abstracts;
+﻿using MediatR;
 
 namespace BestPracticeInDotNet.Infrastructure.EventStore.Abstracts;
 
 public interface IEventDispatcher
 {
-    Task DispatchAsync(IDomainEvent @event, CancellationToken cancellationToken = default);
+    Task DispatchAsync(INotification @event, CancellationToken cancellationToken = default);
 }

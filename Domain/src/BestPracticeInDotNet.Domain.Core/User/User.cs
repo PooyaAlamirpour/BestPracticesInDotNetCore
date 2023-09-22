@@ -1,5 +1,5 @@
 ﻿using BestPracticeInDotNet.framework.DDD;
-using BestPracticeInDotNet.framework.Mediator.Abstracts;
+using MediatR;
 
 namespace BestPracticeInDotNet.Domain.Core.User;
 
@@ -10,7 +10,7 @@ public class User : AggregateRoot<Guid>
     public string Email { get; set; } = null!;
     public string Password { get; set; } = null!;
     
-    public override void Apply(IDomainEvent @event)
+    public override void Apply(INotification @event)
     {
         throw new NotImplementedException();
     }

@@ -1,5 +1,4 @@
-﻿using BestPracticeInDotNet.framework.Mediator.Abstracts;
-using BestPracticeInDotNet.Infrastructure.EventStore.Abstracts;
+﻿using BestPracticeInDotNet.Infrastructure.EventStore.Abstracts;
 using MediatR;
 
 namespace BestPracticeInDotNet.Infrastructure.EventStore.EventBus;
@@ -13,7 +12,7 @@ public class EventDispatcher : IEventDispatcher
         _eventPublisher = eventPublisher;
     }
 
-    public async Task DispatchAsync(IDomainEvent @event, CancellationToken cancellationToken = default)
+    public async Task DispatchAsync(INotification @event, CancellationToken cancellationToken = default)
     {
         await _eventPublisher.Publish(@event, cancellationToken);
     }
