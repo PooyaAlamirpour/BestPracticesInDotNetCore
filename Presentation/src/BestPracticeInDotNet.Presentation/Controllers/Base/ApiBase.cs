@@ -12,17 +12,10 @@ public class ApiBase : ControllerBase
 {
     public IActionResult Problem(List<Error> errors)
     {
+        if (errors.Count is 0) return Problem();
         if (errors.All(error => error.Type == ErrorType.Validation))
         {
-            var modelStateDictionary = new ModelStateDictionary();
-            foreach (var error in errors)
-            {
-                modelStateDictionary.AddModelError(
-                    error.Code,
-                    error.Description);
-            }
-
-            return ValidationProblem(modelStateDictionary);
+            return ValidationProblem(errors);
         }
         
         HttpContext.Items.Add(HttpContextItemKeys.Errors, errors);
@@ -44,5 +37,18 @@ public class ApiBase : ControllerBase
         return Problem(
             statusCode: (int)statusCode, 
             title: firstError.Description);
+    }
+
+    private IActionResult ValidationProblem(List<Error> errors)
+    {
+        var modelStateDictionary = new ModelStateDictionary();
+        foreach (var error in errors)
+        {
+            modelStateDictionary.AddModelError(
+                error.Code,
+                error.Description);
+        }
+
+        return ValidationProblem(modelStateDictionary);
     }
 }
