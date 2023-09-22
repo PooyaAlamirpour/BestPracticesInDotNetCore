@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Presentation.Server.Commons.Models;
+﻿namespace BestPracticeInDotNet.Presentation.Server.Commons.Models.CustomerDto;
 
 public record GetCustomerDto(
     string? Firstname,

@@ -1,5 +1,4 @@
-﻿using BestPracticeInDotNet.Application.Services.DateTimeProvider;
-using BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
+﻿using BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
 using BestPracticeInDotNet.Infrastructure.Authentication.DatetimeProvider;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

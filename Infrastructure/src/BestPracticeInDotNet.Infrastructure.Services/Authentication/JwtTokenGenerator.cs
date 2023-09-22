@@ -1,7 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using BestPracticeInDotNet.Application.Services.DateTimeProvider;
+using BestPracticeInDotNet.Infrastructure.Authentication.DatetimeProvider;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 

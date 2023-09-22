@@ -2,9 +2,9 @@
 using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.User.Get;
 using BestPracticeInDotNet.Domain.Core.User;
-using BestPracticeInDotNet.Presentation.Contracts.Authentication;
 using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Server.Commons.Models;
+using BestPracticeInDotNet.Presentation.Server.Commons.Models.AuthenticationDto;
 using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
 using ErrorOr;
 using MediatR;

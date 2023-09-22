@@ -5,6 +5,7 @@ using BestPracticeInDotNet.Application.Queries.Customer.Get;
 using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Server.Commons.Models;
+using BestPracticeInDotNet.Presentation.Server.Commons.Models.CustomerDto;
 using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

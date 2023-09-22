@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Presentation.Contracts.Authentication;
+﻿namespace BestPracticeInDotNet.Presentation.Server.Commons.Models.AuthenticationDto;
 
 public record LoginRequestDto(
     string Email,
