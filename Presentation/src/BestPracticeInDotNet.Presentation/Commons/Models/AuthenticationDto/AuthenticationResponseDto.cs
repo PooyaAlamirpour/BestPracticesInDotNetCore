@@ -1,7 +1,9 @@
 ﻿namespace BestPracticeInDotNet.Presentation.Contracts.Authentication;
 
-public record RegisterRequest(
+public record AuthenticationResponseDto(
+    Guid Id,
     string FirstName,
     string LastName,
     string Email,
-    string Password);
+    string Token);
+    

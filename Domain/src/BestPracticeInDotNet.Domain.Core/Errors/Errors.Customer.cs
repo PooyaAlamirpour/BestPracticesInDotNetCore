@@ -1,6 +1,6 @@
 ﻿using ErrorOr;
 
-namespace BestPracticeInDotNet.Domain.Generic.Errors;
+namespace BestPracticeInDotNet.Domain.Core.Errors;
 
 public static partial class Errors
 {

@@ -1,5 +1,5 @@
-﻿using FluentValidation;
-using BestPracticeInDotNet.Domain.Generic.Errors;
+﻿using BestPracticeInDotNet.Domain.Core.Errors;
+using FluentValidation;
 using BestPracticeInDotNet.framework.Mediator.Extensions;
 
 namespace BestPracticeInDotNet.Application.Command.Customer.Delete;

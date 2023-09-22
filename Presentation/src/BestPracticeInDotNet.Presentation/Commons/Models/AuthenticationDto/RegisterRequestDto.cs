@@ -1,5 +1,7 @@
 ﻿namespace BestPracticeInDotNet.Presentation.Contracts.Authentication;
 
-public record LoginRequest(
+public record RegisterRequestDto(
+    string FirstName,
+    string LastName,
     string Email,
     string Password);

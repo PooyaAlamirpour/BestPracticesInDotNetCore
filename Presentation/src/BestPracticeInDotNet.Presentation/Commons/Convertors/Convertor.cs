@@ -1,7 +1,8 @@
-﻿using BestPracticeInDotNet.Application.Command.Customer.Create;
+﻿using BestPracticeInDotNet.Application.Command.Authentication.Register;
+using BestPracticeInDotNet.Application.Command.Customer.Create;
 using BestPracticeInDotNet.Application.Command.Customer.Update;
+using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
-using BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
 using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Presentation.Contracts.Authentication;
 using BestPracticeInDotNet.Presentation.Server.Commons.Models;
@@ -35,7 +36,14 @@ public class Convertor : IConvertor
     public UpdateCustomerCommand ToCommand(UpdateCustomerDto customer) => 
         new(customer.CustomerId, customer.PhoneNumber, customer.BankAccountNumber);
 
-    public AuthenticationResponse ToDto(AuthenticationResult result) => new(
+    public AuthenticationResponseDto ToDto(RegisterCommandResponse result) => new(
+            result.Id,
+            result.FirstName,
+            result.LastName,
+            result.Email,
+            result.Token);
+
+    public AuthenticationResponseDto ToDto(LoginQueryResponse result) => new(
         result.Id,
         result.FirstName,
         result.LastName,

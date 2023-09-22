@@ -13,8 +13,4 @@
       <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.0" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Services\BestPracticeInDotNet.Application.Services.csproj" />
-    </ItemGroup>
-
 </Project>

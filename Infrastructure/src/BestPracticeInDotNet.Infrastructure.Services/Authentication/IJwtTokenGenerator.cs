@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
+﻿namespace BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
 
 public interface IJwtTokenGenerator
 {

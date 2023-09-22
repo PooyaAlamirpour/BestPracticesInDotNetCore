@@ -24,7 +24,6 @@ namespace BestPracticeInDotNet.Presentation.Server
                     .AddReadInfrastructure(builder.Configuration)
                     .AddWriteInfrastructure(builder.Configuration)
                     .AddEventStore(builder.Configuration)
-                    .AddAuthenticationService()
                     .AddJwtTokenGenerator(builder.Configuration);
 
                 builder.Services.AddSwaggerGen();

@@ -2,7 +2,7 @@
 
 namespace BestPracticeInDotNet.Application.Queries.Repositories;
 
-public interface IUserReadRepository : IGenericReadRepository<User, Guid>
+public interface IUserReadRepository : IGenericReadRepository<Domain.Core.User.User, Guid>
 {
-    Task<User?> GetByEmailAsync(string email);
+    Task<Domain.Core.User.User?> GetByEmailAsync(string email);
 }

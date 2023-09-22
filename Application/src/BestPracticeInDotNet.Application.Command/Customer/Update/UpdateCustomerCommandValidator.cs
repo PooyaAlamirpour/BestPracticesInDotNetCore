@@ -1,4 +1,4 @@
-﻿using BestPracticeInDotNet.Domain.Generic.Errors;
+﻿using BestPracticeInDotNet.Domain.Core.Errors;
 using BestPracticeInDotNet.framework.Mediator.Extensions;
 using FluentValidation;
 

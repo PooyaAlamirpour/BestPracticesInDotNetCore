@@ -19,4 +19,10 @@
       <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="BestPracticeInDotNet.Application.Services">
+        <HintPath>..\..\..\Presentation\src\BestPracticeInDotNet.Presentation\bin\Debug\net7.0\BestPracticeInDotNet.Application.Services.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
