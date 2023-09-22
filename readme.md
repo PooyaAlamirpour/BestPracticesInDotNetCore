@@ -1,22 +1,12 @@
 # CRUD Code Test 
 
-Please read each note very carefully!
-Feel free to add/change project structure to a clean architecture to your view.
-and if you are not able to work on FrontEnd project, you can add a Swagger UI
-in a new Front project.
+In this repository, it is supposed to be implemented techniques and tools that would be 
+categorized as `Best Preactice`. Feel free to add anything that you think would be helpful
+for other dot net developer and send me pull request. I appreciate you for joining us
+for this journey.
 
-Create a simple CRUD application with ASP NET that implements the below model:
-```
-Customer {
-	Firstname
-	Lastname
-	DateOfBirth
-	PhoneNumber
-	Email
-	BankAccountNumber
-}
-```
-## Practices and patterns (Must):
+In the below sections, all architecture, tools, pattern and anything that were implemented are listed.
+## Practices and patterns:
 
 - [TDD](https://docs.microsoft.com/en-us/visualstudio/test/quick-start-test-driven-development-with-test-explorer?view=vs-2022)
 - [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)
@@ -26,19 +16,13 @@ Customer {
 - [CQRS](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_query_responsibility_separation) pattern ([Event sourcing](https://en.wikipedia.org/wiki/Domain-driven_design#Event_sourcing)).
 - Clean git commits that shows your work progress.
 
-### Validations (Must)
-
-- During Create; validate the phone number to be a valid *mobile* number only (Please use this library [Google LibPhoneNumber](https://github.com/google/libphonenumber) to validate number at the backend).
-
-- A Valid email and a valid bank account number must be checked before submitting the form.
-
+### Validations
+It is used `FLuentValidation` for validating each request that comes from client.
+- During Create; validate the phone number to be a valid *mobile* number only (It is used this library [Google LibPhoneNumber](https://github.com/google/libphonenumber) to validate number at the backend).
+- A Valid email and a valid bank account number must be checked.
 - Customers must be unique in database: By `Firstname`, `Lastname` and `DateOfBirth`.
-
 - Email must be unique in the database.
 
-### Storage (Must)
-
-- Store the phone number in a database with minimized space storage (choose `varchar`/`string`, or `ulong` whichever store less space).
 
 ### Generating UserSecretId for JWT
 By using the below code, it is possible to be generated a suer secret id which is used
