@@ -41,14 +41,28 @@ Customer {
 - Store the phone number in a database with minimized space storage (choose `varchar`/`string`, or `ulong` whichever store less space).
 
 ### Generating UserSecretId for JWT
+By using the below code, it is possible to be generated a suer secret id which is used
+for signing credential by using `HmacSha256` algorithm. So, the first step is initialing
+user secret by built-in dot net command:
 ```
 dotnet user-secrets init --project .\Presentation\src\BestPracticesInDotNet.Presentation\
 ```
-
+Now, assign a value like `super-secret-key-from-user-secrets` as the below:
 ```
 dotnet user-secrets set --project .\Presentation\src\Mc2.CrudTest.Presentation\ "JwtSettings:Secret" "super-secret-key-from-user-secrets"
 ```
-
+If it is needed to list all generated secrets, use the below command:
 ```
 dotnet user-secrets list --project .\Presentation\src\Mc2.CrudTest.Presentation\
 ```
+
+### Error Handling
+This part is one of essential scenario for preventing to show all occured exceptions.
+In the dot net core, there are 3 ways for doing it. 
+- Middleware
+- Filter attribute
+- Global exception handling
+
+In this project, it is used `filter attribute` technique and `problem detail` class.
+Also, there are an amazing nuget package that are called `OneOf` and `ErrorOr` that have lovely ways
+for handling errors.
