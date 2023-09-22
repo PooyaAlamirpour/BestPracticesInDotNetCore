@@ -1,10 +1,10 @@
-﻿
-using BestPracticeInDotNet.Application.Command.Repositories;
+﻿using BestPracticeInDotNet.Application.Command.Repositories;
 using BestPracticeInDotNet.Application.Queries.Repositories;
 using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
 using BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
-using BestPracticeInDotNet.Domain.Core.Exceptions;
+using BestPracticeInDotNet.Domain.Core.Errors;
 using BestPracticeInDotNet.Domain.Core.User;
+using ErrorOr;
 
 namespace BestPracticeInDotNet.Application.Services.Authentication;
 
@@ -22,11 +22,10 @@ public class AuthenticationService : IAuthenticationService
         _userWriteRepository = userWriteRepository;
     }
 
-    public AuthenticationResult Register(string firstName, string lastName, string email, string password)
+    public ErrorOr<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
     {
         var user = _userReadRepository.Any(x => x.Email == email);
-        if (user) 
-            throw new UserRegistrationFailedException();
+        if (user) return Errors.User.UserRegistrationFailed;
         
         var newUser = new User()
         {
@@ -41,7 +40,7 @@ public class AuthenticationService : IAuthenticationService
         return new AuthenticationResult(newUser.Id, firstName, lastName, email, token);
     }
 
-    public AuthenticationResult Login(string email, string password)
+    public ErrorOr<AuthenticationResult> Login(string email, string password)
     {
         var user = _userReadRepository.GetByEmailAsync(email).GetAwaiter().GetResult();
         if (user is not null)
@@ -53,6 +52,6 @@ public class AuthenticationService : IAuthenticationService
             }
         }
 
-        throw new UserLoginFailedException();
+        return Errors.Authentication.UserLoginFailedException;
     }
 }

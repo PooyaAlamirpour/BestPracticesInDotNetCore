@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="FluentResults" Version="3.15.2" />
       <PackageReference Include="libphonenumber-csharp" Version="8.13.20" />
     </ItemGroup>
 

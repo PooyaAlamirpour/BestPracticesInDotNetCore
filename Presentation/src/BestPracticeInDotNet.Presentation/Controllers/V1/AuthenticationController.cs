@@ -1,54 +1,48 @@
 ﻿using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
+using BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
 using BestPracticeInDotNet.Presentation.Contracts.Authentication;
 using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
+using BestPracticeInDotNet.Presentation.Server.Convertors;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BestPracticeInDotNet.Presentation.Server.Controllers.V1;
 
-[ApiController]
 [Route("auth")]
-public class AuthenticationController : ControllerBase
+public class AuthenticationController : ApiBase
 {
     private readonly IAuthenticationService _authenticationService;
+    private readonly IConvertor _convertor;
 
-    public AuthenticationController(IAuthenticationService authenticationService)
+    public AuthenticationController(IAuthenticationService authenticationService, IConvertor convertor)
     {
         _authenticationService = authenticationService;
+        _convertor = convertor;
     }
 
     [HttpPost(ApiRoutes.Authentication.Register)]
     public IActionResult Register(RegisterRequest request)
     {
-        var authResult = _authenticationService.Register(
+        ErrorOr<AuthenticationResult> registerResult = _authenticationService.Register(
             request.FirstName,
             request.LastName,
             request.Email,
             request.Password);
 
-        var authResponse = new AuthenticationResponse(
-            authResult.Id,
-            authResult.FirstName,
-            authResult.LastName,
-            authResult.Email,
-            authResult.Token);
-        
-        return Ok(authResponse);
+        return registerResult.Match(
+            _ => Ok(_convertor.ToDto(registerResult.Value)),
+            Problem);
     }
-    
+
     [HttpPost(ApiRoutes.Authentication.Login)]
     public IActionResult Login(LoginRequest request)
     {
-        var authResult = _authenticationService.Login(
+        ErrorOr<AuthenticationResult> authResult = _authenticationService.Login(
             request.Email,
             request.Password);
 
-        var authResponse = new AuthenticationResponse(
-            authResult.Id,
-            authResult.FirstName,
-            authResult.LastName,
-            authResult.Email,
-            authResult.Token);
-        
-        return Ok(authResponse);
+        return authResult.Match(
+            _ => Ok(_convertor.ToDto(authResult.Value)),
+            Problem);
     }
 }

@@ -1,7 +1,9 @@
 ﻿using BestPracticeInDotNet.Application.Command.Customer.Create;
 using BestPracticeInDotNet.Application.Command.Customer.Update;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
+using BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
 using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Presentation.Contracts.Authentication;
 using BestPracticeInDotNet.Presentation.Server.Models;
 
 namespace BestPracticeInDotNet.Presentation.Server.Convertors;
@@ -32,4 +34,11 @@ public class Convertor : IConvertor
 
     public UpdateCustomerCommand ToCommand(UpdateCustomerDto customer) => 
         new(customer.CustomerId, customer.PhoneNumber, customer.BankAccountNumber);
+
+    public AuthenticationResponse ToDto(AuthenticationResult result) => new(
+        result.Id,
+        result.FirstName,
+        result.LastName,
+        result.Email,
+        result.Token);
 }
