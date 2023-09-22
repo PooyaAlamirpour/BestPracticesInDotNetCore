@@ -1,4 +1,5 @@
-﻿using BestPracticeInDotNet.Application.Command.Authentication.Register;
+﻿using System.Net;
+using BestPracticeInDotNet.Application.Command.Authentication.Register;
 using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.User.Get;
 using BestPracticeInDotNet.Domain.Core.User;
@@ -28,7 +29,7 @@ public class AuthenticationController : ApiBase
     public async Task<IActionResult> Register(RegisterRequestDto requestDto)
     {
         var user = await _sender.Send(new GetUserQuery(requestDto.Email));
-        if (!user.IsError)
+        if (user.Value is null)
         {
             var command = new RegisterCommand(
                 requestDto.FirstName,
@@ -42,7 +43,9 @@ public class AuthenticationController : ApiBase
                 Problem);
         }
 
-        return user.Match(_ => NotFound(), Problem);
+        return Problem(
+            title: "The requested user can not be registered.",
+            statusCode: (int)HttpStatusCode.Conflict);
     }
 
     [HttpPost(ApiRoutes.Authentication.Login)]

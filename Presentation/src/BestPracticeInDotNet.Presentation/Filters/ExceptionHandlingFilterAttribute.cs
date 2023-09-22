@@ -23,11 +23,10 @@ public class ExceptionHandlingFilterAttribute : ExceptionFilterAttribute
             Title = title,
             Instance = context.HttpContext.Request.Path,
             Status = (int)statusCode,
-            Detail = exception.InnerException?.Message
+            Detail = $"{exception.Message}. {exception.InnerException?.Message}",
         };
 
         context.Result = new ObjectResult(problemDetails);
-
         context.ExceptionHandled = true;
     }
 }

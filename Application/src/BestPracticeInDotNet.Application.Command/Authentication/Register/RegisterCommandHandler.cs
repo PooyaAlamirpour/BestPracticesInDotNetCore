@@ -1,7 +1,6 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
-using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
-using BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
 using BestPracticeInDotNet.Domain.Core.User;
+using BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
 using ErrorOr;
 using MediatR;
 

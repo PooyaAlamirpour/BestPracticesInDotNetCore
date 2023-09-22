@@ -12,20 +12,14 @@
       <PackageReference Include="ErrorOr" Version="1.2.1" />
       <PackageReference Include="FluentValidation" Version="11.7.1" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
       <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Generic\BestPracticeInDotNet.Domain.Generic.csproj" />
       <ProjectReference Include="..\..\..\Framework\BestPracticeInDotNet.framework.Mediator\BestPracticeInDotNet.framework.Mediator.csproj" />
+      <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Services\BestPracticeInDotNet.Infrastructure.Services.csproj" />
       <ProjectReference Include="..\BestPracticeInDotNet.Application.Queries\BestPracticeInDotNet.Application.Queries.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Reference Include="BestPracticeInDotNet.Application.Services">
-        <HintPath>..\..\..\Presentation\src\BestPracticeInDotNet.Presentation\bin\Debug\net7.0\BestPracticeInDotNet.Application.Services.dll</HintPath>
-      </Reference>
     </ItemGroup>
 
 </Project>

@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
+      <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Services\BestPracticeInDotNet.Infrastructure.Services.csproj" />
     </ItemGroup>
 
     <ItemGroup>
