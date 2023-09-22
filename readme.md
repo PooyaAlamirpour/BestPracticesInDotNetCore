@@ -48,5 +48,5 @@ In the dot net core, there are 3 ways for doing it.
 - Global exception handling
 
 In this project, it is used `filter attribute` technique and `problem detail` class.
-Also, there are an amazing nuget package that are called `OneOf` and `ErrorOr` that have lovely ways
+Also, there is an amazing nuget package that is called  `ErrorOr` that has lovely ways
 for handling errors.
