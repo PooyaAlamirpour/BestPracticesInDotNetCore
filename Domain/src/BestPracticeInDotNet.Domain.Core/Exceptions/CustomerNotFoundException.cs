@@ -1,9 +1,10 @@
-﻿namespace BestPracticeInDotNet.Domain.Core.Exceptions;
+﻿using System.Net;
+using BestPracticeInDotNet.Domain.Core.Exceptions.ABstracts;
 
-public class CustomerNotFoundException : Exception
+namespace BestPracticeInDotNet.Domain.Core.Exceptions;
+
+public class CustomerNotFoundException : Exception, IServiceException
 {
-    public CustomerNotFoundException() 
-        : base($"The requested customer is not found")
-    {
-    }
+    public HttpStatusCode StatusCode => HttpStatusCode.NotFound;
+    public string ErrorMessage => "The requested customer is not found";
 }
