@@ -14,9 +14,6 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddQueryPipeline(this IServiceCollection services, Assembly assembly)
     {
-        services.AddTransient<IValidator<GetCustomerQuery>, GetCustomerQueryValidator>();
-        services.AddTransient<IValidator<LoginQuery>, LoginQueryValidator>();
-        services.AddTransient<IValidator<GetUserQuery>, GetUserQueryValidator>();
         services.AddTransient<IRequestHandler<GetCustomerQuery, List<CustomerAggregateRoot>>, GetCustomerQueryHandler>();
         services.AddMediatR(configuration =>
         {
@@ -24,6 +21,8 @@ public static class DependencyInjection
                 .AddOpenBehavior(typeof(ValidationBehavior<,>))
                 .AddOpenBehavior(typeof(LoggingBehavior<,>));
         });
+        
+        services.AddValidatorsFromAssembly(QueryApplicationAssembly.Assembly);
 
         return services;
     }
