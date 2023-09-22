@@ -2,9 +2,7 @@
 using BestPracticeInDotNet.Application.Command.Authentication.Register;
 using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.User.Get;
-using BestPracticeInDotNet.Domain.Core.User;
 using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
-using BestPracticeInDotNet.Presentation.Server.Commons.Models;
 using BestPracticeInDotNet.Presentation.Server.Commons.Models.AuthenticationDto;
 using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
 using ErrorOr;
@@ -16,10 +14,10 @@ namespace BestPracticeInDotNet.Presentation.Server.Controllers.V1;
 [Route("auth")]
 public class AuthenticationController : ApiBase
 {
-    private readonly IMediator _sender;
+    private readonly ISender _sender;
     private readonly IConvertor _convertor;
 
-    public AuthenticationController(IConvertor convertor, IMediator sender)
+    public AuthenticationController(IConvertor convertor, ISender sender)
     {
         _convertor = convertor;
         _sender = sender;
