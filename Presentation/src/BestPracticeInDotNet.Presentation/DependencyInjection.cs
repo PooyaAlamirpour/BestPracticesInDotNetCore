@@ -1,8 +1,6 @@
 ﻿using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Server.Commons.Errors;
-using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
 using BestPracticeInDotNet.Presentation.Server.Filters;
-using BestPracticeInDotNet.Presentation.Server.Middlewares;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Versioning;
@@ -13,7 +11,6 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddPresentation(this IServiceCollection services)
     {
-        // services.AddScoped<ExceptionHandlingMiddleware>();
         services.AddControllers(x => x.Filters.Add<ExceptionHandlingFilterAttribute>());
         services.AddRazorPages();
         
