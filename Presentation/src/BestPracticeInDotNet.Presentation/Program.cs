@@ -6,6 +6,7 @@ using BestPracticeInDotNet.Infrastructure.EventStore;
 using BestPracticeInDotNet.Infrastructure.Persistence;
 using BestPracticeInDotNet.Infrastructure.Write.Persistence;
 using BestPracticeInDotNet.Presentation.Server.Middlewares;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 namespace BestPracticeInDotNet.Presentation.Server

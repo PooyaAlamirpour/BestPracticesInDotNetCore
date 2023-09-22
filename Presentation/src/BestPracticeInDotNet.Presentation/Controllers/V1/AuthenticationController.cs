@@ -1,8 +1,8 @@
 ﻿using BestPracticeInDotNet.Application.Services.Authentication.Abstracts;
 using BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
 using BestPracticeInDotNet.Presentation.Contracts.Authentication;
+using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
-using BestPracticeInDotNet.Presentation.Server.Convertors;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 

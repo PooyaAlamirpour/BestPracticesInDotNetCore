@@ -4,9 +4,9 @@ using BestPracticeInDotNet.Application.Queries.Customer.Get;
 using BestPracticeInDotNet.Application.Services.Authentication.ResponseModels;
 using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Presentation.Contracts.Authentication;
-using BestPracticeInDotNet.Presentation.Server.Models;
+using BestPracticeInDotNet.Presentation.Server.Commons.Models;
 
-namespace BestPracticeInDotNet.Presentation.Server.Convertors;
+namespace BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
 
 public interface IConvertor
 {

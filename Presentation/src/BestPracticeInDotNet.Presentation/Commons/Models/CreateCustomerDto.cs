@@ -1,7 +1,6 @@
-﻿namespace BestPracticeInDotNet.Presentation.Server.Models;
+﻿namespace BestPracticeInDotNet.Presentation.Server.Commons.Models;
 
-public record GetCustomerResponse(
-    Guid Id,
+public record CreateCustomerDto(
     string Firstname,
     string Lastname,
     string DateOfBirth,

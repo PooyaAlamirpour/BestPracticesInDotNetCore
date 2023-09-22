@@ -3,9 +3,9 @@ using BestPracticeInDotNet.Application.Command.Customer.Delete;
 using BestPracticeInDotNet.Application.Command.Customer.Update;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
 using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
+using BestPracticeInDotNet.Presentation.Server.Commons.Models;
 using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
-using BestPracticeInDotNet.Presentation.Server.Convertors;
-using BestPracticeInDotNet.Presentation.Server.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

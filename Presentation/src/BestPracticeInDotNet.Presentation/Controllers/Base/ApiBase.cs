@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using BestPracticeInDotNet.Presentation.Server.Commons.Http;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,8 @@ public class ApiBase : ControllerBase
 {
     public IActionResult Problem(List<Error> errors)
     {
+        HttpContext.Items.Add(HttpContextItemKeys.Errors, errors);
+        
         var firstError = errors.FirstOrDefault();
         var statusCode = firstError.Type switch
         {
@@ -21,6 +24,11 @@ public class ApiBase : ControllerBase
             _ => HttpStatusCode.InternalServerError
         };
         
-        return Problem(statusCode: (int)statusCode, title: firstError.Description);
+        var problem = new ProblemDetails();
+        problem.Extensions.Add("ErrorCodes", errors.Select(x => x.Code));
+
+        return Problem(
+            statusCode: (int)statusCode, 
+            title: firstError.Description);
     }
 }
