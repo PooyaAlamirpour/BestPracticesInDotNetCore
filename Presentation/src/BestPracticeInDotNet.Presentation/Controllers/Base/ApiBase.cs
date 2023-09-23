@@ -4,7 +4,7 @@ using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace BestPracticeInDotNet.Presentation.Server.Controllers.Base;
+namespace BestPracticeInDotNet.Presentation.Api.Controllers.Base;
 
 [ApiController]
 [Route("api/v{version:apiVersion}")]

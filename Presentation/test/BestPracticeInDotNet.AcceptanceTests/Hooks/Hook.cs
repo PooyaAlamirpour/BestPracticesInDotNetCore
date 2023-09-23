@@ -1,9 +1,9 @@
 using BestPracticeInDotNet.AcceptanceTests.Repositories;
 using BestPracticeInDotNet.Application.Command.Repositories;
 using BestPracticeInDotNet.Application.Queries.Repositories;
-using BestPracticeInDotNet.Presentation.Server;
 using BoDi;
 using BestPracticeInDotNet.Infrastructure.Persistence.DbContexts;
+using BestPracticeInDotNet.Presentation.Api;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;

@@ -2,15 +2,14 @@
 using BestPracticeInDotNet.Application.Command.Authentication.Register;
 using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.User.Get;
-using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
-using BestPracticeInDotNet.Presentation.Server.Models.AuthenticationDto;
-using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
-using BestPracticeInDotNet.Presentation.Server.Models.AuthenticationDto;
+using BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
+using BestPracticeInDotNet.Presentation.Api.Controllers.Base;
+using BestPracticeInDotNet.Presentation.Api.Models.AuthenticationDto;
 using ErrorOr;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BestPracticeInDotNet.Presentation.Server.Controllers.V1;
+namespace BestPracticeInDotNet.Presentation.Api.Controllers.V1;
 
 [Route("auth")]
 public class AuthenticationController : ApiBase

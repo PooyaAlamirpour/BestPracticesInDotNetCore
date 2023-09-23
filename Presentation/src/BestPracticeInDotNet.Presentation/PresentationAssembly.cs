@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace BestPracticeInDotNet.Presentation.Server;
+namespace BestPracticeInDotNet.Presentation.Api;
 
 public class PresentationAssembly
 {

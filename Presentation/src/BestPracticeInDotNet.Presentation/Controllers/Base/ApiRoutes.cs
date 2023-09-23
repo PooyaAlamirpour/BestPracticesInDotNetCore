@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Presentation.Server.Controllers.Base;
+﻿namespace BestPracticeInDotNet.Presentation.Api.Controllers.Base;
 
 public static partial class ApiRoutes
 {
