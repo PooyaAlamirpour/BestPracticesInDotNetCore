@@ -6,7 +6,7 @@ using BestPracticeInDotNet.Infrastructure.Persistence;
 using BestPracticeInDotNet.Infrastructure.Write.Persistence;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
-namespace BestPracticeInDotNet.Presentation.Server
+namespace BestPracticeInDotNet.Presentation.Api
 {
     public class Program
     {

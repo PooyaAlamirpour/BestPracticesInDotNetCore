@@ -3,7 +3,7 @@ using BestPracticeInDotNet.Domain.Core.Exceptions.ABstracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace BestPracticeInDotNet.Presentation.Server.Filters;
+namespace BestPracticeInDotNet.Presentation.Api.Filters;
 
 public class ExceptionHandlingFilterAttribute : ExceptionFilterAttribute
 {

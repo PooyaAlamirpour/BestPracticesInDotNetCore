@@ -1,11 +1,11 @@
 ﻿using BestPracticeInDotNet.framework.Commons.Errors;
-using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
-using BestPracticeInDotNet.Presentation.Server.Filters;
+using BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
+using BestPracticeInDotNet.Presentation.Api.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Versioning;
 
-namespace BestPracticeInDotNet.Presentation.Server;
+namespace BestPracticeInDotNet.Presentation.Api;
 
 public static class DependencyInjection
 {
