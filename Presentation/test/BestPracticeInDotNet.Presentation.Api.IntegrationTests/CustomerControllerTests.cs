@@ -1,6 +1,5 @@
 using System.Net.Http.Json;
 using BestPracticeInDotNet.Presentation.Server;
-using BestPracticeInDotNet.Presentation.Server.Commons.Models;
 using BestPracticeInDotNet.Presentation.Server.Models.CustomerDto;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
