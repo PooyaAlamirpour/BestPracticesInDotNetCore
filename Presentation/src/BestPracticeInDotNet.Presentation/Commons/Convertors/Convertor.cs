@@ -7,6 +7,7 @@ using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Presentation.Server.Commons.Models;
 using BestPracticeInDotNet.Presentation.Server.Models.AuthenticationDto;
 using BestPracticeInDotNet.Presentation.Server.Commons.Models.CustomerDto;
+using BestPracticeInDotNet.Presentation.Server.Models.CustomerDto;
 
 namespace BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
 

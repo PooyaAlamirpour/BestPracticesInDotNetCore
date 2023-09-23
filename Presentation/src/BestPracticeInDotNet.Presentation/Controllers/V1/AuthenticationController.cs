@@ -5,6 +5,7 @@ using BestPracticeInDotNet.Application.Queries.User.Get;
 using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Server.Models.AuthenticationDto;
 using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
+using BestPracticeInDotNet.Presentation.Server.Models.AuthenticationDto;
 using ErrorOr;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

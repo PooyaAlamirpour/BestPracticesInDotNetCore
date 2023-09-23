@@ -1,4 +1,3 @@
-﻿namespace BestPracticeInDotNet.Presentation.Server.Commons.Models.CustomerDto;
 
 public record CreateCustomerDto(
     string Firstname,

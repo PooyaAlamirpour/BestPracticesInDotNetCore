@@ -20,7 +20,6 @@
       <ProjectReference Include="..\..\..\Domain\src\BestPracticeInDotNet.Domain.Generic\BestPracticeInDotNet.Domain.Generic.csproj" />
       <ProjectReference Include="..\..\..\Framework\BestPracticeInDotNet.framework.Mediator\BestPracticeInDotNet.framework.Mediator.csproj" />
       <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Services\BestPracticeInDotNet.Infrastructure.Services.csproj" />
-      <ProjectReference Include="..\BestPracticeInDotNet.Application.Queries\BestPracticeInDotNet.Application.Queries.csproj" />
     </ItemGroup>
 
 </Project>
