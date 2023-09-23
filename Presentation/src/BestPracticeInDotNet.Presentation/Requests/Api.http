@@ -17,3 +17,6 @@ Content-Type: application/json
   "email": "string",
   "password": "string"
 }
+
+### Get the list of dinners
+GET {{host}}/api/v1.0/dinners

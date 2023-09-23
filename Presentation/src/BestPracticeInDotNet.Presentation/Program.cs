@@ -51,6 +51,7 @@ namespace BestPracticeInDotNet.Presentation.Api
                 }
 
                 app.UseHttpsRedirection();
+                app.UseAuthentication();
                 app.UseRouting();
                 app.MapControllers();
 
