@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Presentation.Server.Commons.Http;
+﻿namespace BestPracticeInDotNet.framework.Commons.Http;
 
 public static class HttpContextItemKeys
 {
