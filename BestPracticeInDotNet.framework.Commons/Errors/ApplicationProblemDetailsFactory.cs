@@ -1,5 +1,4 @@
-﻿
-using BestPracticeInDotNet.framework.Commons.Http;
+﻿using BestPracticeInDotNet.framework.Commons.Http;
 using ErrorOr;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
