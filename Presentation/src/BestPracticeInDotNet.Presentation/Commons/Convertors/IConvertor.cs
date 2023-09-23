@@ -4,8 +4,7 @@ using BestPracticeInDotNet.Application.Command.Customer.Update;
 using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
 using BestPracticeInDotNet.Domain.Core.Customer;
-using BestPracticeInDotNet.Presentation.Server.Commons.Models;
-using BestPracticeInDotNet.Presentation.Server.Commons.Models.AuthenticationDto;
+using BestPracticeInDotNet.Presentation.Server.Models.AuthenticationDto;
 using BestPracticeInDotNet.Presentation.Server.Commons.Models.CustomerDto;
 
 namespace BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
