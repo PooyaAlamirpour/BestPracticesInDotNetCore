@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Presentation.Server.Commons.Models.CustomerDto;
+﻿namespace BestPracticeInDotNet.Presentation.Server.Models.CustomerDto;
 
 public record GetCustomerResponse(
     Guid Id,

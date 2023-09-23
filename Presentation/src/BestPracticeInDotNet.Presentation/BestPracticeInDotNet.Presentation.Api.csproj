@@ -24,7 +24,6 @@
     <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Queries\BestPracticeInDotNet.Application.Queries.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.EventStore\BestPracticeInDotNet.Infrastructure.EventStore.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Persistence.Read\BestPracticeInDotNet.Persistence.Read.csproj" />
-    <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Services\BestPracticeInDotNet.Infrastructure.Services.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Persistence.Write\BestPracticeInDotNet.Persistence.Write.csproj" />
   </ItemGroup>
 
