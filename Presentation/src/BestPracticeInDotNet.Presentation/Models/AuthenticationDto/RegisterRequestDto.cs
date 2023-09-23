@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Presentation.Server.Models.AuthenticationDto;
+﻿namespace BestPracticeInDotNet.Presentation.Api.Models.AuthenticationDto;
 
 public record RegisterRequestDto(
     string FirstName,

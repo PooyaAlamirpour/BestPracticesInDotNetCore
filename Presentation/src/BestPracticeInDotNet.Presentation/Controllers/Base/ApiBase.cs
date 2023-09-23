@@ -1,10 +1,10 @@
 ﻿using System.Net;
-using BestPracticeInDotNet.Presentation.Server.Commons.Http;
+using BestPracticeInDotNet.Presentation.Api.Commons.Http;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace BestPracticeInDotNet.Presentation.Server.Controllers.Base;
+namespace BestPracticeInDotNet.Presentation.Api.Controllers.Base;
 
 [ApiController]
 [Route("api/v{version:apiVersion}")]

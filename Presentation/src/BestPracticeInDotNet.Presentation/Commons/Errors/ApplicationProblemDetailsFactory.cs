@@ -1,10 +1,10 @@
-﻿using BestPracticeInDotNet.Presentation.Server.Commons.Http;
+﻿using BestPracticeInDotNet.Presentation.Api.Commons.Http;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace BestPracticeInDotNet.Presentation.Server.Commons.Errors;
+namespace BestPracticeInDotNet.Presentation.Api.Commons.Errors;
 
 public class ApplicationProblemDetailsFactory : ProblemDetailsFactory
 {

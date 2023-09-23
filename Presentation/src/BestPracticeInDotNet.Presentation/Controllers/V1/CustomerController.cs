@@ -3,13 +3,13 @@ using BestPracticeInDotNet.Application.Command.Customer.Delete;
 using BestPracticeInDotNet.Application.Command.Customer.Update;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
 using BestPracticeInDotNet.Domain.Core.Customer;
-using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
-using BestPracticeInDotNet.Presentation.Server.Controllers.Base;
-using BestPracticeInDotNet.Presentation.Server.Models.CustomerDto;
+using BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
+using BestPracticeInDotNet.Presentation.Api.Controllers.Base;
+using BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BestPracticeInDotNet.Presentation.Server.Controllers.V1;
+namespace BestPracticeInDotNet.Presentation.Api.Controllers.V1;
 
 [ApiVersion("1.0")]
 public class CustomerController : ApiBase
