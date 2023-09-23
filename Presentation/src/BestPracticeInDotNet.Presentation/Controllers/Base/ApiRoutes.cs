@@ -15,4 +15,9 @@ public static partial class ApiRoutes
         public const string Update = "customer/{customerId:guid}";
         public const string Delete = "customer/{customerId:guid}";
     }
+
+    public static class Dinner
+    {
+        public const string Get = "dinner";
+    }
 }
