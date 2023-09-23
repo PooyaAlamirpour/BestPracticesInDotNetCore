@@ -10,7 +10,7 @@ namespace BestPracticeInDotNet.Presentation.Api.Controllers.Base;
 [Route("api/v{version:apiVersion}")]
 public class ApiBase : ControllerBase
 {
-    public IActionResult Problem(List<Error> errors)
+    protected IActionResult Problem(List<Error> errors)
     {
         if (errors.Count is 0) return Problem();
         if (errors.All(error => error.Type == ErrorType.Validation))
