@@ -1,5 +1,5 @@
-﻿using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
-using BestPracticeInDotNet.Presentation.Server.Commons.Errors;
+﻿using BestPracticeInDotNet.framework.Commons.Errors;
+using BestPracticeInDotNet.Presentation.Server.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Server.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
