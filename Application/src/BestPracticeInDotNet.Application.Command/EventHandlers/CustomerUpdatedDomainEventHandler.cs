@@ -16,7 +16,7 @@ public class CustomerUpdatedDomainEventHandler : INotificationHandler<CustomerUp
 
     public async Task Handle(CustomerUpdatedDomainEvent @event, CancellationToken cancellationToken)
     {
-        CustomerAggregateRoot customer = new();
+        /*CustomerAggregateRoot customer = new();
         customer.Apply(@event);
         if (!string.IsNullOrWhiteSpace(@event.PhoneNumber))
         {
@@ -26,6 +26,7 @@ public class CustomerUpdatedDomainEventHandler : INotificationHandler<CustomerUp
         {
             _customerWriteRepository.Attach(customer, x => x.BankAccountNumber);
         }
-        await _customerWriteRepository.CommitAsync(cancellationToken);
+        await _customerWriteRepository.CommitAsync(cancellationToken);*/
+        throw new NotImplementedException();
     }
 }

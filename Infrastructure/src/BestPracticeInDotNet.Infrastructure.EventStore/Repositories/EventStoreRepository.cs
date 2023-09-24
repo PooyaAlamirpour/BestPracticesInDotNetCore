@@ -53,18 +53,18 @@ public class EventStoreRepository<TAggregateRoot, Tkey> : IEventStoreRepository<
 
     private Task AppendAsync(Tkey id, INotification[] events, long nextVersion, CancellationToken cancellationToken)
     {
-        foreach (var @event in events)
-        {
-            EventEntity entity = new()
-            {
-                Id = Guid.NewGuid(),
-                AggregateType = @event.GetType().Name,
-                AggregateId = id.Value,
-                Version = nextVersion,
-                Payload = JsonConvert.SerializeObject(@event)
-            };
-            _eventRepository.Add(@entity);
-        }
+        // foreach (var @event in events)
+        // {
+            // EventEntity entity = new()
+            // {
+                // Id = Guid.NewGuid(),
+                // AggregateType = @event.GetType().Name,
+                // AggregateId = id.Value,
+                // Version = nextVersion,
+                // Payload = JsonConvert.SerializeObject(@event)
+            // };
+            // _eventRepository.Add(@entity);
+        // }
         
         return Task.CompletedTask;
     }

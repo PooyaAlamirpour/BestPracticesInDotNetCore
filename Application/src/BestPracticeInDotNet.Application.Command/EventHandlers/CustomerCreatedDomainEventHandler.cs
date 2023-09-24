@@ -16,10 +16,11 @@ public class CustomerCreatedDomainEventHandler : INotificationHandler<CustomerCr
 
     public async Task Handle(CustomerCreatedDomainEvent @event, CancellationToken cancellationToken)
     {
-        CustomerAggregateRoot customer = new();
+        /*CustomerAggregateRoot customer = new();
         customer.Apply(@event);
         
         _customerWriteRepository.Add(customer);
-        await _customerWriteRepository.CommitAsync(cancellationToken);
+        await _customerWriteRepository.CommitAsync(cancellationToken);*/
+        throw new NotImplementedException();
     }
 }

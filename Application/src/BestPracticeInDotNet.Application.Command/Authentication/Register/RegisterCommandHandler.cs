@@ -19,7 +19,7 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<R
 
     public async Task<ErrorOr<RegisterCommandResponse>> Handle(RegisterCommand request, CancellationToken cancellationToken)
     {
-        var newUser = new User()
+        /*var newUser = new User()
         {
             FirstName = request.FirstName,
             LastName = request.LastName,
@@ -29,6 +29,7 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<R
         _userWriteRepository.Add(newUser);
         
         var token = _jwtTokenGenerator.GenerateToken(newUser.Id, request.FirstName, request.LastName);
-        return new RegisterCommandResponse(newUser.Id, request.FirstName, request.LastName, request.Email, token);
+        return new RegisterCommandResponse(newUser.Id, request.FirstName, request.LastName, request.Email, token);*/
+        throw new NotImplementedException();
     }
 }

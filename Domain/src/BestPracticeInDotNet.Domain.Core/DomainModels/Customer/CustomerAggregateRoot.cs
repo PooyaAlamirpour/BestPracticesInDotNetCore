@@ -14,17 +14,20 @@ public class CustomerAggregateRoot : AggregateRoot<CustomerId>
     public Email Email { get; private set; }
     public BankAccountNumber BankAccountNumber { get; private set; }
 
-    public CustomerAggregateRoot() { }
-    
-
-    private CustomerAggregateRoot(CustomerId customerId, string firstname, string lastname, DateOfBirthdate dateOfBirth, PhoneNumber phoneNumber,
-        Email email, BankAccountNumber bankAccountNumber)
+    public CustomerAggregateRoot(CustomerId id) : base(id)
     {
-        CustomerCreatedDomainEvent @event = new(customerId.Value, firstname, lastname, dateOfBirth.Value, phoneNumber.Value, 
-            email.Value, bankAccountNumber.Value);
-        RaiseEvent(@event);
-        Apply(@event);
     }
+    
+    // public CustomerAggregateRoot() { }
+
+    // private CustomerAggregateRoot(CustomerId customerId, string firstname, string lastname, DateOfBirthdate dateOfBirth, PhoneNumber phoneNumber,
+        // Email email, BankAccountNumber bankAccountNumber)
+    // {
+        // CustomerCreatedDomainEvent @event = new(customerId.Value, firstname, lastname, dateOfBirth.Value, phoneNumber.Value, 
+            // email.Value, bankAccountNumber.Value);
+        // RaiseEvent(@event);
+        // Apply(@event);
+    // }
 
     public static CustomerAggregateRoot Create(string firstname, string lastname, string dateOfBirth, string phoneNumber,
         string email, string bankAccountNumber)
@@ -35,10 +38,11 @@ public class CustomerAggregateRoot : AggregateRoot<CustomerId>
         BankAccountNumber bankAccountNumberVObject = BankAccountNumber.Of(bankAccountNumber);
         
         CustomerId customerId = CustomerId.Of(Guid.NewGuid());
-        CustomerAggregateRoot newCustomer = new(customerId, firstname, lastname, dateOfBirthVObject, phoneNumberVObject, emailVObject,
-            bankAccountNumberVObject);
+        // CustomerAggregateRoot newCustomer = new(customerId, firstname, lastname, dateOfBirthVObject, phoneNumberVObject, emailVObject,
+            // bankAccountNumberVObject);
         
-        return newCustomer;
+        // return newCustomer;
+        throw new NotImplementedException();
     }
     
     public void Update(Guid customerId, string phoneNumber, string bankAccountNumber)
@@ -50,9 +54,9 @@ public class CustomerAggregateRoot : AggregateRoot<CustomerId>
     
     public void Delete(CustomerId customerId)
     {
-        CustomerDeletedDomainEvent @event = new(customerId.Value);
-        RaiseEvent(@event);
-        Apply(@event);
+        // CustomerDeletedDomainEvent @event = new(customerId.Value);
+        // RaiseEvent(@event);
+        // Apply(@event);
     }
 
     public void Apply(CustomerDeletedDomainEvent @event)

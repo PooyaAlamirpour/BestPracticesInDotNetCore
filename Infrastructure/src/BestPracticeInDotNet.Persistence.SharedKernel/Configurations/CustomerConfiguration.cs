@@ -12,10 +12,10 @@ public class CustomerConfiguration : IEntityTypeConfiguration<CustomerAggregateR
         entity.ToTable("customers");
         
         entity.HasKey(x => x.Id).HasName("PRIMARY");
-        entity.Property(x => x.Id)
-            .HasConversion(paymentId => paymentId.Value,
-                value => CustomerId.Of(value))
-            .HasColumnName("id");
+        // entity.Property(x => x.Id)
+            // .HasConversion(paymentId => paymentId.Value,
+                // value => CustomerId.Of(value))
+            // .HasColumnName("id");
 
         entity.Property(x => x.Firstname)
             .HasMaxLength(50)
