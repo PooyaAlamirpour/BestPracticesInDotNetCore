@@ -5,6 +5,7 @@ using BestPracticeInDotNet.Infrastructure.EventStore;
 using BestPracticeInDotNet.Infrastructure.Persistence;
 using BestPracticeInDotNet.Infrastructure.Write.Persistence;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.OpenApi.Models;
 
 namespace BestPracticeInDotNet.Presentation.Api
 {
@@ -23,7 +24,38 @@ namespace BestPracticeInDotNet.Presentation.Api
                     .AddEventStore(builder.Configuration)
                     .AddJwtTokenGenerator(builder.Configuration);
 
-                builder.Services.AddSwaggerGen();
+                builder.Services.AddSwaggerGen(c =>
+                {
+                    c.SwaggerDoc("v1", new OpenApiInfo()
+                    {
+                        Title = "Best Practices in DotNet Core",
+                        Version = "v1"
+                    });
+                    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                    {
+                        Description = "JWT Authorization header using the Bearer scheme. " +
+                                      "Just paste below the token that you have taken from the login api.",
+                        Name = "Authorization",
+                        In = ParameterLocation.Header,
+                        Type = SecuritySchemeType.Http,
+                        Scheme = "bearer",
+                        BearerFormat = "JWT"
+                    });
+                    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                    {
+                        {
+                            new OpenApiSecurityScheme()
+                            {
+                                Reference = new OpenApiReference()
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                                }
+                            },
+                            new string[] {}
+                        }
+                    });
+                });
             }
             
             var app = builder.Build();
@@ -46,14 +78,14 @@ namespace BestPracticeInDotNet.Presentation.Api
                 else
                 {
                     app.UseExceptionHandler("/Error");
-                    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                     app.UseHsts();
                 }
 
                 app.UseHttpsRedirection();
+                app.UseAuthentication();
                 app.UseRouting();
                 app.MapControllers();
-
+                app.UseAuthorization();
                 app.Run();
             }
             

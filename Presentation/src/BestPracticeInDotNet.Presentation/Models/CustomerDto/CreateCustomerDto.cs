@@ -1,5 +1,4 @@
-﻿
-namespace BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;
+﻿namespace BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;
 
 public record CreateCustomerDto(
     string Firstname,
