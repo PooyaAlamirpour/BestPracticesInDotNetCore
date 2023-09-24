@@ -1,6 +1,6 @@
 ﻿using BestPracticeInDotNet.Domain.Core.Errors;
-using FluentValidation;
 using BestPracticeInDotNet.framework.Mediator.Extensions;
+using FluentValidation;
 
 namespace BestPracticeInDotNet.Application.Command.Customer.Create;
 

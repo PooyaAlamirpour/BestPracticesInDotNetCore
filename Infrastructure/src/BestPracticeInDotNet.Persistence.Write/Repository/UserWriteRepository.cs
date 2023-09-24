@@ -1,5 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
-using BestPracticeInDotNet.Domain.Core.User;
+using BestPracticeInDotNet.Domain.Core.DomainModels.User;
 
 namespace BestPracticeInDotNet.Infrastructure.Write.Persistence.Repository;
 

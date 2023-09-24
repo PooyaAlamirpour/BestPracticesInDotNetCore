@@ -1,6 +1,6 @@
 ﻿using BestPracticeInDotNet.framework.DDD;
 
-namespace BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
+namespace BestPracticeInDotNet.Domain.Core.DomainModels.Customer.ValueObjects;
 
 public class CustomerId : ValueObject<CustomerId>
 {

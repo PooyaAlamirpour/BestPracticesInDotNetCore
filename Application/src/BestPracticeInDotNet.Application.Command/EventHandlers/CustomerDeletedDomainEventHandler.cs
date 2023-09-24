@@ -1,5 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
-using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
 using BestPracticeInDotNet.Domain.Core.Events;
 using MediatR;
 

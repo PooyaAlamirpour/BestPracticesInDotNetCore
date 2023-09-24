@@ -1,8 +1,6 @@
 ﻿using System.Reflection;
-using BestPracticeInDotNet.Application.Command.Authentication.Register;
-using FluentValidation;
-using BestPracticeInDotNet.Application.Command.Customer.Delete;
 using BestPracticeInDotNet.framework.Mediator.Behaviors;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BestPracticeInDotNet.Application.Command;

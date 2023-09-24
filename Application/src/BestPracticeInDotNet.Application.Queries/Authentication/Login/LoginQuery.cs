@@ -1,5 +1,5 @@
-﻿using ErrorOr;
-using MediatR;
+﻿using MediatR;
+using ErrorOr;
 
 namespace BestPracticeInDotNet.Application.Queries.Authentication.Login;
 

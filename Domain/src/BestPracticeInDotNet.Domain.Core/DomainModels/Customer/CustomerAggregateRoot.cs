@@ -1,9 +1,9 @@
-﻿using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
+﻿using BestPracticeInDotNet.Domain.Core.DomainModels.Customer.ValueObjects;
 using BestPracticeInDotNet.Domain.Core.Events;
 using BestPracticeInDotNet.framework.DDD;
 using MediatR;
 
-namespace BestPracticeInDotNet.Domain.Core.Customer;
+namespace BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
 
 public class CustomerAggregateRoot : AggregateRoot<CustomerId>
 {

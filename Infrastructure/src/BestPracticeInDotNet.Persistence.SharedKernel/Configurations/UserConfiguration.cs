@@ -1,4 +1,4 @@
-﻿using BestPracticeInDotNet.Domain.Core.User;
+﻿using BestPracticeInDotNet.Domain.Core.DomainModels.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -22,7 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Command\BestPracticeInDotNet.Application.Command.csproj" />
     <ProjectReference Include="..\..\..\Application\src\BestPracticeInDotNet.Application.Queries\BestPracticeInDotNet.Application.Queries.csproj" />
-    <ProjectReference Include="..\..\..\BestPracticeInDotNet.framework.Commons\BestPracticeInDotNet.framework.Commons.csproj" />
+    <ProjectReference Include="..\..\..\Framework\src\BestPracticeInDotNet.framework.Commons\BestPracticeInDotNet.framework.Commons.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.EventStore\BestPracticeInDotNet.Infrastructure.EventStore.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Persistence.Read\BestPracticeInDotNet.Persistence.Read.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Persistence.Write\BestPracticeInDotNet.Persistence.Write.csproj" />

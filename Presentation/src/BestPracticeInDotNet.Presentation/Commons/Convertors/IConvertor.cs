@@ -3,7 +3,7 @@ using BestPracticeInDotNet.Application.Command.Customer.Create;
 using BestPracticeInDotNet.Application.Command.Customer.Update;
 using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
-using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
 using BestPracticeInDotNet.Presentation.Api.Models.AuthenticationDto;
 using BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;
 

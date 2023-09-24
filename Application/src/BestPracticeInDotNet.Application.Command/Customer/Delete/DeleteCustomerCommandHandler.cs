@@ -1,6 +1,6 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
-using BestPracticeInDotNet.Domain.Core.Customer;
-using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
+using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
+using BestPracticeInDotNet.Domain.Core.DomainModels.Customer.ValueObjects;
 using MediatR;
 
 namespace BestPracticeInDotNet.Application.Command.Customer.Delete;

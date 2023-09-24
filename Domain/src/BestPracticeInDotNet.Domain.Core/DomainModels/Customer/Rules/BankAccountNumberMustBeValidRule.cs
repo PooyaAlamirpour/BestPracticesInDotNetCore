@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using BestPracticeInDotNet.framework.DDD.Abstracts;
 
-namespace BestPracticeInDotNet.Domain.Core.Customer.Rules;
+namespace BestPracticeInDotNet.Domain.Core.DomainModels.Customer.Rules;
 
 public class BankAccountNumberMustBeValidRule : IBusinessRule
 {

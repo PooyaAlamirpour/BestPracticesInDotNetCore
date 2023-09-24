@@ -3,7 +3,7 @@ using MediatR;
 
 namespace BestPracticeInDotNet.framework.DDD;
 
-public abstract class AggregateRoot<TKey> : Entity<TKey>,  IAggregateRoot<TKey>, IAuditable
+public abstract class AggregateRoot<TKey> : Entity<TKey>, IAggregateRoot<TKey>, IAuditable
 {
     public DateTime CreatedAt { get; set; }
     public DateTime? ModifiedAt { get; set; }

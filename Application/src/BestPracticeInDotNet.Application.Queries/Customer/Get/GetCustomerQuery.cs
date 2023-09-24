@@ -1,4 +1,4 @@
-﻿using BestPracticeInDotNet.Domain.Core.Customer;
+﻿using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
 using MediatR;
 
 namespace BestPracticeInDotNet.Application.Queries.Customer.Get;

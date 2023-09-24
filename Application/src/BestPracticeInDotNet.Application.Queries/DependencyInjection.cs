@@ -1,8 +1,6 @@
 ﻿using System.Reflection;
-using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
-using BestPracticeInDotNet.Application.Queries.User.Get;
-using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
 using BestPracticeInDotNet.framework.Mediator.Behaviors;
 using FluentValidation;
 using MediatR;

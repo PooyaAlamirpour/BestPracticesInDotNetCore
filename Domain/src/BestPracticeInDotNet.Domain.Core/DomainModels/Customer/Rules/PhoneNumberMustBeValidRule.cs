@@ -1,7 +1,7 @@
 ﻿using BestPracticeInDotNet.framework.DDD.Abstracts;
 using PhoneNumbers;
 
-namespace BestPracticeInDotNet.Domain.Core.Customer.Rules;
+namespace BestPracticeInDotNet.Domain.Core.DomainModels.Customer.Rules;
 
 public class PhoneNumberMustBeValidRule : IBusinessRule
 {

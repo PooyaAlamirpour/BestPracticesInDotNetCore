@@ -1,5 +1,5 @@
+using BestPracticeInDotNet.Domain.Core.DomainModels.Customer.Rules;
 using FluentAssertions;
-using BestPracticeInDotNet.Domain.Core.Customer.Rules;
 using BestPracticeInDotNet.framework.DDD.Abstracts;
 
 namespace BestPracticeInDotNet.Domain.Core.Tests;

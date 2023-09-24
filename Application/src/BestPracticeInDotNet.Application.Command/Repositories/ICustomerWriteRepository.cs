@@ -1,5 +1,5 @@
-﻿using BestPracticeInDotNet.Domain.Core.Customer;
-using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
+﻿using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
+using BestPracticeInDotNet.Domain.Core.DomainModels.Customer.ValueObjects;
 
 namespace BestPracticeInDotNet.Application.Command.Repositories;
 

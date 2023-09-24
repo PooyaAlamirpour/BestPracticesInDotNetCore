@@ -1,7 +1,7 @@
 ﻿using BestPracticeInDotNet.framework.DDD;
 using MediatR;
 
-namespace BestPracticeInDotNet.Domain.Core.User;
+namespace BestPracticeInDotNet.Domain.Core.DomainModels.User;
 
 public class User : AggregateRoot<Guid>
 {

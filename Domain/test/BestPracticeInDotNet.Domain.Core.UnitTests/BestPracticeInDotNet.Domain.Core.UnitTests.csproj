@@ -26,6 +26,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Framework\BestPracticeInDotNet.framework.domain\BestPracticeInDotNet.framework.domain.csproj" />
+      <ProjectReference Include="..\..\..\Framework\src\BestPracticeInDotNet.framework.domain\BestPracticeInDotNet.framework.domain.csproj" />
       <ProjectReference Include="..\..\src\BestPracticeInDotNet.Domain.Core\BestPracticeInDotNet.Domain.Core.csproj" />
     </ItemGroup>
 
