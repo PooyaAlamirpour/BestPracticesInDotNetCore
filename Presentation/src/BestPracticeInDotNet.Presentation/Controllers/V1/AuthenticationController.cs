@@ -7,11 +7,13 @@ using BestPracticeInDotNet.Presentation.Api.Controllers.Base;
 using BestPracticeInDotNet.Presentation.Api.Models.AuthenticationDto;
 using ErrorOr;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BestPracticeInDotNet.Presentation.Api.Controllers.V1;
 
 [Route("auth")]
+[AllowAnonymous]
 public class AuthenticationController : ApiBase
 {
     private readonly ISender _sender;
