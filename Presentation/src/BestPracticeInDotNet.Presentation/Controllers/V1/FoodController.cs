@@ -8,7 +8,7 @@ namespace BestPracticeInDotNet.Presentation.Api.Controllers.V1;
 [Authorize]
 public class FoodController : ApiBase
 {
-    [HttpGet(ApiRoutes.Dinner.Get)]
+    [HttpGet(ApiRoutes.Food.Get)]
     public IActionResult ListDinners()
     {
         return Ok(Array.Empty<string>());

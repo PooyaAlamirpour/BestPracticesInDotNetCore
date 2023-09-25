@@ -16,8 +16,13 @@ public static partial class ApiRoutes
         public const string Delete = "customer/{customerId:guid}";
     }
 
-    public static class Dinner
+    public static class Food
     {
         public const string Get = "dinners";
+    }
+
+    public static class Menu
+    {
+        public const string Create = "hosts/{hostId}/menus";
     }
 }
