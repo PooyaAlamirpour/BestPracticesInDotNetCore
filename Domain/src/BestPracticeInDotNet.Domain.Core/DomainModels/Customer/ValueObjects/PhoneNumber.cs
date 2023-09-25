@@ -8,7 +8,7 @@ public class PhoneNumber : ValueObject<PhoneNumber>
     private readonly string _phoneNumber;
     
     public string Value => _phoneNumber;
-    public override IEnumerable<object> GetEqualityComponents()
+    public override IEnumerable<PhoneNumber> GetEqualityComponents()
     {
         throw new NotImplementedException();
     }

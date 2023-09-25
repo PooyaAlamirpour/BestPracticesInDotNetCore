@@ -10,7 +10,7 @@ public class CustomerId : ValueObject<CustomerId>
     }
 
     public static CustomerId Of(Guid customerId) => new(customerId);
-    public override IEnumerable<object> GetEqualityComponents()
+    public override IEnumerable<CustomerId> GetEqualityComponents()
     {
         throw new NotImplementedException();
     }
