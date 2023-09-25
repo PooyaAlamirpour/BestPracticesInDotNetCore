@@ -1,6 +1,6 @@
-﻿using FluentAssertions;
-using BestPracticeInDotNet.Domain.Core.Customer.Rules;
+﻿using BestPracticeInDotNet.Domain.Core.Customer.Rules;
 using BestPracticeInDotNet.framework.DDD.Abstracts;
+using FluentAssertions;
 
 namespace BestPracticeInDotNet.Domain.Core.Tests;
 

@@ -3,7 +3,8 @@ using MediatR;
 
 namespace BestPracticeInDotNet.framework.DDD;
 
-public abstract class AggregateRoot<TKey> : Entity<TKey>,  IAggregateRoot<TKey>, IAuditable
+public abstract class AggregateRoot<TId> : Entity<TId>, IAggregateRoot<TId>, IAuditable
+    where TId : notnull
 {
     public DateTime CreatedAt { get; set; }
     public DateTime? ModifiedAt { get; set; }
@@ -12,6 +13,10 @@ public abstract class AggregateRoot<TKey> : Entity<TKey>,  IAggregateRoot<TKey>,
     public void ClearUncommittedEvents() => _uncommittedEvents.Clear();
     public IEnumerable<INotification> GetUncommittedEvents() => _uncommittedEvents;
 
+    protected AggregateRoot(TId id) : base(id)
+    {
+    }
+    
     public abstract void Apply(INotification @event);
     
     protected void RaiseEvent(INotification @event)

@@ -9,10 +9,10 @@ public class UpdateCustomerCommandHandler : IRequestHandler<UpdateCustomerComman
 {
     private readonly IEventStoreRepository<CustomerAggregateRoot, CustomerId> _eventStoreRepository;
 
-    public UpdateCustomerCommandHandler(IEventStoreRepository<CustomerAggregateRoot, CustomerId> eventStoreRepository)
-    {
-        _eventStoreRepository = eventStoreRepository;
-    }
+    // public UpdateCustomerCommandHandler(IEventStoreRepository<CustomerAggregateRoot, CustomerId> eventStoreRepository)
+    // {
+        // _eventStoreRepository = eventStoreRepository;
+    // }
 
     public async Task Handle(UpdateCustomerCommand message, CancellationToken cancellationToken)
     {

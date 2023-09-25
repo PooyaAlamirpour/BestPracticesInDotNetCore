@@ -1,6 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
-using BestPracticeInDotNet.Domain.Core.Customer;
-using BestPracticeInDotNet.Domain.Core.Events;
+using BestPracticeInDotNet.Domain.SubDomain.Events;
 using MediatR;
 
 namespace BestPracticeInDotNet.Application.Command.EventHandlers;
@@ -16,10 +15,11 @@ public class CustomerCreatedDomainEventHandler : INotificationHandler<CustomerCr
 
     public async Task Handle(CustomerCreatedDomainEvent @event, CancellationToken cancellationToken)
     {
-        CustomerAggregateRoot customer = new();
+        /*CustomerAggregateRoot customer = new();
         customer.Apply(@event);
         
         _customerWriteRepository.Add(customer);
-        await _customerWriteRepository.CommitAsync(cancellationToken);
+        await _customerWriteRepository.CommitAsync(cancellationToken);*/
+        throw new NotImplementedException();
     }
 }

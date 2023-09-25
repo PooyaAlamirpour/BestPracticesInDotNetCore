@@ -2,7 +2,7 @@
 
 namespace BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 
-public class CustomerId : ValueObject<CustomerId>
+public class CustomerId : ValueObject<Guid>
 {
     private CustomerId(Guid customerId)
     {
@@ -10,4 +10,8 @@ public class CustomerId : ValueObject<CustomerId>
     }
 
     public static CustomerId Of(Guid customerId) => new(customerId);
+    public override IEnumerable<Guid> GetEqualityComponents()
+    {
+        throw new NotImplementedException();
+    }
 }

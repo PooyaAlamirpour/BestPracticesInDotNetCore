@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BestPracticeInDotNet.framework.Mediator\BestPracticeInDotNet.framework.Mediator.csproj" />
+        <PackageReference Include="MediatR" Version="12.1.1" />
     </ItemGroup>
-
 </Project>

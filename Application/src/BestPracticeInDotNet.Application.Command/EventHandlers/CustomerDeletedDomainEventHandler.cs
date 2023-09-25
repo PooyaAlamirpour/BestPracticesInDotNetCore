@@ -1,6 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
-using BestPracticeInDotNet.Domain.Core.Customer;
-using BestPracticeInDotNet.Domain.Core.Events;
+using BestPracticeInDotNet.Domain.SubDomain.Events;
 using MediatR;
 
 namespace BestPracticeInDotNet.Application.Command.EventHandlers;
@@ -16,9 +15,10 @@ public class CustomerDeletedDomainEventHandler : INotificationHandler<CustomerDe
 
     public async Task Handle(CustomerDeletedDomainEvent @event, CancellationToken cancellationToken)
     {
-        CustomerAggregateRoot customer = new();
+        /*CustomerAggregateRoot customer = new();
         customer.Apply(@event);
         _customerWriteRepository.Delete(customer);
-        await _customerWriteRepository.CommitAsync(cancellationToken);
+        await _customerWriteRepository.CommitAsync(cancellationToken);*/
+        throw new NotImplementedException();
     }
 }

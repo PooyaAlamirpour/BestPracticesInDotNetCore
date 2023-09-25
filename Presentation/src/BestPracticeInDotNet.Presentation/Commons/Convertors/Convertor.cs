@@ -22,7 +22,7 @@ public class Convertor : IConvertor
 
     public List<GetCustomerResponse> ToDto(List<CustomerAggregateRoot> customers)
     {
-        return customers.Select(x => new GetCustomerResponse(
+        /*return customers.Select(x => new GetCustomerResponse(
                 x.Id.Value,
                 x.Firstname,
                 x.Lastname,
@@ -30,7 +30,8 @@ public class Convertor : IConvertor
                 x.PhoneNumber.Value,
                 x.Email.Value,
                 x.BankAccountNumber.Value))
-            .ToList();
+            .ToList();*/
+        throw new NotImplementedException();
     }
 
     public UpdateCustomerCommand ToCommand(UpdateCustomerDto customer) => 

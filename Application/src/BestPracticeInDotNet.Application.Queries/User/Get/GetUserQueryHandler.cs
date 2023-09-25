@@ -1,7 +1,7 @@
 ﻿using BestPracticeInDotNet.Application.Queries.Repositories;
-using BestPracticeInDotNet.Domain.Core.Errors;
-using MediatR;
+using BestPracticeInDotNet.Domain.SubDomain.Errors;
 using ErrorOr;
+using MediatR;
 
 namespace BestPracticeInDotNet.Application.Queries.User.Get;
 

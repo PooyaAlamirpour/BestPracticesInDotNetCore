@@ -7,7 +7,7 @@ using BestPracticeInDotNet.AcceptanceTests.Extensions;
 using BestPracticeInDotNet.AcceptanceTests.Repositories;
 using BestPracticeInDotNet.Application.Command.Repositories;
 using BestPracticeInDotNet.Domain.Core.Customer;
-using BestPracticeInDotNet.Domain.Core.Events;
+using BestPracticeInDotNet.Domain.SubDomain.Events;
 using BestPracticeInDotNet.Presentation.Api;
 using BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;
 using FluentAssertions;

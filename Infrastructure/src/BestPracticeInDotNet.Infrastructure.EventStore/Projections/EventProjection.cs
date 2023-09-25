@@ -1,4 +1,4 @@
-﻿using BestPracticeInDotNet.Domain.Core.Events;
+﻿using BestPracticeInDotNet.Domain.SubDomain.Events;
 using BestPracticeInDotNet.framework.DDD;
 using MediatR;
 using Newtonsoft.Json;

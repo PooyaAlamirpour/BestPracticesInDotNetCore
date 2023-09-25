@@ -9,10 +9,10 @@ public class DeleteCustomerCommandHandler : IRequestHandler<DeleteCustomerComman
 {
     private readonly IEventStoreRepository<CustomerAggregateRoot, CustomerId> _eventStoreRepository;
 
-    public DeleteCustomerCommandHandler(IEventStoreRepository<CustomerAggregateRoot, CustomerId> eventStoreRepository)
-    {
-        _eventStoreRepository = eventStoreRepository;
-    }
+    // public DeleteCustomerCommandHandler(IEventStoreRepository<CustomerAggregateRoot, CustomerId> eventStoreRepository)
+    // {
+        // _eventStoreRepository = eventStoreRepository;
+    // }
 
     public async Task Handle(DeleteCustomerCommand message, CancellationToken cancellationToken)
     {

@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace BestPracticeInDotNet.Domain.Core.Exceptions.ABstracts;
+namespace BestPracticeInDotNet.Domain.SubDomain.Exceptions.ABstracts;
 
 public interface IServiceException
 {

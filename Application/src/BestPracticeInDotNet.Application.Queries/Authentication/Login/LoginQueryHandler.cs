@@ -1,8 +1,8 @@
 ﻿using BestPracticeInDotNet.Application.Queries.Repositories;
-using BestPracticeInDotNet.Domain.Core.Errors;
+using BestPracticeInDotNet.Domain.SubDomain.Errors;
 using BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
-using MediatR;
 using ErrorOr;
+using MediatR;
 
 namespace BestPracticeInDotNet.Application.Queries.Authentication.Login;
 

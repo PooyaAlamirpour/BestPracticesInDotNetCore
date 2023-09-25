@@ -8,6 +8,10 @@ public class DateOfBirthdate : ValueObject<Email>
     private readonly DateOnly _dateOfBirth;
     
     public DateOnly Value => _dateOfBirth;
+    public override IEnumerable<Email> GetEqualityComponents()
+    {
+        throw new NotImplementedException();
+    }
 
     private DateOfBirthdate(string dateOfBirth)
     {

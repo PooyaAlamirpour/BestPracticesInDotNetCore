@@ -10,6 +10,10 @@ public class User : AggregateRoot<Guid>
     public string Email { get; set; } = null!;
     public string Password { get; set; } = null!;
     
+    public User(Guid id) : base(id)
+    {
+    }
+    
     public override void Apply(INotification @event)
     {
         throw new NotImplementedException();

@@ -1,7 +1,7 @@
 ﻿using System.Net;
-using BestPracticeInDotNet.Domain.Core.Exceptions.ABstracts;
+using BestPracticeInDotNet.Domain.SubDomain.Exceptions.ABstracts;
 
-namespace BestPracticeInDotNet.Domain.Core.Exceptions;
+namespace BestPracticeInDotNet.Domain.SubDomain.Exceptions;
 
 public class CustomerNotFoundException : Exception, IServiceException
 {

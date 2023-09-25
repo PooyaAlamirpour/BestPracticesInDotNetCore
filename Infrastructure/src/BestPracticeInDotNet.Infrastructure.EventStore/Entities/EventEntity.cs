@@ -11,4 +11,8 @@ public class EventEntity : Entity<Guid>, IAuditable
     public long Version { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime? ModifiedAt { get; set; }
+
+    public EventEntity(Guid id) : base(id)
+    {
+    }
 }

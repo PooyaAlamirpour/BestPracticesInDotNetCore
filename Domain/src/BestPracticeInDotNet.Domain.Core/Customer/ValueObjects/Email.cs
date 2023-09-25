@@ -8,6 +8,10 @@ public class Email : ValueObject<Email>
     private readonly string _email;
     
     public string Value => _email;
+    public override IEnumerable<Email> GetEqualityComponents()
+    {
+        throw new NotImplementedException();
+    }
 
     private Email(string email)
     {

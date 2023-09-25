@@ -1,6 +1,4 @@
-﻿using BestPracticeInDotNet.Domain.Core.User;
-
-namespace BestPracticeInDotNet.Application.Queries.Repositories;
+﻿namespace BestPracticeInDotNet.Application.Queries.Repositories;
 
 public interface IUserReadRepository : IGenericReadRepository<Domain.Core.User.User, Guid>
 {

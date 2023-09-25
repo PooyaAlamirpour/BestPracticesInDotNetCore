@@ -8,6 +8,10 @@ public class BankAccountNumber : ValueObject<BankAccountNumber>
     private readonly string _bankAccountNumber;
     
     public string Value => _bankAccountNumber;
+    public override IEnumerable<BankAccountNumber> GetEqualityComponents()
+    {
+        throw new NotImplementedException();
+    }
 
     private BankAccountNumber(string bankAccountNumber)
     {
