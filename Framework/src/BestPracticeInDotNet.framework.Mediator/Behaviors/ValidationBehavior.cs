@@ -14,8 +14,7 @@ public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TReques
         _validator = validator;
     }
 
-    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, 
-        CancellationToken cancellationToken)
+    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
         if (_validator is null)
         {

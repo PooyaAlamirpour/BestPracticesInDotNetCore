@@ -1,4 +1,4 @@
-using BestPracticeInDotNet.Domain.Core.DomainModels.Customer.Rules;
+using BestPracticeInDotNet.Domain.Core.Customer.Rules;
 using FluentAssertions;
 using BestPracticeInDotNet.framework.DDD.Abstracts;
 

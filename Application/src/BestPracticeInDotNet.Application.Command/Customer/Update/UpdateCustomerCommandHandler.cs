@@ -1,6 +1,6 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
-using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
-using BestPracticeInDotNet.Domain.Core.DomainModels.Customer.ValueObjects;
+using BestPracticeInDotNet.Domain.Core.Customer;
+using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 using MediatR;
 
 namespace BestPracticeInDotNet.Application.Command.Customer.Update;
@@ -9,10 +9,10 @@ public class UpdateCustomerCommandHandler : IRequestHandler<UpdateCustomerComman
 {
     private readonly IEventStoreRepository<CustomerAggregateRoot, CustomerId> _eventStoreRepository;
 
-    public UpdateCustomerCommandHandler(IEventStoreRepository<CustomerAggregateRoot, CustomerId> eventStoreRepository)
-    {
-        _eventStoreRepository = eventStoreRepository;
-    }
+    // public UpdateCustomerCommandHandler(IEventStoreRepository<CustomerAggregateRoot, CustomerId> eventStoreRepository)
+    // {
+        // _eventStoreRepository = eventStoreRepository;
+    // }
 
     public async Task Handle(UpdateCustomerCommand message, CancellationToken cancellationToken)
     {

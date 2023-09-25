@@ -1,5 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Queries.Repositories;
-using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
+using BestPracticeInDotNet.Domain.Core.Customer;
 using MediatR;
 
 namespace BestPracticeInDotNet.Application.Queries.Customer.Get;

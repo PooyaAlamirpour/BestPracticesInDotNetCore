@@ -1,5 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Queries.Repositories;
-using BestPracticeInDotNet.Domain.Core.Errors;
+using BestPracticeInDotNet.Domain.SubDomain.Errors;
 using BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
 using ErrorOr;
 using MediatR;

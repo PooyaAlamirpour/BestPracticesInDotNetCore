@@ -1,4 +1,4 @@
-﻿using BestPracticeInDotNet.Domain.Core.DomainModels.User;
+﻿using BestPracticeInDotNet.Domain.Core.User;
 
 namespace BestPracticeInDotNet.Application.Command.Repositories;
 

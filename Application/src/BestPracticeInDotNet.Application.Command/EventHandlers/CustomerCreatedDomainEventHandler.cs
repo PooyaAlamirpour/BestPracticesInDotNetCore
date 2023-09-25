@@ -1,6 +1,5 @@
 ﻿using BestPracticeInDotNet.Application.Command.Repositories;
-using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
-using BestPracticeInDotNet.Domain.Core.Events;
+using BestPracticeInDotNet.Domain.SubDomain.Events;
 using MediatR;
 
 namespace BestPracticeInDotNet.Application.Command.EventHandlers;

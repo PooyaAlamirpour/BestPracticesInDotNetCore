@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MediatR.NotificationHandling.Extensions" Version="1.0.0" />
+        <PackageReference Include="MediatR" Version="12.1.1" />
     </ItemGroup>
-
 </Project>

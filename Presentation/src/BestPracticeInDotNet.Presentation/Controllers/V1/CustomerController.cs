@@ -2,7 +2,7 @@
 using BestPracticeInDotNet.Application.Command.Customer.Delete;
 using BestPracticeInDotNet.Application.Command.Customer.Update;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
-using BestPracticeInDotNet.Domain.Core.DomainModels.Customer;
+using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Api.Controllers.Base;
 using BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;

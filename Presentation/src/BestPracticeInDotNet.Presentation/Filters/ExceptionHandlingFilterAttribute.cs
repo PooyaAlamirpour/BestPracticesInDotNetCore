@@ -1,5 +1,5 @@
 ﻿using System.Net;
-using BestPracticeInDotNet.Domain.Core.Exceptions.ABstracts;
+using BestPracticeInDotNet.Domain.SubDomain.Exceptions.ABstracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
