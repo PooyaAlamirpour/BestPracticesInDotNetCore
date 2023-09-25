@@ -11,10 +11,10 @@ namespace BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
 
 public interface IConvertor
 {
-    CreateCustomerCommand ToCommand(CreateCustomerDto customer);
-    GetCustomerQuery ToQuery(GetCustomerDto dto);
-    List<GetCustomerResponse> ToDto(List<CustomerAggregateRoot> customers);
-    UpdateCustomerCommand ToCommand(UpdateCustomerDto customer);
+    CreateCustomerCommand ToCommand(CreateCustomerRequestDto customer);
+    GetCustomerQuery ToQuery(GetCustomerRequestDto requestDto);
+    List<GetCustomerResponseDto> ToDto(List<CustomerAggregateRoot> customers);
+    UpdateCustomerCommand ToCommand(UpdateCustomerRequestDto customer);
     AuthenticationResponseDto ToDto(RegisterCommandResponse result);
     AuthenticationResponseDto ToDto(LoginQueryResponse registerResultValue);
 }

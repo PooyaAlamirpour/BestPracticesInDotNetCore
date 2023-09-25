@@ -1,7 +1,6 @@
 ﻿namespace BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;
 
-public record GetCustomerResponse(
-    Guid Id,
+public record CreateCustomerRequestDto(
     string Firstname,
     string Lastname,
     string DateOfBirth,

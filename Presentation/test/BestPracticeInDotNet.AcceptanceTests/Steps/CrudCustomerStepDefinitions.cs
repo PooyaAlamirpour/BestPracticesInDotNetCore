@@ -144,7 +144,7 @@ public sealed class CrudCustomerStepDefinitions
         JArray jsonArray = JArray.Parse(response);
         string id = jsonArray[0]["id"]?.ToString()!;
 
-        UpdateCustomerDto updatedPhoneNumber = new(Guid.Parse(id), phoneNumber, null);
+        UpdateCustomerRequestDto updatedPhoneNumber = new(Guid.Parse(id), phoneNumber, null);
         var updatedJson = JsonConvert.SerializeObject(updatedPhoneNumber);
         
         var content = new StringContent(updatedJson, Encoding.UTF8, MediaTypeNames.Application.Json);

@@ -1,6 +1,6 @@
 ﻿namespace BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;
 
-public record GetCustomerDto(
+public record GetCustomerRequestDto(
     string? Firstname,
     string? Lastname,
     string? PhoneNumber,

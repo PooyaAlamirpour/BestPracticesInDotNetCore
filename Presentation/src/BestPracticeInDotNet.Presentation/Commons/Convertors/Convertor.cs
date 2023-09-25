@@ -11,16 +11,16 @@ namespace BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
 
 public class Convertor : IConvertor
 {
-    public CreateCustomerCommand ToCommand(CreateCustomerDto customer)
+    public CreateCustomerCommand ToCommand(CreateCustomerRequestDto customer)
     {
         return new CreateCustomerCommand(customer.Firstname, customer.Lastname, customer.DateOfBirth,
             customer.PhoneNumber, customer.Email, customer.BankAccountNumber);
     }
 
-    public GetCustomerQuery ToQuery(GetCustomerDto dto) => 
-        new(dto.Firstname, dto.Lastname, dto.PhoneNumber, dto.Email, dto.BankAccountNumber);
+    public GetCustomerQuery ToQuery(GetCustomerRequestDto requestDto) => 
+        new(requestDto.Firstname, requestDto.Lastname, requestDto.PhoneNumber, requestDto.Email, requestDto.BankAccountNumber);
 
-    public List<GetCustomerResponse> ToDto(List<CustomerAggregateRoot> customers)
+    public List<GetCustomerResponseDto> ToDto(List<CustomerAggregateRoot> customers)
     {
         /*return customers.Select(x => new GetCustomerResponse(
                 x.Id.Value,
@@ -34,7 +34,7 @@ public class Convertor : IConvertor
         throw new NotImplementedException();
     }
 
-    public UpdateCustomerCommand ToCommand(UpdateCustomerDto customer) => 
+    public UpdateCustomerCommand ToCommand(UpdateCustomerRequestDto customer) => 
         new(customer.CustomerId, customer.PhoneNumber, customer.BankAccountNumber);
 
     public AuthenticationResponseDto ToDto(RegisterCommandResponse result) => new(

@@ -32,8 +32,4 @@
     <_ContentIncludedByDefault Remove="Requests\http-client.env.json" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\Menus\" />
-  </ItemGroup>
-
 </Project>

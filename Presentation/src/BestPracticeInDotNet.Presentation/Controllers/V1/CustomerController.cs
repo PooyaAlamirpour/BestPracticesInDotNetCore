@@ -23,18 +23,18 @@ public class CustomerController : ApiBase
     }
     
     [HttpGet(ApiRoutes.Customer.Get)]
-    public async Task<IActionResult> GetCustomers([FromQuery] GetCustomerDto customerDto)
+    public async Task<IActionResult> GetCustomers([FromQuery] GetCustomerRequestDto customerRequestDto)
     {
-        GetCustomerQuery getCustomerQuery = _convertor.ToQuery(customerDto);
+        GetCustomerQuery getCustomerQuery = _convertor.ToQuery(customerRequestDto);
         List<CustomerAggregateRoot> response = await _sender.Send(getCustomerQuery);
         return Ok(_convertor.ToDto(response));
     }
 
     [HttpPost(ApiRoutes.Customer.Create)]
-    public async Task<IActionResult> Create([FromBody] CreateCustomerDto customer, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create([FromBody] CreateCustomerRequestDto customer, CancellationToken cancellationToken)
     {
         GetCustomerQuery getCustomerQuery = _convertor.ToQuery(
-            new GetCustomerDto(null, null, null, customer.Email, null));
+            new GetCustomerRequestDto(null, null, null, customer.Email, null));
         List<CustomerAggregateRoot> response = await _sender.Send(getCustomerQuery, cancellationToken);
         if (response.Count is not 0) throw new ArgumentException($"{customer.Email} has been created before.");
         
@@ -44,7 +44,7 @@ public class CustomerController : ApiBase
     }
 
     [HttpPut(ApiRoutes.Customer.Update)]
-    public async Task<IActionResult> Update([FromBody] UpdateCustomerDto customer, CancellationToken cancellationToken)
+    public async Task<IActionResult> Update([FromBody] UpdateCustomerRequestDto customer, CancellationToken cancellationToken)
     {
         UpdateCustomerCommand updateCustomerCommand = _convertor.ToCommand(customer);
         await _sender.Send(updateCustomerCommand, cancellationToken);

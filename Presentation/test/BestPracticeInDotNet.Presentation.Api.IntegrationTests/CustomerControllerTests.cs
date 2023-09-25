@@ -26,7 +26,7 @@ public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Progr
         // Act
         var response = await client.GetAsync("/api/v1/customer");
         var body = await response.Content.ReadAsStringAsync();
-        var customer = JsonConvert.DeserializeObject<List<GetCustomerResponse>>(body);
+        var customer = JsonConvert.DeserializeObject<List<GetCustomerResponseDto>>(body);
         
         // Assert
         response.EnsureSuccessStatusCode();
@@ -38,7 +38,7 @@ public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Progr
     {
         // Assign
         HttpClient client = _factory.CreateClient();
-        var newCustomer = new CreateCustomerDto(
+        var newCustomer = new CreateCustomerRequestDto(
             "Pooya",
             "Alamirpour",
             "2000-01-02",
@@ -52,7 +52,7 @@ public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Progr
 
         var response = await client.GetAsync("/api/v1/customer?firstname=Pooya");
         var body = await response.Content.ReadAsStringAsync();
-        var createdCustomer = JsonConvert.DeserializeObject<List<GetCustomerResponse>>(body);
+        var createdCustomer = JsonConvert.DeserializeObject<List<GetCustomerResponseDto>>(body);
         
         // Assert
         response.EnsureSuccessStatusCode();
@@ -66,7 +66,7 @@ public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Progr
     {
         // Assign
         HttpClient client = _factory.CreateClient();
-        var newCustomer = new CreateCustomerDto(
+        var newCustomer = new CreateCustomerRequestDto(
             "Pooya",
             "Alamirpour",
             "2000-01-02",
@@ -80,7 +80,7 @@ public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Progr
 
         var response = await client.GetAsync("/api/v1/customer?firstname=Pooya");
         var body = await response.Content.ReadAsStringAsync();
-        var createdCustomer = JsonConvert.DeserializeObject<List<GetCustomerResponse>>(body);
+        var createdCustomer = JsonConvert.DeserializeObject<List<GetCustomerResponseDto>>(body);
 
         var customerId = createdCustomer?.FirstOrDefault()?.Id;
         var deleteResponse = await client.DeleteAsync($"/api/v1/customer/{customerId}");
@@ -94,7 +94,7 @@ public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Progr
     {
         // Assign
         HttpClient client = _factory.CreateClient();
-        var newCustomer = new CreateCustomerDto(
+        var newCustomer = new CreateCustomerRequestDto(
             "Pooya",
             "Alamirpour",
             "2000-01-02",
@@ -108,11 +108,11 @@ public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Progr
 
         var response = await client.GetAsync("/api/v1/customer?firstname=Pooya");
         var body = await response.Content.ReadAsStringAsync();
-        var createdCustomer = JsonConvert.DeserializeObject<List<GetCustomerResponse>>(body);
+        var createdCustomer = JsonConvert.DeserializeObject<List<GetCustomerResponseDto>>(body);
 
         var customerId = createdCustomer?.FirstOrDefault()?.Id;
 
-        var updatedCustomer = new UpdateCustomerDto(
+        var updatedCustomer = new UpdateCustomerRequestDto(
             Guid.Parse(customerId.ToString()!), "+989910831000", null);
         
         var updatedResponse = await client.PutAsJsonAsync($"/api/v1/customer/{customerId}", updatedCustomer);
