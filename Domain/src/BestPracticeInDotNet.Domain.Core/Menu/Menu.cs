@@ -10,23 +10,22 @@ namespace BestPracticeInDotNet.Domain.Core.Menu;
 
 public sealed class Menu : AggregateRoot<MenuId>
 {
+    private readonly List<MenuSection> _sections = new();
+    private readonly List<FoodId> _foodIds = new();
+    private readonly List<MenuReviewId> _menuReviewIds = new();
+    
     public string Name { get; }
     public string Description { get; }
     public AverageRating AverageRating { get; }
     public HostId HostId { get; }
-
-    private readonly List<MenuSection> _sections = new();
-    private readonly List<FoodId> _foodIds = new();
-    private readonly List<MenuReviewId> _menuReviewIds = new();
     public IReadOnlyList<MenuSection> Sections => _sections.AsReadOnly();
     public IReadOnlyList<FoodId> FoodIds => _foodIds.AsReadOnly();
     public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
 
-    private Menu(
-        MenuId menuId,
+    private Menu(MenuId id, 
         string name,
         string description,
-        HostId hostId) : base(menuId)
+        HostId hostId) : base(id)
     {
         Name = name;
         Description = description;

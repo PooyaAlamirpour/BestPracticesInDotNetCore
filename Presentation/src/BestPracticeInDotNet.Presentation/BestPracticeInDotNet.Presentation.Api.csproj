@@ -28,4 +28,8 @@
     <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Persistence.Write\BestPracticeInDotNet.Persistence.Write.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Requests\http-client.env.json" />
+  </ItemGroup>
+
 </Project>
