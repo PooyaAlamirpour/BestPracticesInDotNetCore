@@ -1,6 +1,7 @@
 ﻿using BestPracticeInDotNet.Domain.Core.Food.ValueObjects;
 using BestPracticeInDotNet.Domain.Core.Host.ValueObjects;
 using BestPracticeInDotNet.Domain.Core.Menu.Entities;
+using BestPracticeInDotNet.Domain.Core.Menu.Events;
 using BestPracticeInDotNet.Domain.Core.Menu.ValueObjects;
 using BestPracticeInDotNet.Domain.Core.MenuReview.ValueObjects;
 using BestPracticeInDotNet.framework.DDD;
@@ -34,11 +35,17 @@ public sealed class Menu : AggregateRoot<MenuId>
 
     public static Menu Create(string name, string description, HostId hostId)
     {
-        return new Menu(MenuId.CreateUnique(), name, description, hostId);
+        var menu = new Menu(MenuId.CreateUnique(), name, description, hostId);
+        menu.RaiseEvent(new MenuCreated(menu));
+        return menu;
     }
 
     public override void Apply(INotification @event)
     {
         throw new NotImplementedException();
     }
+    
+    #pragma warning disable CS8618
+    
+    #pragma warning restore CS8618
 }

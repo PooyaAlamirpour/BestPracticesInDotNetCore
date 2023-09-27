@@ -24,4 +24,12 @@
       <ProjectReference Include="..\..\..\Infrastructure\src\BestPracticeInDotNet.Infrastructure.Services\BestPracticeInDotNet.Infrastructure.Services.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Authentication\Commands\" />
+      <Folder Include="Authentication\Events\" />
+      <Folder Include="Customer\Commands\" />
+      <Folder Include="Menu\Commands\" />
+      <Folder Include="Menu\Events\" />
+    </ItemGroup>
+
 </Project>

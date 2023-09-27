@@ -1,4 +1,5 @@
 ﻿using BestPracticeInDotNet.framework.DDD.Abstracts;
+using BestPracticeInDotNet.Infrastructure.EventStore.Interceptors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -6,8 +7,11 @@ namespace BestPracticeInDotNet.Infrastructure.EventStore.DbContexts;
 
 public class ApplicationEventDbContext : DbContext
 {
-    public ApplicationEventDbContext(DbContextOptions<ApplicationEventDbContext> options) : base(options)
+    private readonly PublishDomainEventsInterceptor _publishDomainEventsInterceptor;
+    public ApplicationEventDbContext(DbContextOptions<ApplicationEventDbContext> options, 
+        PublishDomainEventsInterceptor publishDomainEventsInterceptor) : base(options)
     {
+        _publishDomainEventsInterceptor = publishDomainEventsInterceptor;
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -21,6 +25,7 @@ public class ApplicationEventDbContext : DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        optionsBuilder.AddInterceptors(_publishDomainEventsInterceptor);
         optionsBuilder.LogTo(Console.WriteLine);
     }
 

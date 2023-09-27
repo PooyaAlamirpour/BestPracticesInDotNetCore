@@ -1,9 +1,9 @@
 ﻿using System.Net;
-using BestPracticeInDotNet.Application.Command.Authentication.Register;
+using BestPracticeInDotNet.Application.Command.Authentication.Commands.Register;
 using BestPracticeInDotNet.Application.Queries.Authentication.Login;
 using BestPracticeInDotNet.Application.Queries.User.Get;
-using BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Api.Controllers.Base;
+using BestPracticeInDotNet.Presentation.Api.Mapping;
 using BestPracticeInDotNet.Presentation.Api.Models.AuthenticationDto;
 using ErrorOr;
 using MediatR;

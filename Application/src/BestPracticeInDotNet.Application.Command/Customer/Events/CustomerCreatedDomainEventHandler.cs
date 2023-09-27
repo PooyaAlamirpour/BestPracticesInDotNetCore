@@ -2,22 +2,23 @@
 using BestPracticeInDotNet.Domain.SubDomain.Events;
 using MediatR;
 
-namespace BestPracticeInDotNet.Application.Command.EventHandlers;
+namespace BestPracticeInDotNet.Application.Command.Customer.Events;
 
-public class CustomerDeletedDomainEventHandler : INotificationHandler<CustomerDeletedDomainEvent>
+public class CustomerCreatedDomainEventHandler : INotificationHandler<CustomerCreatedDomainEvent>
 {
     private readonly ICustomerWriteRepository _customerWriteRepository;
-    
-    public CustomerDeletedDomainEventHandler(ICustomerWriteRepository customerWriteRepository)
+
+    public CustomerCreatedDomainEventHandler(ICustomerWriteRepository customerWriteRepository)
     {
         _customerWriteRepository = customerWriteRepository;
     }
 
-    public async Task Handle(CustomerDeletedDomainEvent @event, CancellationToken cancellationToken)
+    public async Task Handle(CustomerCreatedDomainEvent @event, CancellationToken cancellationToken)
     {
         /*CustomerAggregateRoot customer = new();
         customer.Apply(@event);
-        _customerWriteRepository.Delete(customer);
+        
+        _customerWriteRepository.Add(customer);
         await _customerWriteRepository.CommitAsync(cancellationToken);*/
         throw new NotImplementedException();
     }

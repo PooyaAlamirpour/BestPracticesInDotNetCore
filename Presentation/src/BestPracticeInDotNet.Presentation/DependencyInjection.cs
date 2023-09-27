@@ -1,6 +1,7 @@
 using BestPracticeInDotNet.framework.Commons.Errors;
-using BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Api.Filters;
+using BestPracticeInDotNet.Presentation.Api.Mapping;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Versioning;
@@ -13,7 +14,7 @@ public static class DependencyInjection
     {
         services.AddControllers(x => x.Filters.Add<ExceptionHandlingFilterAttribute>());
         services.AddRazorPages();
-        
+
         services.AddVersionedApiExplorer(options =>
         {
             options.GroupNameFormat = "'v'VVV";
@@ -28,6 +29,8 @@ public static class DependencyInjection
             options.AssumeDefaultVersionWhenUnspecified = true;
         });
 
+        services.AddMapster();
+        
         services.AddTransient<IConvertor, Convertor>();
         services.AddSingleton<ProblemDetailsFactory, ApplicationProblemDetailsFactory>();
         return services;

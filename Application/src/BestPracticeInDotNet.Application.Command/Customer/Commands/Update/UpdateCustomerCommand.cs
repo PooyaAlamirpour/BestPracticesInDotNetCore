@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace BestPracticeInDotNet.Application.Command.Customer.Update;
+namespace BestPracticeInDotNet.Application.Command.Customer.Commands.Update;
 
 public record UpdateCustomerCommand(
     Guid CustomerId,

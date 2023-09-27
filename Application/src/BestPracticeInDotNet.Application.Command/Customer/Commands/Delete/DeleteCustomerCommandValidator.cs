@@ -2,7 +2,7 @@
 using BestPracticeInDotNet.framework.Mediator.Extensions;
 using FluentValidation;
 
-namespace BestPracticeInDotNet.Application.Command.Customer.Delete;
+namespace BestPracticeInDotNet.Application.Command.Customer.Commands.Delete;
 
 public class DeleteCustomerCommandValidator : AbstractValidator<DeleteCustomerCommand>
 {

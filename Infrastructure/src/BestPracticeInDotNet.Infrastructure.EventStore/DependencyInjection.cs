@@ -2,6 +2,7 @@
 using BestPracticeInDotNet.Infrastructure.EventStore.Abstracts;
 using BestPracticeInDotNet.Infrastructure.EventStore.DbContexts;
 using BestPracticeInDotNet.Infrastructure.EventStore.EventBus;
+using BestPracticeInDotNet.Infrastructure.EventStore.Interceptors;
 using BestPracticeInDotNet.Infrastructure.EventStore.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +23,8 @@ public static class DependencyInjection
         services.AddTransient<IEventDispatcher, EventDispatcher>();
         services.AddRepositories();
 
+        services.AddScoped<PublishDomainEventsInterceptor>();
+        
         return services;
     }
 

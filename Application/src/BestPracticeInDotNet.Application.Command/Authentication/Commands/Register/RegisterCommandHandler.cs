@@ -1,9 +1,10 @@
-﻿using BestPracticeInDotNet.Application.Command.Repositories;
+﻿using BestPracticeInDotNet.Application.Command.Authentication.Models;
+using BestPracticeInDotNet.Application.Command.Repositories;
 using BestPracticeInDotNet.Infrastructure.Authentication.Authentication;
 using ErrorOr;
 using MediatR;
 
-namespace BestPracticeInDotNet.Application.Command.Authentication.Register;
+namespace BestPracticeInDotNet.Application.Command.Authentication.Commands.Register;
 
 public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<RegisterCommandResponse>>
 {

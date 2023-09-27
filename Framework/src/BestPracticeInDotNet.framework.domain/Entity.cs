@@ -2,9 +2,13 @@
 
 namespace BestPracticeInDotNet.framework.DDD;
 
-public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
+public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>, IDomainEventEntity
     where TId : notnull
 {
+    private readonly Queue<IDomainEvent> _uncommittedEvents = new();
+    public void ClearUncommittedEvents() => _uncommittedEvents.Clear();
+    public IEnumerable<IDomainEvent> GetUncommittedEvents() => _uncommittedEvents;
+    public IReadOnlyList<IDomainEvent> DomainEvents => _uncommittedEvents.ToArray().AsReadOnly();
     public TId Id { get; protected set; }
 
     protected Entity(TId id)
@@ -12,6 +16,11 @@ public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
         Id = id;
     }
 
+    protected void RaiseEvent(IDomainEvent @event)
+    {
+        _uncommittedEvents.Enqueue(@event);    
+    }
+    
     public override bool Equals(object? obj)
     {
         return obj is Entity<TId> entity && Id.Equals(entity.Id);

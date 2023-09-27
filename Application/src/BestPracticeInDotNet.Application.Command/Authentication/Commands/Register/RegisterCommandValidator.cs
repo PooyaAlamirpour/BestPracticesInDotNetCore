@@ -2,7 +2,7 @@
 using BestPracticeInDotNet.framework.Mediator.Extensions;
 using FluentValidation;
 
-namespace BestPracticeInDotNet.Application.Command.Authentication.Register;
+namespace BestPracticeInDotNet.Application.Command.Authentication.Commands.Register;
 
 public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
 {

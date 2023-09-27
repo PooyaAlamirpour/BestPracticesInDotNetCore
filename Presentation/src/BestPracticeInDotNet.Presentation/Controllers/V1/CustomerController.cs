@@ -1,10 +1,10 @@
-﻿using BestPracticeInDotNet.Application.Command.Customer.Create;
-using BestPracticeInDotNet.Application.Command.Customer.Delete;
-using BestPracticeInDotNet.Application.Command.Customer.Update;
+﻿using BestPracticeInDotNet.Application.Command.Customer.Commands.Create;
+using BestPracticeInDotNet.Application.Command.Customer.Commands.Delete;
+using BestPracticeInDotNet.Application.Command.Customer.Commands.Update;
 using BestPracticeInDotNet.Application.Queries.Customer.Get;
 using BestPracticeInDotNet.Domain.Core.Customer;
-using BestPracticeInDotNet.Presentation.Api.Commons.Convertors;
 using BestPracticeInDotNet.Presentation.Api.Controllers.Base;
+using BestPracticeInDotNet.Presentation.Api.Mapping;
 using BestPracticeInDotNet.Presentation.Api.Models.CustomerDto;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

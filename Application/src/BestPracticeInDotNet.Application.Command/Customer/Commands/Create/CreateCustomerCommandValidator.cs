@@ -2,7 +2,7 @@
 using BestPracticeInDotNet.framework.Mediator.Extensions;
 using FluentValidation;
 
-namespace BestPracticeInDotNet.Application.Command.Customer.Create;
+namespace BestPracticeInDotNet.Application.Command.Customer.Commands.Create;
 
 public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCommand>
 {

@@ -2,7 +2,7 @@
 using BestPracticeInDotNet.Domain.SubDomain.Events;
 using MediatR;
 
-namespace BestPracticeInDotNet.Application.Command.EventHandlers;
+namespace BestPracticeInDotNet.Application.Command.Customer.Events;
 
 public class CustomerUpdatedDomainEventHandler : INotificationHandler<CustomerUpdatedDomainEvent>
 {

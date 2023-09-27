@@ -3,22 +3,21 @@ using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 using MediatR;
 
-namespace BestPracticeInDotNet.Application.Command.Customer.Update;
+namespace BestPracticeInDotNet.Application.Command.Customer.Commands.Delete;
 
-public class UpdateCustomerCommandHandler : IRequestHandler<UpdateCustomerCommand>
+public class DeleteCustomerCommandHandler : IRequestHandler<DeleteCustomerCommand>
 {
     private readonly IEventStoreRepository<CustomerAggregateRoot, CustomerId> _eventStoreRepository;
 
-    // public UpdateCustomerCommandHandler(IEventStoreRepository<CustomerAggregateRoot, CustomerId> eventStoreRepository)
+    // public DeleteCustomerCommandHandler(IEventStoreRepository<CustomerAggregateRoot, CustomerId> eventStoreRepository)
     // {
         // _eventStoreRepository = eventStoreRepository;
     // }
 
-    public async Task Handle(UpdateCustomerCommand message, CancellationToken cancellationToken)
+    public async Task Handle(DeleteCustomerCommand message, CancellationToken cancellationToken)
     {
         CustomerAggregateRoot customer = await _eventStoreRepository.FetchStreamAsync(message.CustomerId, cancellationToken: cancellationToken);
-        customer.Update(message.CustomerId, message.PhoneNumber, message.BankAccountNumber);
+        customer.Delete(CustomerId.Of(message.CustomerId));
         await _eventStoreRepository.AppendEventsAsync(customer, cancellationToken);
     }
-    
 }

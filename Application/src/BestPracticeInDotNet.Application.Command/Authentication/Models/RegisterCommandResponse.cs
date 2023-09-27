@@ -1,4 +1,4 @@
-﻿namespace BestPracticeInDotNet.Application.Command.Authentication.Register;
+﻿namespace BestPracticeInDotNet.Application.Command.Authentication.Models;
 
 public record RegisterCommandResponse(
     Guid Id,

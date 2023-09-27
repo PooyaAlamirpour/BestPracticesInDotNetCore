@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace BestPracticeInDotNet.Application.Command.Customer.Create;
+namespace BestPracticeInDotNet.Application.Command.Customer.Commands.Create;
 
 public record CreateCustomerCommand(
     string Firstname,

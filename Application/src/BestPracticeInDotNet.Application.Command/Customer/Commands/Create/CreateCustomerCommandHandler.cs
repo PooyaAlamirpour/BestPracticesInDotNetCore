@@ -3,7 +3,7 @@ using BestPracticeInDotNet.Domain.Core.Customer;
 using BestPracticeInDotNet.Domain.Core.Customer.ValueObjects;
 using MediatR;
 
-namespace BestPracticeInDotNet.Application.Command.Customer.Create;
+namespace BestPracticeInDotNet.Application.Command.Customer.Commands.Create;
 
 public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand>
 {

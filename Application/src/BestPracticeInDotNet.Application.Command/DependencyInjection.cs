@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
-using BestPracticeInDotNet.Application.Command.Customer.Create;
-using BestPracticeInDotNet.Application.Command.Customer.Delete;
-using BestPracticeInDotNet.Application.Command.Customer.Update;
+using BestPracticeInDotNet.Application.Command.Customer.Commands.Create;
+using BestPracticeInDotNet.Application.Command.Customer.Commands.Delete;
+using BestPracticeInDotNet.Application.Command.Customer.Commands.Update;
 using BestPracticeInDotNet.framework.Mediator.Behaviors;
 using FluentValidation;
 using MediatR;
